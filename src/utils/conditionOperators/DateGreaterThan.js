@@ -18,7 +18,7 @@ export default class DateGeaterThan extends ConditionOperator {
     }
 
     execute(options, functionName = 'isAfter') {
-        const { value, instance, path } = options;
+        const { value, instance, conditionComponentPath } = options;
 
         if (!value) {
             return false;
@@ -26,8 +26,8 @@ export default class DateGeaterThan extends ConditionOperator {
 
         let conditionTriggerComponent = null;
 
-        if (instance?.root?.getComponent) {
-            conditionTriggerComponent = instance.root.getComponent(path);
+        if (instance && instance.root) {
+            conditionTriggerComponent = instance.root.getComponent(conditionComponentPath);
         }
 
         if ( conditionTriggerComponent && conditionTriggerComponent.isPartialDay && conditionTriggerComponent.isPartialDay(value)) {

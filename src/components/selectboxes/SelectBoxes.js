@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { componentValueTypes, getComponentSavedTypes, boolValue, getComponent } from '../../utils/utils';
+import { componentValueTypes, getComponentSavedTypes, boolValue } from '../../utils/utils';
 import RadioComponent from '../radio/Radio';
 
 export default class SelectBoxesComponent extends RadioComponent {
@@ -31,22 +31,15 @@ export default class SelectBoxesComponent extends RadioComponent {
     return {
       ...super.conditionOperatorsSettings,
       valueComponent(classComp) {
-        const isValuesSrc = !classComp.dataSrc || classComp.dataSrc === 'values';
-        return isValuesSrc
-        ? {
-            type: 'select',
-            dataSrc: 'custom',
-            valueProperty: 'value',
-            dataType: 'string',
-            data: {
-              custom: `values = ${classComp && classComp.values ? JSON.stringify(classComp.values) : []}`
-            },
-          }
-        : {
-            ...classComp,
-            dataType: 'string',
-            type: 'select',
-          }
+        return {
+          type: 'select',
+          dataSrc: 'custom',
+          valueProperty: 'value',
+          valueType: 'string',
+          data: {
+            custom: `values = ${classComp && classComp.values ? JSON.stringify(classComp.values) : []}`
+          },
+        };
       }
     };
   }
@@ -57,6 +50,7 @@ export default class SelectBoxesComponent extends RadioComponent {
 
   constructor(...args) {
     super(...args);
+    this.validators = this.validators.concat('minSelectedCount', 'maxSelectedCount', 'availableValueProperty');
   }
 
   init() {
@@ -74,10 +68,6 @@ export default class SelectBoxesComponent extends RadioComponent {
     info.attr.type = 'checkbox';
     info.attr.class = 'form-check-input';
     return info;
-  }
-
-  get hasDefaultValue() {
-    return true;
   }
 
   get emptyValue() {
@@ -108,8 +98,9 @@ export default class SelectBoxesComponent extends RadioComponent {
 
   /**
    * Only empty if the values are all false.
-   * @param {any} value - The value to check if empty.
-   * @returns {boolean} - If the value is empty.
+   *
+   * @param value
+   * @return {boolean}
    */
   isEmpty(value = this.dataValue) {
     let empty = true;
@@ -136,8 +127,9 @@ export default class SelectBoxesComponent extends RadioComponent {
 
   /**
    * Normalize values coming into updateValue.
-   * @param {any} value - The value to normalize.
-   * @returns {*} - The normalized value
+   *
+   * @param value
+   * @return {*}
    */
   normalizeValue(value) {
     value = value || {};
@@ -168,25 +160,14 @@ export default class SelectBoxesComponent extends RadioComponent {
       _.set(submission.metadata.selectData, this.path, selectData);
     }
 
-    // Ensure that for dataSrc == 'values' that there are not any other superfluous values.
-    if (this.component.dataSrc === 'values') {
-      for (const key in value) {
-        if (!this.component.values.find((val) => val.value === key)) {
-          delete value[key];
-        }
-      }
-    }
-    else if (_.isEmpty(this.loadedOptions) && !checkedValues.length) {
-      value = {};
-    }
     return value;
   }
 
   /**
    * Set the value of this component.
-   * @param {any} value - The value to set.
-   * @param {any} flags - Flags to apply to this update.
-   * @returns {boolean} - If the value has changed.
+   *
+   * @param value
+   * @param flags
    */
   setValue(value, flags = {}) {
     const changed = this.updateValue(value, flags);
@@ -209,20 +190,12 @@ export default class SelectBoxesComponent extends RadioComponent {
     return changed;
   }
 
-  getValueAsString(value, options = {}) {
+  getValueAsString(value) {
     if (!value) {
       return '';
     }
 
     if (this.isSelectURL) {
-      if (options.modalPreview || this.options.readOnly || this.inDataTable) {
-        const checkedItems = _.keys(_.pickBy(value, (val) => val));
-        if (this.selectData?.length === checkedItems.length) {
-          return this.selectData.map(item => this.itemTemplate(item)).join(', ');
-        } else if (this.loadedOptions?.length) {
-          return this.loadedOptions.filter((option) => value[option.value]).map((option) => option.label).join(', ');
-        }
-      }
       return _(value).pickBy((val) => val).keys().join(', ');
     }
     return _(this.component.values || [])
@@ -268,61 +241,47 @@ export default class SelectBoxesComponent extends RadioComponent {
     }
   }
 
-  checkComponentValidity(data, dirty, rowData, options, errors = []) {
+  checkComponentValidity(data, dirty, rowData, options) {
     const minCount = this.component.validate.minSelectedCount;
     const maxCount = this.component.validate.maxSelectedCount;
-    if (!this.shouldSkipValidation(data, rowData, options)) {
-      const isValid = this.isValid(data, dirty);
-      if ((maxCount || minCount)) {
-        const count = Object.keys(this.validationValue).reduce((total, key) => {
-          if (this.validationValue[key]) {
-            total++;
-          }
-          return total;
-        }, 0);
+    const isValid = this.isValid(data, dirty);
 
-        // Disable the rest of inputs if the max amount is already checked
-        if (maxCount && count >= maxCount) {
-          this.setInputsDisabled(true, true);
+    if ((maxCount || minCount) && !this.shouldSkipValidation(data, dirty, rowData)) {
+      const count = Object.keys(this.validationValue).reduce((total, key) => {
+        if (this.validationValue[key]) {
+          total++;
         }
-        else if (maxCount && !this.shouldDisabled) {
-          this.setInputsDisabled(false);
-        }
+        return total;
+      }, 0);
 
-        if (!isValid && maxCount && count > maxCount) {
-          const message = this.t(
-            this.component.maxSelectedCountMessage || 'maxSelectItems',
-            { maxCount }
-          );
-          this.errors.push({ message });
-          this.setCustomValidity(message, dirty);
-          return false;
-        }
-        else if (!isValid && minCount && count < minCount) {
-          this.setInputsDisabled(false);
-          const message = this.t(
-            this.component.minSelectedCountMessage || 'minSelectItems',
-            { minCount }
-          );
-          this.errors.push({ message });
-          this.setCustomValidity(message, dirty);
-          return false;
-        }
+      // Disable the rest of inputs if the max amount is already checked
+      if (maxCount && count >= maxCount) {
+        this.setInputsDisabled(true, true);
+      }
+      else if (maxCount && !this.shouldDisabled) {
+        this.setInputsDisabled(false);
+      }
+
+      if (!isValid && maxCount && count > maxCount) {
+        const message = this.t(
+          this.component.maxSelectedCountMessage || 'You can only select up to {{maxCount}} items.',
+          { maxCount }
+        );
+        this.setCustomValidity(message, dirty);
+        return false;
+      }
+      else if (!isValid && minCount && count < minCount) {
+        this.setInputsDisabled(false);
+        const message = this.t(
+          this.component.minSelectedCountMessage || 'You must select at least {{minCount}} items.',
+          { minCount }
+        );
+        this.setCustomValidity(message, dirty);
+        return false;
       }
     }
 
-    return super.checkComponentValidity(data, dirty, rowData, options, errors);
-  }
-
-  setCustomValidity(messages, dirty, external) {
-    if (this.options.building && _.find(messages, {ruleName: 'invalidValueProperty'})) {
-      setTimeout(() => {
-        this.root && getComponent(this.root.components, 'valueProperty').setCustomValidity(messages, dirty);
-      }, 0);
-      return super.setCustomValidity(_.filter(messages, (message) => message.ruleName !=='invalidValueProperty'), dirty, external);
-    } else {
-      return super.setCustomValidity(messages, dirty, external);
-    }
+    return super.checkComponentValidity(data, dirty, rowData, options);
   }
 
   validateValueAvailability(setting, value) {
@@ -330,7 +289,7 @@ export default class SelectBoxesComponent extends RadioComponent {
       return true;
     }
 
-    const values = this.component.dataSrc === 'values' ? this.component.values : this.loadedOptions;
+    const values = this.component.values;
     const availableValueKeys = (values || []).map(({ value: optionValue }) => optionValue);
     const valueKeys = Object.keys(value);
 

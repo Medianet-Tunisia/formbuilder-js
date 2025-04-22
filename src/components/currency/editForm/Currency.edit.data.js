@@ -1,9 +1,5 @@
 export default [
   {
-    key: 'case',
-    ignore: true
-  },
-  {
     type: 'select',
     input: true,
     weight: 50,

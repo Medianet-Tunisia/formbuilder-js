@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-import { Formio } from '../../../Formio';
+import { GlobalFormio as Formio } from '../../../Formio';
 
 export default [
   {
@@ -28,7 +28,7 @@ export default [
   {
     type: 'textfield',
     input: true,
-    key: "subscriptionKey",
+    key: "providerOptions.params['subscription-key']",
     label: 'Subscription Key',
     placeholder: 'Enter Subscription Key',
     weight: 10,
@@ -43,7 +43,7 @@ export default [
   {
     type: 'textfield',
     input: true,
-    key: 'url',
+    key: 'providerOptions.url',
     label: 'Url',
     placeholder: 'Enter Url',
     weight: 10,
@@ -58,7 +58,7 @@ export default [
   {
     type: 'textfield',
     input: true,
-    key: 'queryProperty',
+    key: 'providerOptions.queryProperty',
     label: 'Query Property',
     defaultValue: 'query',
     placeholder: 'Enter Query Property',
@@ -71,7 +71,7 @@ export default [
   {
     type: 'textfield',
     input: true,
-    key: 'responseProperty',
+    key: 'providerOptions.responseProperty',
     label: 'Response Property',
     placeholder: 'Enter Response Property',
     weight: 30,
@@ -83,7 +83,7 @@ export default [
   {
     type: 'textfield',
     input: true,
-    key: 'displayValueProperty',
+    key: 'providerOptions.displayValueProperty',
     label: 'Display Value Property',
     placeholder: 'Display Value Property',
     weight: 40,
@@ -95,7 +95,7 @@ export default [
   {
     type: 'textarea',
     input: true,
-    key: 'params',
+    key: 'providerOptions.params',
     label: 'Params',
     placeholder: '{ ... }',
     weight: 50,
@@ -110,7 +110,7 @@ export default [
   {
     type: 'textfield',
     input: true,
-    key: 'apiKey',
+    key: 'providerOptions.params.key',
     label: 'API Key',
     placeholder: 'Enter API Key',
     weight: 10,
@@ -125,7 +125,7 @@ export default [
   {
     type: 'textarea',
     input: true,
-    key: 'autocompleteOptions',
+    key: 'providerOptions.params.autocompleteOptions',
     label: 'Provider options',
     placeholder: 'Enter provider options as JSON object',
     defaultValue:{},

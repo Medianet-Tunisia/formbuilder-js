@@ -1,9 +1,9 @@
 import _ from 'lodash';
 import { eachComponent } from '../../../utils/utils';
 
-const calculateSingleSelectData = (context, defaultValue) => {
+const calculateSelectData = (context) => {
   const { instance, data } = context;
-  const rawDefaultValue = instance.downloadedResources.find(resource => _.get(resource, data.valueProperty) === defaultValue);
+  const rawDefaultValue = instance.downloadedResources.find(resource => _.get(resource, data.valueProperty) === instance.getValue());
   const options = { data: {}, noeval: true };
   instance.interpolate(data.template, {
     item: rawDefaultValue,
@@ -11,39 +11,20 @@ const calculateSingleSelectData = (context, defaultValue) => {
   return options.data.item;
 };
 
-const calculateSelectData = (context) => {
-  const { instance } = context;
-  const defaultValue = instance.getValue();
-  if (instance.component.multiple) {
-    const multiSelectData = {};
-    (defaultValue ?? []).forEach((defaultValueItem) => {
-      multiSelectData[defaultValueItem] = calculateSingleSelectData(context, defaultValueItem);
-    });
-    return multiSelectData;
-  }
-  else {
-    return calculateSingleSelectData(context, defaultValue);
-  }
-};
-
 const setSelectData = (context) => {
   // Wait before downloadedResources will be set
   setTimeout(() => {
     const { instance, data } = context;
-    const selectDataComponent = instance?.root?.getComponent('selectData');
-    // clear selectData if conditions are not met or clearing default value
-    if (selectDataComponent && (!selectDataComponent.visible || !data.defaultValue)) {
-      selectDataComponent.setValue(null, { resetValue: true});
-      return;
-    }
+    const selectDataComponent = instance?.root.getComponent('selectData');
     // nothing can set if don't have downloaded resources
     if (!selectDataComponent || !instance.getValue() || !instance.downloadedResources?.length) {
       return;
     }
+    // if valueProperty is not provided, we have entire object
     const shouldCalculateUrlData = data.dataSrc === 'url' && data.data.url && data.valueProperty;
     const shouldCalculateResourceData = data.dataSrc === 'resource' && data.data.resource && data.valueProperty;
-    const newValue = shouldCalculateUrlData || shouldCalculateResourceData ? calculateSelectData(context) : null;
-    selectDataComponent.setValue(newValue, { resetValue: newValue === null});
+    const newValue = shouldCalculateUrlData || shouldCalculateResourceData ? calculateSelectData(context) : undefined;
+    selectDataComponent.setValue(newValue);
   }, 0);
 };
 
@@ -58,6 +39,42 @@ export default [
         { label: 'Custom', value: 'custom' },
         { label: 'Raw JSON', value: 'json' },
       ],
+    },
+  },
+  {
+    type: 'textfield',
+    weight: 10,
+    input: true,
+    key: 'indexeddb.database',
+    label: 'Database name',
+    tooltip: 'The name of the indexeddb database.',
+    conditional: {
+      json: { '===': [{ var: 'data.dataSrc' }, 'indexeddb'] },
+    },
+  },
+  {
+    type: 'textfield',
+    input: true,
+    key: 'indexeddb.table',
+    label: 'Table name',
+    weight: 16,
+    tooltip: 'The name of table in the indexeddb database.',
+    conditional: {
+      json: { '===': [{ var: 'data.dataSrc' }, 'indexeddb'] },
+    }
+  },
+  {
+    type: 'textarea',
+    as: 'json',
+    editor: 'ace',
+    weight: 18,
+    input: true,
+    key: 'indexeddb.filter',
+    label: 'Row Filter',
+    tooltip: 'Filter table items that match the object.',
+    defaultValue: {},
+    conditional: {
+      json: { '===': [{ var: 'data.dataSrc' }, 'indexeddb'] },
     },
   },
   {
@@ -81,7 +98,6 @@ export default [
     key: 'lazyLoad',
     tooltip: 'When set, this will not fire off the request to the URL until this control is within focus. This can improve performance if you have many Select dropdowns on your form where the API\'s will only fire when the control is activated.',
     weight: 11,
-    defaultValue: true,
     conditional: {
       json: {
         and: [
@@ -171,7 +187,7 @@ export default [
     label: 'Value Property',
     key: 'valueProperty',
     skipMerge: true,
-    clearOnHide: false,
+    clearOnHide: true,
     tooltip: 'The field to use as the value.',
     weight: 11,
     refreshOn: 'data.resource',
@@ -605,8 +621,8 @@ export default [
     input: true,
     weight: 25,
     key: 'reference',
-    label: 'Submit as reference',
-    tooltip: 'Using this option will submit this field as a reference id and link its value to the value of the origin record.',
+    label: 'Save as reference',
+    tooltip: 'Using this option will save this field as a reference and link its value to the value of the origin record.',
     conditional: {
       json: { '===': [{ var: 'data.dataSrc' }, 'resource'] },
     },
@@ -651,27 +667,11 @@ export default [
   },
   {
     key: 'selectData',
-    type: 'hidden',
     conditional: {
-      json: {
-        and: [
-          { var: 'data.valueProperty' },
-          { '===': [{ var: 'data.lazyLoad' }, true]},
-          { '!==': [{ var: 'data.widget' }, 'html5'] },
-          {
-            or: [
-              { '===': [{ var: 'data.dataSrc' }, 'url'] },
-              {
-                and: [
-                  { '===': [{ var: 'data.dataSrc' }, 'resource'] },
-                  // 'data' means entire object from resource will be used
-                  { '!==': [{ var: 'data.valueProperty' }, 'data'] },
-                ],
-              }
-            ]
-          }
-        ]
-      },
+      json: { 'and': [
+        { '!==': [{ var: 'data.valueProperty' }, null] },
+        { '!==': [{ var: 'data.valueProperty' }, ''] },
+      ] },
     },
   },
   {

@@ -1,11 +1,7 @@
-/**
- * Creates a file processor function.
- * @param {Formio} formio - The Formio instance.
- * @param {object} config - The configuration object.
- * @returns {function(File, object): Promise<FormData>} A function that takes a file and options, and returns a Promise that resolves with the processed file.
- */
+import NativePromise from 'native-promise-only';
+
 const fileProcessor = (formio, config) => (file, options) =>
-  new Promise((resolve, reject) => {
+  new NativePromise((resolve, reject) => {
     const xhr = new XMLHttpRequest();
 
     // Fire on network error.

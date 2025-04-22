@@ -1,9 +1,6 @@
 _site
-dist
 lib
-docs
 dump.rdb
-.dccache
 .DS_Store
 .bower.json
 node_modules
@@ -13,5 +10,3 @@ bower_components
 .ruby-version
 .ruby-gemset
 /.vs
-coverage
-.nyc_output

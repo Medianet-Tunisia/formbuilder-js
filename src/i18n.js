@@ -2,7 +2,6 @@ import enTranslation from './translations/en';
 import {
   fastCloneDeep
 } from './utils/utils';
-
 export default {
   lng: 'en',
   nsSeparator: '::',

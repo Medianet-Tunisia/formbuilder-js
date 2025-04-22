@@ -13,11 +13,11 @@ For a full example of creating your own module that does this, please see the [C
 
 ```js
 /**
- * This file shows how to create a custom component.
+ * This file shows how to create a custom component and register that within an Angular application.
  *
  * Get the base component class by referencing Formio.Components.components map.
  */
-import { Components } from '@formio/js';
+import { Components } from 'formiojs';
 const FieldComponent = (Components as any).components.field;
 import editForm from './CheckMatrix.form';
 
@@ -65,24 +65,25 @@ export default class CheckMatrix extends (FieldComponent as any) {
     return tableClass;
   }
 
-  get emptyValue() {
-    return [];
+  renderCell(row, col) {
+    return this.renderTemplate('input', {
+      input: {
+        type: 'input',
+        ref: `${this.component.key}-${row}`,
+        attr: {
+          id: `${this.component.key}-${row}-${col}`,
+          class: 'form-control',
+          type: 'checkbox',
+        }
+      }
+    });
   }
 
-  /**
-   * Render method returns HTML from the component JSON.
-   */
-  public render() {
+  public render(children) {
     return super.render(this.renderTemplate('checkmatrix', {
-      tableClass: this.tableClass
+      tableClass: this.tableClass,
+      renderCell: this.renderCell.bind(this)
     }));
-  }
-
-  /**
-   * Get the reference key for the checkbox based on the row and column index.
-   */
-  refKey(i, j) {
-    return `${this.component.key}-${i}-${j}`;
   }
 
   /**
@@ -94,21 +95,21 @@ export default class CheckMatrix extends (FieldComponent as any) {
    */
   attach(element) {
     const refs = {};
-    // Iterate through all cells and add refs.
+
     for (let i = 0; i < this.component.numRows; i++) {
-      for (let j = 0; j < this.component.numCols; j++) {
-        refs[this.refKey(i, j)] = 'single';
-      }
+      refs[`${this.component.key}-${i}`] = 'multiple';
     }
 
-    // Load the references.
     this.loadRefs(element, refs);
 
-    // Re-iterate through the refs and add event listeners.
+    this.checks = [];
     for (let i = 0; i < this.component.numRows; i++) {
-      for (let j = 0; j < this.component.numCols; j++) {
-        this.addEventListener(this.refs[this.refKey(i, j)], 'click', () => this.updateValue())
-      }
+      this.checks[i] = Array.prototype.slice.call(this.refs[`${this.component.key}-${i}`], 0);
+
+      // Attach click events to each input in the row
+      this.checks[i].forEach(input => {
+        this.addEventListener(input, 'click', () => this.updateValue())
+      });
     }
 
     // Allow basic component functionality to attach like field logic and tooltips.
@@ -122,12 +123,12 @@ export default class CheckMatrix extends (FieldComponent as any) {
    */
   getValue() {
     var value = [];
-    for (let i = 0; i < this.component.numRows; i++) {
-      value[i] = [];
-      for (let j = 0; j < this.component.numCols; j++) {
-        if (this.refs.hasOwnProperty(this.refKey(i,j))) {
-          value[i][j] = !!this.refs[this.refKey(i,j)].checked;
-        }
+    for (var rowIndex in this.checks) {
+      var row = this.checks[rowIndex];
+      value[rowIndex] = [];
+      for (var colIndex in row) {
+        var col = row[colIndex];
+        value[rowIndex][colIndex] = !!col.checked;
       }
     }
     return value;
@@ -143,18 +144,19 @@ export default class CheckMatrix extends (FieldComponent as any) {
     if (!value) {
       return;
     }
-    for (let i = 0; i < this.component.numRows; i++) {
-      for (let j = 0; j < this.component.numCols; j++) {
-        if (
-          value.length > i &&
-          value[i].length > j &&
-          this.refs.hasOwnProperty(this.refKey(i,j))
-        ) {
-          const ref = this.refs[this.refKey(i,j)];
-          let checked = value[i][j] ? 1 : 0;
-          ref.value = checked;
-          ref.checked = checked;
+    for (var rowIndex in this.checks) {
+      var row = this.checks[rowIndex];
+      if (!value[rowIndex]) {
+        break;
+      }
+      for (var colIndex in row) {
+        var col = row[colIndex];
+        if (!value[rowIndex][colIndex]) {
+          return false;
         }
+        let checked = value[rowIndex][colIndex] ? 1 : 0;
+        col.value = checked;
+        col.checked = checked;
       }
     }
   }
@@ -164,14 +166,14 @@ export default class CheckMatrix extends (FieldComponent as any) {
 These modules will then be compiled into a Module file that can either be imported within your own application, or using ```<script>``` tags in the browser like the following.
 
 ```js
-import { Formio } from '@formio/js';
+import { Formio } from 'formiojs';
 import YourModule from './yourmodule';
 Formio.use(YourModule);
 ```
 
 ```html
-<link rel="stylesheet" href="https://cdn.form.io/js/formio.full.min.css">
-<script src="https://cdn.form.io/js/formio.full.min.js"></script>
+<link rel="stylesheet" href="https://cdn.form.io/formiojs/formio.full.min.css">
+<script src="https://cdn.form.io/formiojs/formio.full.min.js"></script>
 <script src="./contrib/YourModule.js"></script>
 <script type="text/javascript">
     Formio.use(YourModule);
@@ -181,8 +183,8 @@ Formio.use(YourModule);
 As an example, you can import the Contributed Components into your application using the following.
 
 ```html
-<link rel="stylesheet" href="https://cdn.form.io/js/formio.full.min.css">
-<script src="https://cdn.form.io/js/formio.full.min.js"></script>
+<link rel="stylesheet" href="https://cdn.form.io/formiojs/formio.full.min.css">
+<script src="https://cdn.form.io/formiojs/formio.full.min.js"></script>
 <script src="https://unpkg.com/@formio/contrib@latest/dist/formio-contrib.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/@formio/contrib@latest/dist/formio-contrib.css">
 <script type="text/javascript">

@@ -1,3 +1,2 @@
-import { embed } from './InlineEmbed';
+import { embed } from './Embed';
 embed();
-export { Formio } from './InlineEmbed';

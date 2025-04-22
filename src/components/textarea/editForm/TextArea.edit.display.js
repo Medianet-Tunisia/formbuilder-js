@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { Formio } from '../../../Formio';
+import { GlobalFormio as Formio } from '../../../Formio';
 
 export default [
   {
@@ -11,19 +11,7 @@ export default [
     ignore: true
   },
   {
-    key: 'inputMasks',
-    ignore: true
-  },
-  {
     key: 'mask',
-    ignore: true
-  },
-  {
-    key: 'widget.type',
-    ignore: true
-  },
-  {
-    key: 'widget',
     ignore: true
   },
   {

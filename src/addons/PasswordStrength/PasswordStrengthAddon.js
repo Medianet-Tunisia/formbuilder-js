@@ -226,7 +226,7 @@ export default class PasswordStrengthAddon extends FormioAddon {
 
   /**
    * Determines is a password is secure enough to submit
-   * @returns {boolean} - returns TRUE if password is valid, FALSE if it is not.
+   * @return {boolean}
    */
   isValid() {
     const isValidCheck = this.settings.isValid;
@@ -245,9 +245,8 @@ export default class PasswordStrengthAddon extends FormioAddon {
    * Handles the result of check and constructs a new error object or returns an amount of points to add to the current entropy
    * @param {boolean|number} valid - Determines if the validation was failed or an amount of points if it was passed
    * @param {*} validation - Validation configuration
+   * @param {string} value - Value which was validated
    * @param {string} message - Message which should be shown if validation was not passed
-   * @param {any[]} errors - The errors array (will be mutated)
-   * @returns {number} - Returns an amount of points to add to the current entropy
    */
   handleRuleCheckResult(valid, validation, message, errors) {
     if (valid !== true) {
@@ -293,29 +292,22 @@ export default class PasswordStrengthAddon extends FormioAddon {
 
   /**
    * Performs checks to validate password security
-   * @param {string} value - The password value to be checked.
-   * @returns {boolean} - Returns TRUE if password is strong enough, FALSE if it is not.
+   * @param {string} value - Suggested password
    */
   checkValidity(value) {
     const passwordLength = value.length;
 
     const { charactersPoolSize, errors } = this.performChecks(value);
+    this.errors = errors;
+
     const entropy = this.calculatePasswordEntropy(passwordLength, charactersPoolSize);
     const blackListCheck = this.settings.blackList?.length || this.settings.customBlacklistedWords ?
       this.checkBlackList(value)
       : null;
 
-    const isValid = this.isValid();
-    if (!isValid) {
-      errors.push({
-        message: 'Password is not strong enough',
-        level: this.settings.required ? 'error' : 'warning'
-      });
-    }
-
     // If there were found some words from the black list
     if (blackListCheck && blackListCheck !== true) {
-      this.handleBlackListCheckResult(blackListCheck, errors);
+      this.handleBlackListCheckResult(blackListCheck);
       // Select the mininal entropy based on the dictionary check or symbolic check
       this.entropy = Math.min(entropy, blackListCheck.entropy);
     }
@@ -323,10 +315,18 @@ export default class PasswordStrengthAddon extends FormioAddon {
       this.entropy = entropy;
     }
 
-    return !errors.length;
+    const isValid = this.isValid();
+    if (!isValid) {
+      this.errors.push({
+        message: 'Password is not strong enough',
+        level: this.settings.required ? 'error' : 'warning'
+      });
+    }
+
+    return !this.errors.length;
   }
 
-  handleBlackListCheckResult(result, errors) {
+  handleBlackListCheckResult(result) {
     const blacklistedWords = result.blacklistedWords;
     const isRequired = this.settings.disableBlacklistedWords;
     const message = `Password ${isRequired ? 'must' : 'should'} not include common words: ${blacklistedWords.join(', ')}`;
@@ -335,7 +335,7 @@ export default class PasswordStrengthAddon extends FormioAddon {
       required: isRequired,
     };
 
-    this.handleRuleCheckResult(false, validation, message, errors);
+    this.handleRuleCheckResult(false, validation, message, this.errors);
   }
 
   constructor(settings, componentInstance) {
@@ -410,7 +410,6 @@ export default class PasswordStrengthAddon extends FormioAddon {
   /**
    * Finds the level which one the passed entropy suits
    * @param {number} entropy - Points of password's security
-   * @returns {object} - Returns the level object
    */
   getLevel(entropy = this.entropy) {
     const lowestLevel = this.levels[0];

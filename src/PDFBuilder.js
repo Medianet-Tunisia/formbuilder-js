@@ -1,5 +1,6 @@
 import _ from 'lodash';
-import { Formio } from './Formio';
+import NativePromise from 'native-promise-only';
+import { GlobalFormio as Formio } from './Formio';
 
 import WebformBuilder from './WebformBuilder';
 import { fastCloneDeep, getElementRect , getBrowserInfo } from './utils/utils';
@@ -168,7 +169,7 @@ export default class PDFBuilder extends WebformBuilder {
         });
       }
 
-      return Promise.resolve();
+      return NativePromise.resolve();
     }
 
     // Normal PDF Builder
@@ -218,10 +219,10 @@ export default class PDFBuilder extends WebformBuilder {
         const progress = Math.floor((event.loaded / event.total) * 100);
         this.refs.uploadProgress.style.width = `${progress}%`;
         if (progress > 98) {
-          this.refs.uploadProgress.innerHTML = this.t('waitPdfConverting');
+          this.refs.uploadProgress.innerHTML = this.t('Converting PDF. Please wait.');
         }
         else {
-          this.refs.uploadProgress.innerHTML = `${this.t('uploading')} ${progress}%`;
+          this.refs.uploadProgress.innerHTML = `${this.t('Uploading')} ${progress}%`;
         }
       }
     }, `${this.projectUrl}/upload`, {}, 'file')
@@ -263,7 +264,7 @@ export default class PDFBuilder extends WebformBuilder {
       return;
     }
     this.refs.uploadError.style.display = message ? '' : 'none';
-    this.refs.uploadError.innerHTML = this.t(`${message}`);
+    this.refs.uploadError.innerHTML = message;
   }
 
   createForm(options) {
@@ -280,9 +281,9 @@ export default class PDFBuilder extends WebformBuilder {
     return this.webform;
   }
 
-  destroy(all = false) {
-    super.destroy(all);
-    this.webform.destroy(all);
+  destroy(deleteFromGlobal) {
+    super.destroy(deleteFromGlobal);
+    this.webform.destroy(deleteFromGlobal);
   }
 
   // d8b 8888888888                                                                              888
@@ -326,7 +327,7 @@ export default class PDFBuilder extends WebformBuilder {
           width: schema.width
         };
 
-        if (!this.options.noNewEdit && !component.component.noNewEdit && this.hasEditTabs(component.type)) {
+        if (!this.options.noNewEdit && !component.component.noNewEdit) {
           this.editComponent(component.component, this.getParentContainer(component), isNew);
         }
         this.emit('updateComponent', component.component);
@@ -352,7 +353,7 @@ export default class PDFBuilder extends WebformBuilder {
 
     this.webform.on('iframe-componentClick', schema => {
       const component = this.webform.getComponentById(schema.id);
-      if (component && this.hasEditTabs(component.type)) {
+      if (component) {
         this.editComponent(component.component, this.getParentContainer(component));
       }
     }, true);
@@ -478,7 +479,7 @@ export default class PDFBuilder extends WebformBuilder {
     }
 
     // Set a unique key for this component.
-    BuilderUtils.uniquify(this.webform._form?.components || [], schema);
+    BuilderUtils.uniquify([this.webform._form], schema);
     this.webform._form.components.push(schema);
 
     schema.overlay = {
@@ -522,7 +523,7 @@ export default class PDFBuilder extends WebformBuilder {
           name: 'showBuilderErrors',
           data: {
             compId: comp.component.id,
-            errorMessage: `${this.t('notUniqueKey')}: ${comp.key}`,
+            errorMessage: `API Key is not unique: ${comp.key}`,
           }
         });
       }

@@ -5,7 +5,7 @@ module.exports = {
   timeout: 20000,
   exit: true,
   require: [
-    'ts-node/register',
+    '@babel/register',
     'mock-local-storage',
     'jsdom-global/register'
   ]

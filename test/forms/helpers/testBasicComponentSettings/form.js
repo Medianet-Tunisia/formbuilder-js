@@ -305,6 +305,7 @@ export default {
       "key": "day",
       "type": "day",
       "input": true,
+      "defaultValue": "00/00/0000"
     }, {
       "label": "Time",
       "tableView": true,
@@ -648,6 +649,20 @@ export default {
         "label": "Text Field EditGrid",
         "tableView": true,
         "key": "textFieldEditGrid",
+        "type": "textfield",
+        "input": true
+      }]
+    }, {
+      "label": "Tree",
+      "tableView": false,
+      "key": "tree",
+      "type": "tree",
+      "input": true,
+      "tree": true,
+      "components": [{
+        "label": "Text Field Tree",
+        "tableView": true,
+        "key": "textFieldTree",
         "type": "textfield",
         "input": true
       }]
