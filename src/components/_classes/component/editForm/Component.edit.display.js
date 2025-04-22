@@ -195,5 +195,26 @@ export default [
     key: 'modalEdit',
     input: true
   },
+  {
+    weight: 1600,
+    type: 'checkbox',
+    label: 'Is Active',
+    tooltip: 'The Step is active it will be shown.',
+    key: 'isActive',
+    input: true
+  },
+  {
+    type: 'number',
+    input: true,
+    key: 'order',
+    label: 'Order',
+    tooltip: 'The order when listing.',
+    clearOnHide: false,
+    weight: 30,
+    validate: {
+      min: 0,
+      max: 100
+    },
+  },
 ];
 /* eslint-enable max-len */
