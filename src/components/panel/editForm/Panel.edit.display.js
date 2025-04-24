@@ -4,15 +4,27 @@ import _difference from 'lodash/difference';
 import _keys from 'lodash/keys';
 export default [
   {
+    key: 'hidden',
+    ignore: true
+  },
+  {
+    key: 'hideLabel',
+    ignore: true
+  },
+  {
+    key: 'modalEdit',
+    ignore: true
+  },
+  {
+    key: 'disabled',
+    ignore: true
+  },
+  {
     key: 'labelPosition',
     ignore: true
   },
   {
     key: 'placeholder',
-    ignore: true
-  },
-  {
-    key: 'description',
     ignore: true
   },
   {
@@ -38,7 +50,7 @@ export default [
     weight: 1,
     type: 'textfield',
     input: true,
-    placeholder: 'Panel Title',
+    placeholder: 'Step Title',
     label: 'Title',
     key: 'title',
     tooltip: 'The title text that appears in the header of this panel.'
