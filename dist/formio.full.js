@@ -228,17 +228,6 @@ eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js *
 
 /***/ }),
 
-/***/ "./lib/components/_classes/componentModal/ComponentModal.js":
-/*!******************************************************************!*\
-  !*** ./lib/components/_classes/componentModal/ComponentModal.js ***!
-  \******************************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\n__webpack_require__(/*! core-js/modules/es.object.keys.js */ \"./node_modules/core-js/modules/es.object.keys.js\");\n__webpack_require__(/*! core-js/modules/es.array.filter.js */ \"./node_modules/core-js/modules/es.array.filter.js\");\n__webpack_require__(/*! core-js/modules/es.object.get-own-property-descriptor.js */ \"./node_modules/core-js/modules/es.object.get-own-property-descriptor.js\");\n__webpack_require__(/*! core-js/modules/es.array.for-each.js */ \"./node_modules/core-js/modules/es.array.for-each.js\");\n__webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ \"./node_modules/core-js/modules/web.dom-collections.for-each.js\");\n__webpack_require__(/*! core-js/modules/es.object.get-own-property-descriptors.js */ \"./node_modules/core-js/modules/es.object.get-own-property-descriptors.js\");\n__webpack_require__(/*! core-js/modules/es.object.define-properties.js */ \"./node_modules/core-js/modules/es.object.define-properties.js\");\n__webpack_require__(/*! core-js/modules/es.symbol.iterator.js */ \"./node_modules/core-js/modules/es.symbol.iterator.js\");\n__webpack_require__(/*! core-js/modules/es.array.iterator.js */ \"./node_modules/core-js/modules/es.array.iterator.js\");\n__webpack_require__(/*! core-js/modules/es.string.iterator.js */ \"./node_modules/core-js/modules/es.string.iterator.js\");\n__webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ \"./node_modules/core-js/modules/web.dom-collections.iterator.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\n__webpack_require__(/*! core-js/modules/es.function.bind.js */ \"./node_modules/core-js/modules/es.function.bind.js\");\n__webpack_require__(/*! core-js/modules/es.array.concat.js */ \"./node_modules/core-js/modules/es.array.concat.js\");\n__webpack_require__(/*! core-js/modules/es.symbol.to-primitive.js */ \"./node_modules/core-js/modules/es.symbol.to-primitive.js\");\n__webpack_require__(/*! core-js/modules/es.date.to-primitive.js */ \"./node_modules/core-js/modules/es.date.to-primitive.js\");\n__webpack_require__(/*! core-js/modules/es.symbol.js */ \"./node_modules/core-js/modules/es.symbol.js\");\n__webpack_require__(/*! core-js/modules/es.symbol.description.js */ \"./node_modules/core-js/modules/es.symbol.description.js\");\n__webpack_require__(/*! core-js/modules/es.object.to-string.js */ \"./node_modules/core-js/modules/es.object.to-string.js\");\n__webpack_require__(/*! core-js/modules/es.number.constructor.js */ \"./node_modules/core-js/modules/es.number.constructor.js\");\nvar _lodash = _interopRequireDefault(__webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\"));\nvar _utils = __webpack_require__(/*! ../../../utils/utils */ \"./lib/utils/utils.js\");\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nfunction _typeof(obj) { \"@babel/helpers - typeof\"; return _typeof = \"function\" == typeof Symbol && \"symbol\" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && \"function\" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }, _typeof(obj); }\nfunction ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }\nfunction _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, \"prototype\", { writable: false }); return Constructor; }\nfunction _toPropertyKey(arg) { var key = _toPrimitive(arg, \"string\"); return _typeof(key) === \"symbol\" ? key : String(key); }\nfunction _toPrimitive(input, hint) { if (_typeof(input) !== \"object\" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || \"default\"); if (_typeof(res) !== \"object\") return res; throw new TypeError(\"@@toPrimitive must return a primitive value.\"); } return (hint === \"string\" ? String : Number)(input); }\nvar ComponentModal = /*#__PURE__*/function () {\n  function ComponentModal(component, element, isOpened, currentValue) {\n    _classCallCheck(this, ComponentModal);\n    this.isOpened = isOpened;\n    this.component = component;\n    this.element = element;\n    this.currentValue = (0, _utils.fastCloneDeep)(currentValue !== null && currentValue !== void 0 ? currentValue : this.component.getValue());\n    this.dataLoaded = false;\n    this.init();\n  }\n  _createClass(ComponentModal, [{\n    key: \"refs\",\n    get: function get() {\n      return this.component.refs;\n    }\n  }, {\n    key: \"init\",\n    value: function init() {\n      var _this = this;\n      this.openModalListener = this.openModalHandler.bind(this);\n      this.showDialogListener = function (event) {\n        if (_this.isValueChanged() && !_this.component.disabled) {\n          _this.showDialog();\n        } else {\n          _this.closeModalHandler(event);\n        }\n      };\n      this.closeModalListener = this.closeModalHandler.bind(this);\n      this.saveModalListener = this.saveModalValueHandler.bind(this);\n      this.closeDialogListener = this.closeDialog.bind(this);\n      this.saveDialogListener = this.saveDialog.bind(this);\n      this.loadRefs();\n    }\n  }, {\n    key: \"setValue\",\n    value: function setValue(value) {\n      if (this.dataLoaded && this.currentValue === value) {\n        return;\n      }\n      this.currentValue = (0, _utils.fastCloneDeep)(value);\n      this.dataLoaded = true;\n      this.updateView();\n    }\n  }, {\n    key: \"setOpenModalElement\",\n    value: function setOpenModalElement(template) {\n      var _this$component;\n      if ((_this$component = this.component) !== null && _this$component !== void 0 && _this$component.visible) {\n        this.openModalTemplate = template;\n        this.component.setContent(this.refs.openModalWrapper, template);\n        this.loadRefs();\n        this.setEventListeners();\n        if (this.isOpened) {\n          this.refs.modalWrapper.classList.add('formio-dialog-disabled-animation');\n          this.openModal();\n        }\n      }\n    }\n  }, {\n    key: \"templateRefs\",\n    get: function get() {\n      return {\n        modalOverlay: 'single',\n        modalContents: 'single',\n        modalClose: 'single',\n        openModalWrapper: 'single',\n        openModal: 'single',\n        modalSave: 'single',\n        modalWrapper: 'single'\n      };\n    }\n  }, {\n    key: \"loadRefs\",\n    value: function loadRefs() {\n      this.component.loadRefs(this.element, this.templateRefs);\n    }\n  }, {\n    key: \"removeEventListeners\",\n    value: function removeEventListeners() {\n      this.component.removeEventListener(this.refs.openModal, 'click', this.openModalListener);\n      this.component.removeEventListener(this.refs.modalOverlay, 'click', this.refs.modalSave ? this.showDialogListener : this.saveModalListener);\n      this.component.removeEventListener(this.refs.modalClose, 'click', this.showDialogListener);\n      this.component.removeEventListener(this.refs.modalSave, 'click', this.saveModalListener);\n    }\n  }, {\n    key: \"setEventListeners\",\n    value: function setEventListeners() {\n      this.removeEventListeners();\n      this.component.addEventListener(this.refs.openModal, 'click', this.openModalListener);\n      this.component.addEventListener(this.refs.modalOverlay, 'click', this.refs.modalSave ? this.showDialogListener : this.saveModalListener);\n      this.component.addEventListener(this.refs.modalClose, 'click', this.showDialogListener);\n      this.component.addEventListener(this.refs.modalSave, 'click', this.saveModalListener);\n    }\n  }, {\n    key: \"isValueChanged\",\n    value: function isValueChanged() {\n      var componentValue = this.component.getValue();\n      var currentValue = this.currentValue;\n\n      //excluding metadata comparison for components that have it in dataValue (for ex. nested forms)\n      if (componentValue && componentValue.data && componentValue.metadata) {\n        componentValue = this.component.getValue().data;\n        currentValue = this.currentValue.data;\n      }\n      return !_lodash[\"default\"].isEqual((0, _utils.fastCloneDeep)(componentValue), currentValue);\n    }\n  }, {\n    key: \"setOpenEventListener\",\n    value: function setOpenEventListener() {\n      var _this$refs$openModalW;\n      this.component.removeEventListener(this.refs.openModal, 'click', this.openModalListener);\n      this.component.loadRefs((_this$refs$openModalW = this.refs.openModalWrapper) !== null && _this$refs$openModalW !== void 0 ? _this$refs$openModalW : this.element, {\n        'openModal': 'single'\n      });\n      this.component.addEventListener(this.refs.openModal, 'click', this.openModalListener);\n    }\n  }, {\n    key: \"openModalHandler\",\n    value: function openModalHandler(event) {\n      event.preventDefault();\n      this.openModal();\n    }\n  }, {\n    key: \"positionOverElement\",\n    value: function positionOverElement() {\n      // Position the modal just over the element on the page.\n      var elementOffset = this.element.getBoundingClientRect().top;\n      var modalHeight = this.refs.modalContents.getBoundingClientRect().height;\n      var modalTop = elementOffset - modalHeight - 10;\n      modalTop = modalTop > 0 ? modalTop : 10;\n      this.refs.modalWrapper.style.paddingTop = \"\".concat(modalTop, \"px\");\n    }\n  }, {\n    key: \"openModal\",\n    value: function openModal() {\n      this.isOpened = true;\n      this.refs.modalWrapper.classList.remove('component-rendering-hidden');\n      if (this.component.component.type === 'signature') {\n        // Position signature modals just above the signature button.\n        this.positionOverElement();\n      }\n    }\n  }, {\n    key: \"updateView\",\n    value: function updateView() {\n      var template = _lodash[\"default\"].isEqual(this.currentValue, this.component.defaultValue) ? this.openModalTemplate : this.component.getModalPreviewTemplate();\n      this.component.setContent(this.refs.openModalWrapper, template);\n      this.setOpenEventListener();\n    }\n  }, {\n    key: \"closeModal\",\n    value: function closeModal() {\n      this.refs.modalWrapper.classList.remove('formio-dialog-disabled-animation');\n      this.refs.modalWrapper.classList.add('component-rendering-hidden');\n      this.isOpened = false;\n      this.updateView();\n    }\n  }, {\n    key: \"closeModalHandler\",\n    value: function closeModalHandler(event) {\n      event.preventDefault();\n      if (!this.component.disabled) {\n        this.component.setValue(_lodash[\"default\"].cloneDeep(this.currentValue), {\n          resetValue: true\n        });\n      }\n      this.closeModal();\n    }\n  }, {\n    key: \"showDialog\",\n    value: function showDialog() {\n      this.dialogElement = this.component.ce('div');\n      var dialogContent = \"\\n      <h3 ref=\\\"dialogHeader\\\">\".concat(this.component.t('Do you want to clear changes?'), \"</h3>\\n      <div style=\\\"display:flex; justify-content: flex-end;\\\">\\n        <button ref=\\\"dialogCancelButton\\\" class=\\\"btn btn-secondary\\\">\").concat(this.component.t('Cancel'), \"</button>\\n        <button ref=\\\"dialogYesButton\\\" class=\\\"btn btn-danger\\\">\").concat(this.component.t('Yes, delete it'), \"</button>\\n      </div>\\n    \");\n      this.dialogElement.innerHTML = dialogContent;\n      this.dialogElement.refs = {};\n      this.component.loadRefs.call(this.dialogElement, this.dialogElement, {\n        dialogHeader: 'single',\n        dialogCancelButton: 'single',\n        dialogYesButton: 'single'\n      });\n      this.dialog = this.component.createModal(this.dialogElement);\n      this.component.addEventListener(this.dialogElement.refs.dialogYesButton, 'click', this.saveDialogListener);\n      this.component.addEventListener(this.dialogElement.refs.dialogCancelButton, 'click', this.closeDialogListener);\n    }\n  }, {\n    key: \"closeDialog\",\n    value: function closeDialog(event) {\n      event.preventDefault();\n      this.dialog.close();\n      this.component.removeEventListener(this.dialogElement.refs.dialogYesButton, 'click', this.saveDialogListener);\n      this.component.removeEventListener(this.dialogElement.refs.dialogCancelButton, 'click', this.closeDialogListener);\n    }\n  }, {\n    key: \"saveDialog\",\n    value: function saveDialog(event) {\n      this.closeDialog(event);\n      this.closeModalHandler(event);\n    }\n  }, {\n    key: \"saveModalValueHandler\",\n    value: function saveModalValueHandler(event) {\n      var _this$component$dataV;\n      event.preventDefault();\n      this.currentValue = (0, _utils.fastCloneDeep)((_this$component$dataV = this.component.dataValue) !== null && _this$component$dataV !== void 0 ? _this$component$dataV : this.component.getValue());\n      this.closeModal();\n    }\n  }], [{\n    key: \"render\",\n    value: function render(component, data, topLevel) {\n      var children = component.renderTemplate('component', data, topLevel);\n      return component.renderTemplate('componentModal', _objectSpread(_objectSpread({}, data), {}, {\n        children: children\n      }));\n    }\n  }]);\n  return ComponentModal;\n}();\nexports[\"default\"] = ComponentModal;\n\n//# sourceURL=webpack://Formio/./lib/components/_classes/componentModal/ComponentModal.js?");
-
-/***/ }),
-
 /***/ "./lib/components/_classes/component/Component.form.js":
 /*!*************************************************************!*\
   !*** ./lib/components/_classes/component/Component.form.js ***!
@@ -246,7 +235,7 @@ eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js *
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = _default;\n__webpack_require__(/*! core-js/modules/es.array.concat.js */ \"./node_modules/core-js/modules/es.array.concat.js\");\n__webpack_require__(/*! core-js/modules/es.array.map.js */ \"./node_modules/core-js/modules/es.array.map.js\");\nvar _lodash = _interopRequireDefault(__webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\"));\nvar _ComponentEdit = _interopRequireDefault(__webpack_require__(/*! ./editForm/Component.edit.conditional */ \"./lib/components/_classes/component/editForm/Component.edit.conditional.js\"));\nvar _ComponentEdit2 = _interopRequireDefault(__webpack_require__(/*! ./editForm/Component.edit.data */ \"./lib/components/_classes/component/editForm/Component.edit.data.js\"));\nvar _ComponentEdit3 = _interopRequireDefault(__webpack_require__(/*! ./editForm/Component.edit.api */ \"./lib/components/_classes/component/editForm/Component.edit.api.js\"));\nvar _ComponentEdit4 = _interopRequireDefault(__webpack_require__(/*! ./editForm/Component.edit.display */ \"./lib/components/_classes/component/editForm/Component.edit.display.js\"));\nvar _ComponentEdit5 = _interopRequireDefault(__webpack_require__(/*! ./editForm/Component.edit.logic */ \"./lib/components/_classes/component/editForm/Component.edit.logic.js\"));\nvar _ComponentEdit6 = _interopRequireDefault(__webpack_require__(/*! ./editForm/Component.edit.validation */ \"./lib/components/_classes/component/editForm/Component.edit.validation.js\"));\nvar _ComponentEdit7 = _interopRequireDefault(__webpack_require__(/*! ./editForm/Component.edit.layout */ \"./lib/components/_classes/component/editForm/Component.edit.layout.js\"));\nvar _utils = _interopRequireDefault(__webpack_require__(/*! ./editForm/utils */ \"./lib/components/_classes/component/editForm/utils.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nfunction _default() {\n  for (var _len = arguments.length, extend = new Array(_len), _key = 0; _key < _len; _key++) {\n    extend[_key] = arguments[_key];\n  }\n  var components = _lodash[\"default\"].cloneDeep([{\n    type: 'tabs',\n    key: 'tabs',\n    components: [{\n      label: 'Display',\n      key: 'display',\n      weight: 0,\n      components: _ComponentEdit4[\"default\"]\n    }, {\n      label: 'Data',\n      key: 'data',\n      weight: 10,\n      components: _ComponentEdit2[\"default\"]\n    }, {\n      label: 'Validation',\n      key: 'validation',\n      weight: 20,\n      components: _ComponentEdit6[\"default\"]\n    }, {\n      label: 'API',\n      key: 'api',\n      weight: 30,\n      components: _ComponentEdit3[\"default\"]\n    }, {\n      label: 'Conditional',\n      key: 'conditional',\n      weight: 40,\n      components: _ComponentEdit[\"default\"]\n    }, {\n      label: 'Logic',\n      key: 'logic',\n      weight: 50,\n      components: _ComponentEdit5[\"default\"]\n    }, {\n      label: 'Layout',\n      key: 'layout',\n      weight: 60,\n      components: _ComponentEdit7[\"default\"]\n    }]\n  }]).concat(extend.map(function (items) {\n    return {\n      type: 'tabs',\n      key: 'tabs',\n      components: _lodash[\"default\"].cloneDeep(items)\n    };\n  }));\n  return {\n    components: _lodash[\"default\"].unionWith(components, _utils[\"default\"].unifyComponents).concat({\n      type: 'hidden',\n      key: 'type'\n    })\n  };\n}\n\n//# sourceURL=webpack://Formio/./lib/components/_classes/component/Component.form.js?");
+eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = _default;\n__webpack_require__(/*! core-js/modules/es.array.concat.js */ \"./node_modules/core-js/modules/es.array.concat.js\");\n__webpack_require__(/*! core-js/modules/es.array.map.js */ \"./node_modules/core-js/modules/es.array.map.js\");\nvar _lodash = _interopRequireDefault(__webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\"));\nvar _ComponentEdit = _interopRequireDefault(__webpack_require__(/*! ./editForm/Component.edit.conditional */ \"./lib/components/_classes/component/editForm/Component.edit.conditional.js\"));\nvar _ComponentEdit2 = _interopRequireDefault(__webpack_require__(/*! ./editForm/Component.edit.data */ \"./lib/components/_classes/component/editForm/Component.edit.data.js\"));\nvar _ComponentEdit3 = _interopRequireDefault(__webpack_require__(/*! ./editForm/Component.edit.api */ \"./lib/components/_classes/component/editForm/Component.edit.api.js\"));\nvar _ComponentEdit4 = _interopRequireDefault(__webpack_require__(/*! ./editForm/Component.edit.display */ \"./lib/components/_classes/component/editForm/Component.edit.display.js\"));\nvar _ComponentEdit5 = _interopRequireDefault(__webpack_require__(/*! ./editForm/Component.edit.logic */ \"./lib/components/_classes/component/editForm/Component.edit.logic.js\"));\nvar _ComponentEdit6 = _interopRequireDefault(__webpack_require__(/*! ./editForm/Component.edit.validation */ \"./lib/components/_classes/component/editForm/Component.edit.validation.js\"));\nvar _ComponentEdit7 = _interopRequireDefault(__webpack_require__(/*! ./editForm/Component.edit.layout */ \"./lib/components/_classes/component/editForm/Component.edit.layout.js\"));\nvar _utils = _interopRequireDefault(__webpack_require__(/*! ./editForm/utils */ \"./lib/components/_classes/component/editForm/utils.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nfunction _default() {\n  for (var _len = arguments.length, extend = new Array(_len), _key = 0; _key < _len; _key++) {\n    extend[_key] = arguments[_key];\n  }\n  var components = _lodash[\"default\"].cloneDeep([{\n    type: 'tabs',\n    key: 'tabs',\n    components: [{\n      label: 'Display',\n      key: 'display',\n      weight: 0,\n      components: _ComponentEdit4[\"default\"]\n    }, {\n      label: 'Data',\n      key: 'data',\n      weight: 10,\n      components: _ComponentEdit2[\"default\"]\n    }, {\n      label: 'Validation',\n      key: 'validation',\n      weight: 20,\n      components: _ComponentEdit6[\"default\"]\n    }, {\n      label: 'API',\n      key: 'api',\n      weight: 30,\n      components: _ComponentEdit3[\"default\"],\n      ignore: true\n    }, {\n      label: 'Conditional',\n      key: 'conditional',\n      weight: 40,\n      components: _ComponentEdit[\"default\"]\n    }, {\n      label: 'Logic',\n      key: 'logic',\n      weight: 50,\n      components: _ComponentEdit5[\"default\"],\n      ignore: true\n    }, {\n      label: 'Layout',\n      key: 'layout',\n      weight: 60,\n      components: _ComponentEdit7[\"default\"]\n    }]\n  }]).concat(extend.map(function (items) {\n    return {\n      type: 'tabs',\n      key: 'tabs',\n      components: _lodash[\"default\"].cloneDeep(items)\n    };\n  }));\n  return {\n    components: _lodash[\"default\"].unionWith(components, _utils[\"default\"].unifyComponents).concat({\n      type: 'hidden',\n      key: 'type'\n    })\n  };\n}\n\n//# sourceURL=webpack://Formio/./lib/components/_classes/component/Component.form.js?");
 
 /***/ }),
 
@@ -346,6 +335,17 @@ eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js *
 
 "use strict";
 eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\n__webpack_require__(/*! core-js/modules/es.array.filter.js */ \"./node_modules/core-js/modules/es.array.filter.js\");\n__webpack_require__(/*! core-js/modules/es.object.to-string.js */ \"./node_modules/core-js/modules/es.object.to-string.js\");\n__webpack_require__(/*! core-js/modules/es.array.splice.js */ \"./node_modules/core-js/modules/es.array.splice.js\");\nvar _lodash = _interopRequireDefault(__webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\"));\nvar _Evaluator = _interopRequireDefault(__webpack_require__(/*! ../../../../utils/Evaluator */ \"./lib/utils/Evaluator.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar EditFormUtils = {\n  sortAndFilterComponents: function sortAndFilterComponents(components) {\n    return _lodash[\"default\"].filter(_lodash[\"default\"].sortBy(components, 'weight'), function (item) {\n      return !item.ignore;\n    });\n  },\n  unifyComponents: function unifyComponents(objValue, srcValue) {\n    if (objValue.key && srcValue.key) {\n      if (objValue.skipMerge || srcValue.skipMerge) {\n        return false;\n      }\n      if (objValue.key === srcValue.key) {\n        // Create complete objects by including missing keys.\n        _lodash[\"default\"].each(objValue, function (value, prop) {\n          if (objValue.overrideEditForm || !srcValue.hasOwnProperty(prop)) {\n            srcValue[prop] = value;\n          }\n        });\n        _lodash[\"default\"].each(srcValue, function (value, prop) {\n          if (srcValue.overrideEditForm || !objValue.hasOwnProperty(prop)) {\n            objValue[prop] = value;\n          }\n        });\n        if (objValue.components) {\n          srcValue.components = EditFormUtils.sortAndFilterComponents(_lodash[\"default\"].unionWith(objValue.components, srcValue.components, EditFormUtils.unifyComponents));\n        }\n        return true;\n      } else {\n        return false;\n      }\n    }\n    return _lodash[\"default\"].isEqual(objValue, srcValue);\n  },\n  logicVariablesTable: function logicVariablesTable(additional) {\n    additional = additional || '';\n    return {\n      type: 'htmlelement',\n      tag: 'div',\n      /* eslint-disable prefer-template */\n      content: '<p>The following variables are available in all scripts.</p>' + '<table class=\"table table-bordered table-condensed table-striped\">' + additional + '<tr><th>form</th><td>The complete form JSON object</td></tr>' + '<tr><th>submission</th><td>The complete submission object.</td></tr>' + '<tr><th>data</th><td>The complete submission data object.</td></tr>' + '<tr><th>row</th><td>Contextual \"row\" data, used within DataGrid, EditGrid, and Container components</td></tr>' + '<tr><th>component</th><td>The current component JSON</td></tr>' + '<tr><th>instance</th><td>The current component instance.</td></tr>' + '<tr><th>value</th><td>The current value of the component.</td></tr>' + '<tr><th>moment</th><td>The moment.js library for date manipulation.</td></tr>' + '<tr><th>_</th><td>An instance of <a href=\"https://lodash.com/docs/\" target=\"_blank\" rel=\"noopener noreferrer\">Lodash</a>.</td></tr>' + '<tr><th>utils</th><td>An instance of the <a href=\"http://formio.github.io/formio.js/docs/identifiers.html#utils\" target=\"_blank\" rel=\"noopener noreferrer\">FormioUtils</a> object.</td></tr>' + '<tr><th>util</th><td>An alias for \"utils\".</td></tr>' + '</table><br/>'\n      /* eslint-enable prefer-template */\n    };\n  },\n  javaScriptValue: function javaScriptValue(title, property, propertyJSON, weight, exampleHTML, exampleJSON) {\n    var additionalParams = arguments.length > 6 && arguments[6] !== undefined ? arguments[6] : '';\n    var excludeJSONLogic = arguments.length > 7 ? arguments[7] : undefined;\n    var components = [this.logicVariablesTable(additionalParams), {\n      type: 'panel',\n      title: 'JavaScript',\n      collapsible: true,\n      collapsed: false,\n      style: {\n        'margin-bottom': '10px'\n      },\n      key: \"\".concat(property, \"-js\"),\n      customConditional: function customConditional() {\n        return !_Evaluator[\"default\"].noeval || _Evaluator[\"default\"].protectedEval;\n      },\n      components: [{\n        type: 'textarea',\n        key: property,\n        rows: 5,\n        editor: 'ace',\n        hideLabel: true,\n        as: 'javascript',\n        input: true\n      }, {\n        type: 'htmlelement',\n        tag: 'div',\n        content: \"<p>Enter custom javascript code.</p>\".concat(exampleHTML)\n      }]\n    }, {\n      type: 'panel',\n      title: 'JSONLogic',\n      collapsible: true,\n      collapsed: true,\n      key: \"\".concat(property, \"-json\"),\n      components: [{\n        type: 'htmlelement',\n        tag: 'div',\n        /* eslint-disable prefer-template */\n        content: '<p>Execute custom logic using <a href=\"http://jsonlogic.com/\" target=\"_blank\" rel=\"noopener noreferrer\">JSONLogic</a>.</p>' + '<p>Full <a href=\"https://lodash.com/docs\" target=\"_blank\" rel=\"noopener noreferrer\">Lodash</a> support is provided using an \"_\" before each operation, such as <code>{\"_sum\": {var: \"data.a\"}}</code></p>' + exampleJSON\n        /* eslint-enable prefer-template */\n      }, {\n        type: 'textarea',\n        key: propertyJSON,\n        rows: 5,\n        editor: 'ace',\n        hideLabel: true,\n        as: 'json',\n        input: true\n      }]\n    }];\n    if (excludeJSONLogic) {\n      components.splice(2, 1);\n    }\n    return {\n      type: 'panel',\n      title: title,\n      theme: 'default',\n      collapsible: true,\n      collapsed: true,\n      key: \"\".concat(property, \"Panel\"),\n      weight: weight,\n      components: components\n    };\n  }\n};\nvar _default = EditFormUtils;\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/components/_classes/component/editForm/utils.js?");
+
+/***/ }),
+
+/***/ "./lib/components/_classes/componentModal/ComponentModal.js":
+/*!******************************************************************!*\
+  !*** ./lib/components/_classes/componentModal/ComponentModal.js ***!
+  \******************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\n__webpack_require__(/*! core-js/modules/es.object.keys.js */ \"./node_modules/core-js/modules/es.object.keys.js\");\n__webpack_require__(/*! core-js/modules/es.array.filter.js */ \"./node_modules/core-js/modules/es.array.filter.js\");\n__webpack_require__(/*! core-js/modules/es.object.get-own-property-descriptor.js */ \"./node_modules/core-js/modules/es.object.get-own-property-descriptor.js\");\n__webpack_require__(/*! core-js/modules/es.array.for-each.js */ \"./node_modules/core-js/modules/es.array.for-each.js\");\n__webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ \"./node_modules/core-js/modules/web.dom-collections.for-each.js\");\n__webpack_require__(/*! core-js/modules/es.object.get-own-property-descriptors.js */ \"./node_modules/core-js/modules/es.object.get-own-property-descriptors.js\");\n__webpack_require__(/*! core-js/modules/es.object.define-properties.js */ \"./node_modules/core-js/modules/es.object.define-properties.js\");\n__webpack_require__(/*! core-js/modules/es.symbol.iterator.js */ \"./node_modules/core-js/modules/es.symbol.iterator.js\");\n__webpack_require__(/*! core-js/modules/es.array.iterator.js */ \"./node_modules/core-js/modules/es.array.iterator.js\");\n__webpack_require__(/*! core-js/modules/es.string.iterator.js */ \"./node_modules/core-js/modules/es.string.iterator.js\");\n__webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ \"./node_modules/core-js/modules/web.dom-collections.iterator.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\n__webpack_require__(/*! core-js/modules/es.function.bind.js */ \"./node_modules/core-js/modules/es.function.bind.js\");\n__webpack_require__(/*! core-js/modules/es.array.concat.js */ \"./node_modules/core-js/modules/es.array.concat.js\");\n__webpack_require__(/*! core-js/modules/es.symbol.to-primitive.js */ \"./node_modules/core-js/modules/es.symbol.to-primitive.js\");\n__webpack_require__(/*! core-js/modules/es.date.to-primitive.js */ \"./node_modules/core-js/modules/es.date.to-primitive.js\");\n__webpack_require__(/*! core-js/modules/es.symbol.js */ \"./node_modules/core-js/modules/es.symbol.js\");\n__webpack_require__(/*! core-js/modules/es.symbol.description.js */ \"./node_modules/core-js/modules/es.symbol.description.js\");\n__webpack_require__(/*! core-js/modules/es.object.to-string.js */ \"./node_modules/core-js/modules/es.object.to-string.js\");\n__webpack_require__(/*! core-js/modules/es.number.constructor.js */ \"./node_modules/core-js/modules/es.number.constructor.js\");\nvar _lodash = _interopRequireDefault(__webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\"));\nvar _utils = __webpack_require__(/*! ../../../utils/utils */ \"./lib/utils/utils.js\");\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nfunction _typeof(obj) { \"@babel/helpers - typeof\"; return _typeof = \"function\" == typeof Symbol && \"symbol\" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && \"function\" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }, _typeof(obj); }\nfunction ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }\nfunction _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, \"prototype\", { writable: false }); return Constructor; }\nfunction _toPropertyKey(arg) { var key = _toPrimitive(arg, \"string\"); return _typeof(key) === \"symbol\" ? key : String(key); }\nfunction _toPrimitive(input, hint) { if (_typeof(input) !== \"object\" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || \"default\"); if (_typeof(res) !== \"object\") return res; throw new TypeError(\"@@toPrimitive must return a primitive value.\"); } return (hint === \"string\" ? String : Number)(input); }\nvar ComponentModal = /*#__PURE__*/function () {\n  function ComponentModal(component, element, isOpened, currentValue) {\n    _classCallCheck(this, ComponentModal);\n    this.isOpened = isOpened;\n    this.component = component;\n    this.element = element;\n    this.currentValue = (0, _utils.fastCloneDeep)(currentValue !== null && currentValue !== void 0 ? currentValue : this.component.getValue());\n    this.dataLoaded = false;\n    this.init();\n  }\n  _createClass(ComponentModal, [{\n    key: \"refs\",\n    get: function get() {\n      return this.component.refs;\n    }\n  }, {\n    key: \"init\",\n    value: function init() {\n      var _this = this;\n      this.openModalListener = this.openModalHandler.bind(this);\n      this.showDialogListener = function (event) {\n        if (_this.isValueChanged() && !_this.component.disabled) {\n          _this.showDialog();\n        } else {\n          _this.closeModalHandler(event);\n        }\n      };\n      this.closeModalListener = this.closeModalHandler.bind(this);\n      this.saveModalListener = this.saveModalValueHandler.bind(this);\n      this.closeDialogListener = this.closeDialog.bind(this);\n      this.saveDialogListener = this.saveDialog.bind(this);\n      this.loadRefs();\n    }\n  }, {\n    key: \"setValue\",\n    value: function setValue(value) {\n      if (this.dataLoaded && this.currentValue === value) {\n        return;\n      }\n      this.currentValue = (0, _utils.fastCloneDeep)(value);\n      this.dataLoaded = true;\n      this.updateView();\n    }\n  }, {\n    key: \"setOpenModalElement\",\n    value: function setOpenModalElement(template) {\n      var _this$component;\n      if ((_this$component = this.component) !== null && _this$component !== void 0 && _this$component.visible) {\n        this.openModalTemplate = template;\n        this.component.setContent(this.refs.openModalWrapper, template);\n        this.loadRefs();\n        this.setEventListeners();\n        if (this.isOpened) {\n          this.refs.modalWrapper.classList.add('formio-dialog-disabled-animation');\n          this.openModal();\n        }\n      }\n    }\n  }, {\n    key: \"templateRefs\",\n    get: function get() {\n      return {\n        modalOverlay: 'single',\n        modalContents: 'single',\n        modalClose: 'single',\n        openModalWrapper: 'single',\n        openModal: 'single',\n        modalSave: 'single',\n        modalWrapper: 'single'\n      };\n    }\n  }, {\n    key: \"loadRefs\",\n    value: function loadRefs() {\n      this.component.loadRefs(this.element, this.templateRefs);\n    }\n  }, {\n    key: \"removeEventListeners\",\n    value: function removeEventListeners() {\n      this.component.removeEventListener(this.refs.openModal, 'click', this.openModalListener);\n      this.component.removeEventListener(this.refs.modalOverlay, 'click', this.refs.modalSave ? this.showDialogListener : this.saveModalListener);\n      this.component.removeEventListener(this.refs.modalClose, 'click', this.showDialogListener);\n      this.component.removeEventListener(this.refs.modalSave, 'click', this.saveModalListener);\n    }\n  }, {\n    key: \"setEventListeners\",\n    value: function setEventListeners() {\n      this.removeEventListeners();\n      this.component.addEventListener(this.refs.openModal, 'click', this.openModalListener);\n      this.component.addEventListener(this.refs.modalOverlay, 'click', this.refs.modalSave ? this.showDialogListener : this.saveModalListener);\n      this.component.addEventListener(this.refs.modalClose, 'click', this.showDialogListener);\n      this.component.addEventListener(this.refs.modalSave, 'click', this.saveModalListener);\n    }\n  }, {\n    key: \"isValueChanged\",\n    value: function isValueChanged() {\n      var componentValue = this.component.getValue();\n      var currentValue = this.currentValue;\n\n      //excluding metadata comparison for components that have it in dataValue (for ex. nested forms)\n      if (componentValue && componentValue.data && componentValue.metadata) {\n        componentValue = this.component.getValue().data;\n        currentValue = this.currentValue.data;\n      }\n      return !_lodash[\"default\"].isEqual((0, _utils.fastCloneDeep)(componentValue), currentValue);\n    }\n  }, {\n    key: \"setOpenEventListener\",\n    value: function setOpenEventListener() {\n      var _this$refs$openModalW;\n      this.component.removeEventListener(this.refs.openModal, 'click', this.openModalListener);\n      this.component.loadRefs((_this$refs$openModalW = this.refs.openModalWrapper) !== null && _this$refs$openModalW !== void 0 ? _this$refs$openModalW : this.element, {\n        'openModal': 'single'\n      });\n      this.component.addEventListener(this.refs.openModal, 'click', this.openModalListener);\n    }\n  }, {\n    key: \"openModalHandler\",\n    value: function openModalHandler(event) {\n      event.preventDefault();\n      this.openModal();\n    }\n  }, {\n    key: \"positionOverElement\",\n    value: function positionOverElement() {\n      // Position the modal just over the element on the page.\n      var elementOffset = this.element.getBoundingClientRect().top;\n      var modalHeight = this.refs.modalContents.getBoundingClientRect().height;\n      var modalTop = elementOffset - modalHeight - 10;\n      modalTop = modalTop > 0 ? modalTop : 10;\n      this.refs.modalWrapper.style.paddingTop = \"\".concat(modalTop, \"px\");\n    }\n  }, {\n    key: \"openModal\",\n    value: function openModal() {\n      this.isOpened = true;\n      this.refs.modalWrapper.classList.remove('component-rendering-hidden');\n      if (this.component.component.type === 'signature') {\n        // Position signature modals just above the signature button.\n        this.positionOverElement();\n      }\n    }\n  }, {\n    key: \"updateView\",\n    value: function updateView() {\n      var template = _lodash[\"default\"].isEqual(this.currentValue, this.component.defaultValue) ? this.openModalTemplate : this.component.getModalPreviewTemplate();\n      this.component.setContent(this.refs.openModalWrapper, template);\n      this.setOpenEventListener();\n    }\n  }, {\n    key: \"closeModal\",\n    value: function closeModal() {\n      this.refs.modalWrapper.classList.remove('formio-dialog-disabled-animation');\n      this.refs.modalWrapper.classList.add('component-rendering-hidden');\n      this.isOpened = false;\n      this.updateView();\n    }\n  }, {\n    key: \"closeModalHandler\",\n    value: function closeModalHandler(event) {\n      event.preventDefault();\n      if (!this.component.disabled) {\n        this.component.setValue(_lodash[\"default\"].cloneDeep(this.currentValue), {\n          resetValue: true\n        });\n      }\n      this.closeModal();\n    }\n  }, {\n    key: \"showDialog\",\n    value: function showDialog() {\n      this.dialogElement = this.component.ce('div');\n      var dialogContent = \"\\n      <h3 ref=\\\"dialogHeader\\\">\".concat(this.component.t('Do you want to clear changes?'), \"</h3>\\n      <div style=\\\"display:flex; justify-content: flex-end;\\\">\\n        <button ref=\\\"dialogCancelButton\\\" class=\\\"btn btn-secondary\\\">\").concat(this.component.t('Cancel'), \"</button>\\n        <button ref=\\\"dialogYesButton\\\" class=\\\"btn btn-danger\\\">\").concat(this.component.t('Yes, delete it'), \"</button>\\n      </div>\\n    \");\n      this.dialogElement.innerHTML = dialogContent;\n      this.dialogElement.refs = {};\n      this.component.loadRefs.call(this.dialogElement, this.dialogElement, {\n        dialogHeader: 'single',\n        dialogCancelButton: 'single',\n        dialogYesButton: 'single'\n      });\n      this.dialog = this.component.createModal(this.dialogElement);\n      this.component.addEventListener(this.dialogElement.refs.dialogYesButton, 'click', this.saveDialogListener);\n      this.component.addEventListener(this.dialogElement.refs.dialogCancelButton, 'click', this.closeDialogListener);\n    }\n  }, {\n    key: \"closeDialog\",\n    value: function closeDialog(event) {\n      event.preventDefault();\n      this.dialog.close();\n      this.component.removeEventListener(this.dialogElement.refs.dialogYesButton, 'click', this.saveDialogListener);\n      this.component.removeEventListener(this.dialogElement.refs.dialogCancelButton, 'click', this.closeDialogListener);\n    }\n  }, {\n    key: \"saveDialog\",\n    value: function saveDialog(event) {\n      this.closeDialog(event);\n      this.closeModalHandler(event);\n    }\n  }, {\n    key: \"saveModalValueHandler\",\n    value: function saveModalValueHandler(event) {\n      var _this$component$dataV;\n      event.preventDefault();\n      this.currentValue = (0, _utils.fastCloneDeep)((_this$component$dataV = this.component.dataValue) !== null && _this$component$dataV !== void 0 ? _this$component$dataV : this.component.getValue());\n      this.closeModal();\n    }\n  }], [{\n    key: \"render\",\n    value: function render(component, data, topLevel) {\n      var children = component.renderTemplate('component', data, topLevel);\n      return component.renderTemplate('componentModal', _objectSpread(_objectSpread({}, data), {}, {\n        children: children\n      }));\n    }\n  }]);\n  return ComponentModal;\n}();\nexports[\"default\"] = ComponentModal;\n\n//# sourceURL=webpack://Formio/./lib/components/_classes/componentModal/ComponentModal.js?");
 
 /***/ }),
 
@@ -2734,290 +2734,6 @@ eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js *
 
 /***/ }),
 
-/***/ "./lib/templates/bootstrap5/builderSidebarGroup/form.ejs.js":
-/*!******************************************************************!*\
-  !*** ./lib/templates/bootstrap5/builderSidebarGroup/form.ejs.js ***!
-  \******************************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<div class=\"card form-builder-panel\" ref=\"group-panel-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\">\\n  <div class=\"card-header form-builder-group-header\" id=\"heading-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\">\\n    <h5 class=\"mb-0 mt-0 d-grid\">\\n      <button\\n        class=\"btn builder-group-button\"\\n        type=\"button\"\\n        data-toggle=\"collapse\"\\n        data-target=\"#group-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\"\\n        data-parent=\"#' +\n((__t = (ctx.groupId)) == null ? '' : __t) +\n'\"\\n        aria-expanded=\"' +\n((__t = (ctx.group.default)) == null ? '' : __t) +\n'\"\\n        aria-controls=\"group-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\"\\n        ref=\"sidebar-anchor\"\\n      >\\n        ' +\n((__t = (ctx.t(ctx.group.title, { _userInput: true }))) == null ? '' : __t) +\n'\\n      </button>\\n    </h5>\\n  </div>\\n  <div\\n    id=\"group-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\"\\n    class=\"collapse ' +\n((__t = (ctx.group.default ? ' show' : '')) == null ? '' : __t) +\n'\"\\n    data-parent=\"#' +\n((__t = (ctx.groupId)) == null ? '' : __t) +\n'\"\\n    data-default=\"' +\n((__t = (ctx.group.default)) == null ? '' : __t) +\n'\"\\n    aria-labelledby=\"heading-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\"\\n    ref=\"sidebar-group\"\\n  >\\n    <div id=\"group-container-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\" class=\"d-grid gap-1 no-drop p-2 w-100\" ref=\"sidebar-container\">\\n      ';\n if (ctx.group.componentOrder.length || ctx.subgroups.length) { ;\n__p += '\\n        ';\n !ctx.group.componentOrder || ctx.group.componentOrder.forEach(function(componentKey) { ;\n__p += '\\n          <span\\n            data-group=\"' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\"\\n            data-key=\"' +\n((__t = (ctx.group.components[componentKey].key)) == null ? '' : __t) +\n'\"\\n            data-type=\"' +\n((__t = (ctx.group.components[componentKey].schema.type)) == null ? '' : __t) +\n'\"\\n            class=\"btn btn-primary btn-sm formcomponent drag-copy m-0\"\\n          >\\n            ';\n if (ctx.group.components[componentKey].icon) { ;\n__p += '\\n              <i class=\"' +\n((__t = (ctx.iconClass(ctx.group.components[componentKey].icon))) == null ? '' : __t) +\n'\" style=\"margin-right: 5px;\"></i>\\n            ';\n } ;\n__p += '\\n            ' +\n((__t = (ctx.t(ctx.group.components[componentKey].title, { _userInput: true }))) == null ? '' : __t) +\n'\\n          </span>\\n        ';\n }) ;\n__p += '\\n        ' +\n((__t = (ctx.subgroups.join(''))) == null ? '' : __t) +\n'\\n      ';\n } else { ;\n__p += '\\n        <div>' +\n((__t = (ctx.t('No Matches Found'))) == null ? '' : __t) +\n'</div>\\n      ';\n } ;\n__p += '\\n    </div>\\n  </div>\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/builderSidebarGroup/form.ejs.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap5/builderSidebarGroup/index.js":
-/*!***************************************************************!*\
-  !*** ./lib/templates/bootstrap5/builderSidebarGroup/index.js ***!
-  \***************************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap5/builderSidebarGroup/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/builderSidebarGroup/index.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap5/builderSidebar/form.ejs.js":
-/*!*************************************************************!*\
-  !*** ./lib/templates/bootstrap5/builderSidebar/form.ejs.js ***!
-  \*************************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<div id=\"' +\n((__t = (ctx.groupId)) == null ? '' : __t) +\n'\" class=\"accordion builder-sidebar' +\n((__t = (ctx.scrollEnabled ? ' builder-sidebar_scroll' : '')) == null ? '' : __t) +\n'\" ref=\"sidebar\" role=\"tablist\">\\n  <input class=\"form-control builder-sidebar_search\" type=\"search\" ref=\"sidebar-search\" placeholder=\"Search field(s)\" />\\n    ';\n ctx.groups.forEach(function(group) { ;\n__p += '\\n      ' +\n((__t = ( group )) == null ? '' : __t) +\n'\\n    ';\n }) ;\n__p += '\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/builderSidebar/form.ejs.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap5/builderSidebar/index.js":
-/*!**********************************************************!*\
-  !*** ./lib/templates/bootstrap5/builderSidebar/index.js ***!
-  \**********************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap5/builderSidebar/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/builderSidebar/index.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap5/builderWizard/form.ejs.js":
-/*!************************************************************!*\
-  !*** ./lib/templates/bootstrap5/builderWizard/form.ejs.js ***!
-  \************************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<div class=\"formio builder row formbuilder\">\\n  <div class=\"col-xs-4 col-sm-3 col-md-2 formcomponents\">\\n    ' +\n((__t = (ctx.sidebar)) == null ? '' : __t) +\n'\\n  </div>\\n  <div class=\"col-xs-8 col-sm-9 col-md-10 formarea\">\\n    <ol class=\"breadcrumb wizard-pages\">\\n      ';\n ctx.pages.forEach(function(page, pageIndex) { ;\n__p += '\\n      <li>\\n        <span title=\"' +\n((__t = (page.title)) == null ? '' : __t) +\n'\" class=\"me-2 badge ';\n if (pageIndex === ctx.self.page) { ;\n__p += 'bg-primary';\n } else { ;\n__p += 'bg-info';\n } ;\n__p += ' wizard-page-label\" ref=\"gotoPage\">' +\n((__t = (page.title)) == null ? '' : __t) +\n'</span>\\n      </li>\\n      ';\n }) ;\n__p += '\\n      <li class=\"wizard-add-page\">\\n        <span title=\"' +\n((__t = (ctx.t('Create Page'))) == null ? '' : __t) +\n'\" class=\"me-2 badge bg-success wizard-page-label\" ref=\"addPage\">\\n          <i class=\"' +\n((__t = (ctx.iconClass('plus'))) == null ? '' : __t) +\n'\"></i> ' +\n((__t = (ctx.t('Page'))) == null ? '' : __t) +\n'\\n        </span>\\n      </li>\\n    </ol>\\n    <div ref=\"form\">\\n      ' +\n((__t = (ctx.form)) == null ? '' : __t) +\n'\\n    </div>\\n  </div>\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/builderWizard/form.ejs.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap5/builderWizard/index.js":
-/*!*********************************************************!*\
-  !*** ./lib/templates/bootstrap5/builderWizard/index.js ***!
-  \*********************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap5/builderWizard/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/builderWizard/index.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap5/componentModal/form.ejs.js":
-/*!*************************************************************!*\
-  !*** ./lib/templates/bootstrap5/componentModal/form.ejs.js ***!
-  \*************************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<div class=\"formio-component-modal-wrapper formio-component-modal-wrapper-' +\n((__t = ( ctx.component.type )) == null ? '' : __t) +\n'\" ref=\"componentModalWrapper\">\\n  <div ref=\"openModalWrapper\"></div>\\n  <div class=\"formio-dialog formio-dialog-theme-default component-rendering-hidden\" ref=\"modalWrapper\">\\n    <div class=\"formio-dialog-overlay\" ref=\"modalOverlay\"></div>\\n    <div class=\"formio-dialog-content\" aria-labelledby=\"ml-' +\n((__t = (ctx.instance.id)) == null ? '' : __t) +\n'-' +\n((__t = (ctx.component.key)) == null ? '' : __t) +\n'\" ';\n if (!ctx.self.isIE()) { ;\n__p += ' role=\"dialog\" ';\n } ;\n__p += ' ref=\"modalContents\">\\n      <label class=\"visually-hidden\" id=\"ml-' +\n((__t = (ctx.instance.id)) == null ? '' : __t) +\n'-' +\n((__t = (ctx.component.key)) == null ? '' : __t) +\n'\">' +\n((__t = ( ctx.t(ctx.component.label) )) == null ? '' : __t) +\n'' +\n((__t = (ctx.self.isIE() ? ', dialog' : '')) == null ? '' : __t) +\n'</label>\\n      ';\n if (ctx.options.vpat) { ;\n__p += '\\n      <button class=\"formio-dialog-close float-end\" title=\"Close\" aria-label=\"Close button. Click to get back to the form\" ref=\"modalCloseButton\"></button>\\n      ';\n } else { ;\n__p += '\\n      <button class=\"formio-dialog-close float-end btn btn-secondary btn-sm\" aria-label=\"Close button. Click to get back to the form\" ref=\"modalClose\"></button>\\n      ';\n } ;\n__p += '\\n      <div ref=\"modalContents\">\\n        ';\n if (ctx.visible) { ;\n__p += '\\n        ' +\n((__t = (ctx.children)) == null ? '' : __t) +\n'\\n        ';\n } ;\n__p += '\\n        <div class=\"formio-dialog-buttons\">\\n          ';\n if (ctx.options.vpat) { ;\n__p += '\\n          <button class=\"btn btn-secondary formio-dialog-button\" aria-label=\"Cancel button. Click to cancel the changes and get back to the form.\" ref=\"modalClose\">' +\n((__t = (ctx.t('Cancel'))) == null ? '' : __t) +\n'</button>\\n          ';\n } ;\n__p += '\\n          <button class=\"btn btn-success formio-dialog-button\" ref=\"modalSave\" aria-label=\"Save button. Click to save the changes and get back to the form.\">' +\n((__t = (ctx.t('Save'))) == null ? '' : __t) +\n'</button>\\n        </div>\\n      </div>\\n    </div>\\n    <span class=\"visually-hidden\" ref=\"modalLiveRegion\" aria-live=\"assertive\"></span>\\n  </div>\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/componentModal/form.ejs.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap5/componentModal/index.js":
-/*!**********************************************************!*\
-  !*** ./lib/templates/bootstrap5/componentModal/index.js ***!
-  \**********************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap5/componentModal/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/componentModal/index.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap5/cssClasses.js":
-/*!************************************************!*\
-  !*** ./lib/templates/bootstrap5/cssClasses.js ***!
-  \************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _default = {\n  'form-group': 'formio-form-group'\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/cssClasses.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap5/datagrid/form.ejs.js":
-/*!*******************************************************!*\
-  !*** ./lib/templates/bootstrap5/datagrid/form.ejs.js ***!
-  \*******************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<table class=\"table datagrid-table table-bordered\\n    ' +\n((__t = ( ctx.component.striped ? 'table-striped' : '')) == null ? '' : __t) +\n'\\n    ' +\n((__t = ( ctx.component.hover ? 'table-hover' : '')) == null ? '' : __t) +\n'\\n    ' +\n((__t = ( ctx.component.condensed ? 'table-sm' : '')) == null ? '' : __t) +\n'\\n    \" ';\n if (ctx.component.layoutFixed) { ;\n__p += 'style=\"table-layout: fixed;\"';\n } ;\n__p += '>\\n  ';\n if (ctx.hasHeader) { ;\n__p += '\\n  <thead>\\n    <tr>\\n      ';\n if (ctx.component.reorder) { ;\n__p += '<th></th>';\n } ;\n__p += '\\n      ';\n ctx.columns.forEach(function(col) { ;\n__p += '\\n        <th class=\"' +\n((__t = (col.validate && col.validate.required ? 'field-required' : '')) == null ? '' : __t) +\n'\">\\n          ' +\n((__t = ( col.hideLabel ? '' : ctx.t(col.label || col.title, { _userInput: true }) )) == null ? '' : __t) +\n'\\n          ';\n if (col.tooltip) { ;\n__p += ' <i ref=\"tooltip\" tabindex=\"0\" data-title=\"' +\n((__t = (col.tooltip)) == null ? '' : __t) +\n'\" class=\"' +\n((__t = (ctx.iconClass('question-sign'))) == null ? '' : __t) +\n' text-muted\" data-tooltip=\"' +\n((__t = (col.tooltip)) == null ? '' : __t) +\n'\"></i>';\n } ;\n__p += '\\n        </th>\\n      ';\n }) ;\n__p += '\\n      ';\n if (ctx.hasExtraColumn) { ;\n__p += '\\n      <th>\\n        <span class=\"visually-hidden\">' +\n((__t = ( ctx.t('Add/Remove') )) == null ? '' : __t) +\n'</span>\\n        ';\n if (!ctx.builder && ctx.hasAddButton && ctx.hasTopSubmit) { ;\n__p += '\\n        <button class=\"btn btn-primary formio-button-add-row\" ref=\"' +\n((__t = (ctx.datagridKey)) == null ? '' : __t) +\n'-addRow\" tabindex=\"' +\n((__t = (ctx.tabIndex)) == null ? '' : __t) +\n'\">\\n          <i class=\"' +\n((__t = (ctx.iconClass('plus'))) == null ? '' : __t) +\n'\"></i>' +\n((__t = (ctx.t(ctx.component.addAnother || 'Add Another', { _userInput: true }))) == null ? '' : __t) +\n'\\n        </button>\\n        ';\n } ;\n__p += '\\n      </th>\\n      ';\n } ;\n__p += '\\n    </tr>\\n  </thead>\\n  ';\n } ;\n__p += '\\n  <tbody ref=\"' +\n((__t = (ctx.datagridKey)) == null ? '' : __t) +\n'-tbody\" data-key=\"' +\n((__t = (ctx.datagridKey)) == null ? '' : __t) +\n'\">\\n    ';\n ctx.rows.forEach(function(row, index) { ;\n__p += '\\n    ';\n if (ctx.hasGroups && ctx.groups[index]) { ;\n__p += '\\n    <tr ref=\"' +\n((__t = (ctx.datagridKey)) == null ? '' : __t) +\n'-group-header\" class=\"datagrid-group-header' +\n((__t = (ctx.hasToggle ? ' clickable' : '')) == null ? '' : __t) +\n'\">\\n      <td\\n        ref=\"' +\n((__t = (ctx.datagridKey)) == null ? '' : __t) +\n'-group-label\"\\n        colspan=\"' +\n((__t = (ctx.numColumns)) == null ? '' : __t) +\n'\"\\n        class=\"datagrid-group-label\">' +\n((__t = (ctx.groups[index].label)) == null ? '' : __t) +\n'</td>\\n    </tr>\\n    ';\n } ;\n__p += '\\n    <tr ref=\"' +\n((__t = (ctx.datagridKey)) == null ? '' : __t) +\n'-row\">\\n      ';\n if (ctx.component.reorder) { ;\n__p += '\\n        <td>\\n          <button type=\"button\" class=\"formio-drag-button btn btn-default fa fa-bars\" data-key=\"' +\n((__t = (ctx.datagridKey)) == null ? '' : __t) +\n'\"></button>\\n        </td>\\n      ';\n } ;\n__p += '\\n      ';\n ctx.columns.forEach(function(col) { ;\n__p += '\\n        <td ref=\"' +\n((__t = (ctx.datagridKey)) == null ? '' : __t) +\n'\" ';\n if (col.key && col.overlay && col.overlay.width) { ;\n__p += ' style=\"width: ' +\n((__t = (col.overlay.width + 'px')) == null ? '' : __t) +\n'\"';\n } ;\n__p += ' >\\n          ' +\n((__t = (row[col.key])) == null ? '' : __t) +\n'\\n        </td>\\n      ';\n }) ;\n__p += '\\n      ';\n if (ctx.hasExtraColumn) { ;\n__p += '\\n        ';\n if (ctx.hasRemoveButtons) { ;\n__p += '\\n        <td>\\n          <button type=\"button\" class=\"btn btn-secondary formio-button-remove-row\" ref=\"' +\n((__t = (ctx.datagridKey)) == null ? '' : __t) +\n'-removeRow\" tabindex=\"' +\n((__t = (ctx.tabIndex)) == null ? '' : __t) +\n'\" aria-label=\"' +\n((__t = (ctx.t('remove'))) == null ? '' : __t) +\n'\">\\n            <i class=\"' +\n((__t = (ctx.iconClass('remove-circle'))) == null ? '' : __t) +\n'\"></i>\\n          </button>\\n        </td>\\n        ';\n } ;\n__p += '\\n        ';\n if (ctx.canAddColumn) { ;\n__p += '\\n        <td ref=\"' +\n((__t = (ctx.key)) == null ? '' : __t) +\n'-container\">\\n          ' +\n((__t = (ctx.placeholder)) == null ? '' : __t) +\n'\\n        </td>\\n        ';\n } ;\n__p += '\\n      ';\n } ;\n__p += '\\n    </tr>\\n    ';\n }) ;\n__p += '\\n  </tbody>\\n  ';\n if (!ctx.builder && ctx.hasAddButton && ctx.hasBottomSubmit) { ;\n__p += '\\n  <tfoot>\\n    <tr>\\n      <td colspan=\"' +\n((__t = (ctx.component.layoutFixed ? ctx.numColumns :  ctx.numColumns + 1)) == null ? '' : __t) +\n'\">\\n        <button class=\"btn btn-primary formio-button-add-row\" ref=\"' +\n((__t = (ctx.datagridKey)) == null ? '' : __t) +\n'-addRow\" tabindex=\"' +\n((__t = (ctx.tabIndex)) == null ? '' : __t) +\n'\">\\n          <i class=\"' +\n((__t = (ctx.iconClass('plus'))) == null ? '' : __t) +\n'\"></i> ' +\n((__t = (ctx.t(ctx.component.addAnother || 'Add Another', { _userInput: true }))) == null ? '' : __t) +\n'\\n        </button>\\n      </td>\\n    </tr>\\n  </tfoot>\\n  ';\n } ;\n__p += '\\n</table>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/datagrid/form.ejs.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap5/datagrid/index.js":
-/*!****************************************************!*\
-  !*** ./lib/templates/bootstrap5/datagrid/index.js ***!
-  \****************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap5/datagrid/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/datagrid/index.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap5/dialog/form.ejs.js":
-/*!*****************************************************!*\
-  !*** ./lib/templates/bootstrap5/dialog/form.ejs.js ***!
-  \*****************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '';\n__p += '<div class=\"formio-dialog formio-dialog-theme-default component-settings\">\\n  <div class=\"formio-dialog-overlay\" ref=\"dialogOverlay\"></div>\\n  <div class=\"formio-dialog-content\" ref=\"dialogContents\" role=\"dialog\">\\n    <div ref=\"dialogContents\"></div>\\n    <button class=\"formio-dialog-close float-end btn-sm\" aria-label=\"Close modal window.\" ref=\"dialogClose\"></button>\\n  </div>\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/dialog/form.ejs.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap5/dialog/index.js":
-/*!**************************************************!*\
-  !*** ./lib/templates/bootstrap5/dialog/index.js ***!
-  \**************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap5/dialog/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/dialog/index.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap5/file/form.ejs.js":
-/*!***************************************************!*\
-  !*** ./lib/templates/bootstrap5/file/form.ejs.js ***!
-  \***************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n\n if (ctx.options.vpat) { ;\n__p += '\\n  <span tabindex=\"-1\" class=\"visually-hidden\" id=\"invisible-' +\n((__t = (ctx.instance.id)) == null ? '' : __t) +\n'-' +\n((__t = (ctx.component.key)) == null ? '' : __t) +\n'\"></span>\\n';\n } ;\n__p += '\\n';\n if (!ctx.self.imageUpload) { ;\n__p += '\\n  ';\n if (ctx.options.vpat) { ;\n__p += '\\n    <div>' +\n((__t = ((!ctx.component.filePattern || ctx.component.filePattern === '*') ? 'Any file types are allowed' : ctx.t('Allowed file types: ') + ctx.component.filePattern)) == null ? '' : __t) +\n'</div>\\n  ';\n } ;\n__p += '\\n  <ul class=\"list-group list-group-striped\">\\n    <li class=\"list-group-item list-group-header hidden-xs hidden-sm\">\\n      <div class=\"row\">\\n        ';\n if (!ctx.disabled) { ;\n__p += '\\n          <div class=\"col-md-1\"></div>\\n        ';\n } ;\n__p += '\\n        <div class=\"col-md-';\n if (ctx.self.hasTypes) { ;\n__p += '7';\n } else { ;\n__p += '9';\n } ;\n__p += '\"><strong>' +\n((__t = (ctx.t('File Name'))) == null ? '' : __t) +\n'</strong></div>\\n        <div class=\"col-md-2\"><strong>' +\n((__t = (ctx.t('Size'))) == null ? '' : __t) +\n'</strong></div>\\n        ';\n if (ctx.self.hasTypes) { ;\n__p += '\\n          <div class=\"col-md-2\"><strong>' +\n((__t = (ctx.t('Type'))) == null ? '' : __t) +\n'</strong></div>\\n        ';\n } ;\n__p += '\\n      </div>\\n    </li>\\n    ';\n ctx.files.forEach(function(file) { ;\n__p += '\\n      <li class=\"list-group-item\">\\n        <div class=\"row\">\\n          ';\n if (!ctx.disabled) { ;\n__p += '\\n            <div class=\"col-md-1\"><i tabindex=\"0\" class=\"' +\n((__t = (ctx.iconClass('remove'))) == null ? '' : __t) +\n'\" ref=\"removeLink\"></i></div>\\n          ';\n } ;\n__p += '\\n          <div class=\"col-md-';\n if (ctx.self.hasTypes) { ;\n__p += '7';\n } else { ;\n__p += '9';\n } ;\n__p += '\">\\n            ';\n if (ctx.component.uploadOnly) { ;\n__p += '\\n              ' +\n((__t = (file.originalName || file.name)) == null ? '' : __t) +\n'\\n            ';\n } else { ;\n__p += '\\n              <a href=\"' +\n((__t = (file.url || '#')) == null ? '' : __t) +\n'\" target=\"_blank\" ref=\"fileLink\">\\n                <span class=\"visually-hidden\">' +\n((__t = (ctx.t('Press to open '))) == null ? '' : __t) +\n'</span>' +\n((__t = (file.originalName || file.name)) == null ? '' : __t) +\n'\\n              </a>\\n            ';\n } ;\n__p += '\\n          </div>\\n          <div class=\"col-md-2\">' +\n((__t = (ctx.fileSize(file.size))) == null ? '' : __t) +\n'</div>\\n          ';\n if (ctx.self.hasTypes && !ctx.disabled) { ;\n__p += '\\n            <div class=\"col-md-2\">\\n              <select class=\"file-type\" ref=\"fileType\">\\n                ';\n ctx.component.fileTypes.map(function(type) { ;\n__p += '\\n                  <option class=\"test\" value=\"' +\n((__t = ( type.value )) == null ? '' : __t) +\n'\" ';\n if (type.label === file.fileType) { ;\n__p += 'selected=\"selected\"';\n } ;\n__p += '>' +\n((__t = (ctx.t(type.label))) == null ? '' : __t) +\n'</option>\\n                ';\n }); ;\n__p += '\\n              </select>\\n            </div>\\n          ';\n } ;\n__p += '\\n          ';\n if (ctx.self.hasTypes && ctx.disabled) { ;\n__p += '\\n          <div class=\"col-md-2\">' +\n((__t = (file.fileType)) == null ? '' : __t) +\n'</div>\\n          ';\n } ;\n__p += '\\n        </div>\\n      </li>\\n    ';\n }) ;\n__p += '\\n  </ul>\\n';\n } else { ;\n__p += '\\n  <div>\\n    ';\n ctx.files.forEach(function(file) { ;\n__p += '\\n      <div>\\n        <span>\\n          <img ref=\"fileImage\" src=\"\" alt=\"' +\n((__t = (file.originalName || file.name)) == null ? '' : __t) +\n'\" style=\"width:' +\n((__t = (ctx.component.imageSize)) == null ? '' : __t) +\n'px\">\\n          ';\n if (!ctx.disabled) { ;\n__p += '\\n            <i tabindex=\"0\" class=\"' +\n((__t = (ctx.iconClass('remove'))) == null ? '' : __t) +\n'\" ref=\"removeLink\"></i>\\n          ';\n } ;\n__p += '\\n        </span>\\n      </div>\\n    ';\n }) ;\n__p += '\\n  </div>\\n';\n } ;\n__p += '\\n';\n if (!ctx.disabled && (ctx.component.multiple || !ctx.files.length)) { ;\n__p += '\\n  ';\n if (ctx.self.useWebViewCamera) { ;\n__p += '\\n    <div class=\"fileSelector\">\\n      <button class=\"btn btn-primary\" ref=\"galleryButton\"><i class=\"fa fa-book\"></i> ' +\n((__t = (ctx.t('Gallery'))) == null ? '' : __t) +\n'</button>\\n      <button class=\"btn btn-primary\" ref=\"cameraButton\"><i class=\"fa fa-camera\"></i> ' +\n((__t = (ctx.t('Camera'))) == null ? '' : __t) +\n'</button>\\n    </div>\\n  ';\n } else if (!ctx.self.cameraMode) { ;\n__p += '\\n    <div class=\"fileSelector\" ref=\"fileDrop\" ' +\n((__t = (ctx.fileDropHidden ?'hidden' : '')) == null ? '' : __t) +\n'>\\n      <i class=\"' +\n((__t = (ctx.iconClass('cloud-upload'))) == null ? '' : __t) +\n'\"></i> ' +\n((__t = (ctx.t('Drop files to attach,'))) == null ? '' : __t) +\n'\\n        ';\n if (ctx.self.imageUpload && ctx.component.webcam) { ;\n__p += '\\n          <a href=\"#\" ref=\"toggleCameraMode\"><i class=\"fa fa-camera\"></i> ' +\n((__t = (ctx.t('use camera'))) == null ? '' : __t) +\n'</a>\\n        ';\n } ;\n__p += '\\n        ' +\n((__t = (ctx.t('or'))) == null ? '' : __t) +\n'\\n        <a href=\"#\" ref=\"fileBrowse\" class=\"browse\">\\n          ' +\n((__t = (ctx.t('browse'))) == null ? '' : __t) +\n'\\n          <span class=\"visually-hidden\">\\n            ' +\n((__t = (ctx.t('Browse to attach file for ' + ctx.component.label + '. ' + \n            (ctx.component.description ? ctx.component.description + '. ' : '') + \n            ((!ctx.component.filePattern || ctx.component.filePattern === '*') ? 'Any file types are allowed' : ctx.t('Allowed file types: ') + ctx.component.filePattern)))) == null ? '' : __t) +\n'\\n          </span>\\n        </a>\\n      <div ref=\"fileProcessingLoader\" class=\"loader-wrapper\">\\n        <div class=\"loader text-center\"></div>\\n      </div>\\n    </div>\\n  ';\n } else { ;\n__p += '\\n    <div class=\"video-container\">\\n      <video class=\"video\" autoplay=\"true\" ref=\"videoPlayer\" tabindex=\"-1\"></video>\\n    </div>\\n    <button class=\"btn btn-primary\" ref=\"takePictureButton\"><i class=\"fa fa-camera\"></i> ' +\n((__t = (ctx.t('Take Picture'))) == null ? '' : __t) +\n'</button>\\n    <button class=\"btn btn-primary\" ref=\"toggleCameraMode\">' +\n((__t = (ctx.t('Switch to file upload'))) == null ? '' : __t) +\n'</button>\\n  ';\n } ;\n__p += '\\n';\n } ;\n__p += '\\n';\n ctx.statuses.forEach(function(status) { ;\n__p += '\\n  <div class=\"file ' +\n((__t = (ctx.statuses.status === 'error' ? ' has-error' : '')) == null ? '' : __t) +\n'\">\\n    <div class=\"row\">\\n      <div class=\"fileName col-form-label col-sm-10\">' +\n((__t = (status.originalName)) == null ? '' : __t) +\n'\\n        <i class=\"' +\n((__t = (ctx.iconClass('remove'))) == null ? '' : __t) +\n'\" ref=\"fileStatusRemove\">\\n          <span class=\"visually-hidden\">' +\n((__t = (ctx.t('Remove button. Press to remove ' + status.originalName || 0))) == null ? '' : __t) +\n'</span>\\n          <span class=\"visually-hidden\">' +\n((__t = (status.message ? status.message.replace(';', '.') : '')) == null ? '' : __t) +\n'</span>\\n        </i>\\n      </div>\\n      <div class=\"fileSize col-form-label col-sm-2 text-end\">' +\n((__t = (ctx.fileSize(status.size))) == null ? '' : __t) +\n'</div>\\n    </div>\\n    <div class=\"row\">\\n      <div class=\"col-sm-12\">\\n        ';\n if (status.status === 'progress') { ;\n__p += '\\n          <div class=\"progress\">\\n            <div class=\"progress-bar\" role=\"progressbar\" aria-valuenow=\"' +\n((__t = (status.progress)) == null ? '' : __t) +\n'\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: ' +\n((__t = (status.progress)) == null ? '' : __t) +\n'%\">\\n              <span class=\"visually-hidden\">' +\n((__t = (status.progress)) == null ? '' : __t) +\n'% ' +\n((__t = (ctx.t('Complete'))) == null ? '' : __t) +\n'</span>\\n            </div>\\n          </div>\\n        ';\n } else if (status.status === 'error') { ;\n__p += '\\n          <div class=\"alert alert-danger bg-' +\n((__t = (status.status)) == null ? '' : __t) +\n'\">' +\n((__t = (ctx.t(status.message))) == null ? '' : __t) +\n'</div>\\n        ';\n } else { ;\n__p += '\\n          <div class=\"bg-' +\n((__t = (status.status)) == null ? '' : __t) +\n'\">' +\n((__t = (ctx.t(status.message))) == null ? '' : __t) +\n'</div>\\n        ';\n } ;\n__p += '\\n      </div>\\n    </div>\\n  </div>\\n';\n }) ;\n__p += '\\n';\n if (!ctx.component.storage || ctx.support.hasWarning) { ;\n__p += '\\n  <div class=\"alert alert-warning\">\\n    ';\n if (!ctx.component.storage) { ;\n__p += '\\n      <p>' +\n((__t = (ctx.t('No storage has been set for this field. File uploads are disabled until storage is set up.'))) == null ? '' : __t) +\n'</p>\\n    ';\n } ;\n__p += '\\n    ';\n if (!ctx.support.filereader) { ;\n__p += '\\n      <p>' +\n((__t = (ctx.t('File API & FileReader API not supported.'))) == null ? '' : __t) +\n'</p>\\n    ';\n } ;\n__p += '\\n    ';\n if (!ctx.support.formdata) { ;\n__p += '\\n      <p>' +\n((__t = (ctx.t(\"XHR2's FormData is not supported.\"))) == null ? '' : __t) +\n'</p>\\n    ';\n } ;\n__p += '\\n    ';\n if (!ctx.support.progress) { ;\n__p += '\\n      <p>' +\n((__t = (ctx.t(\"XHR2's upload progress isn't supported.\"))) == null ? '' : __t) +\n'</p>\\n    ';\n } ;\n__p += '\\n  </div>\\n';\n } ;\n__p += '\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/file/form.ejs.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap5/file/index.js":
-/*!************************************************!*\
-  !*** ./lib/templates/bootstrap5/file/index.js ***!
-  \************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap5/file/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/file/index.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap5/index.js":
-/*!*******************************************!*\
-  !*** ./lib/templates/bootstrap5/index.js ***!
-  \*******************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\n__webpack_require__(/*! core-js/modules/es.date.to-string.js */ \"./node_modules/core-js/modules/es.date.to-string.js\");\n__webpack_require__(/*! core-js/modules/es.object.to-string.js */ \"./node_modules/core-js/modules/es.object.to-string.js\");\n__webpack_require__(/*! core-js/modules/es.regexp.to-string.js */ \"./node_modules/core-js/modules/es.regexp.to-string.js\");\nvar _builderSidebar = _interopRequireDefault(__webpack_require__(/*! ./builderSidebar */ \"./lib/templates/bootstrap5/builderSidebar/index.js\"));\nvar _builderSidebarGroup = _interopRequireDefault(__webpack_require__(/*! ./builderSidebarGroup */ \"./lib/templates/bootstrap5/builderSidebarGroup/index.js\"));\nvar _builderWizard = _interopRequireDefault(__webpack_require__(/*! ./builderWizard */ \"./lib/templates/bootstrap5/builderWizard/index.js\"));\nvar _componentModal = _interopRequireDefault(__webpack_require__(/*! ./componentModal */ \"./lib/templates/bootstrap5/componentModal/index.js\"));\nvar _datagrid = _interopRequireDefault(__webpack_require__(/*! ./datagrid */ \"./lib/templates/bootstrap5/datagrid/index.js\"));\nvar _dialog = _interopRequireDefault(__webpack_require__(/*! ./dialog */ \"./lib/templates/bootstrap5/dialog/index.js\"));\nvar _file = _interopRequireDefault(__webpack_require__(/*! ./file */ \"./lib/templates/bootstrap5/file/index.js\"));\nvar _input = _interopRequireDefault(__webpack_require__(/*! ./input */ \"./lib/templates/bootstrap5/input/index.js\"));\nvar _label = _interopRequireDefault(__webpack_require__(/*! ./label */ \"./lib/templates/bootstrap5/label/index.js\"));\nvar _modalPreview = _interopRequireDefault(__webpack_require__(/*! ./modalPreview */ \"./lib/templates/bootstrap5/modalPreview/index.js\"));\nvar _radio = _interopRequireDefault(__webpack_require__(/*! ./radio */ \"./lib/templates/bootstrap5/radio/index.js\"));\nvar _table = _interopRequireDefault(__webpack_require__(/*! ./table */ \"./lib/templates/bootstrap5/table/index.js\"));\nvar _cssClasses = _interopRequireDefault(__webpack_require__(/*! ./cssClasses */ \"./lib/templates/bootstrap5/cssClasses.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  transform: function transform(type, text) {\n    if (!text) {\n      return text;\n    }\n    switch (type) {\n      case 'class':\n        return this.cssClasses.hasOwnProperty(text.toString()) ? this.cssClasses[text.toString()] : text;\n    }\n    return text;\n  },\n  builderSidebar: _builderSidebar[\"default\"],\n  builderSidebarGroup: _builderSidebarGroup[\"default\"],\n  builderWizard: _builderWizard[\"default\"],\n  componentModal: _componentModal[\"default\"],\n  datagrid: _datagrid[\"default\"],\n  dialog: _dialog[\"default\"],\n  file: _file[\"default\"],\n  input: _input[\"default\"],\n  label: _label[\"default\"],\n  modalPreview: _modalPreview[\"default\"],\n  radio: _radio[\"default\"],\n  table: _table[\"default\"],\n  cssClasses: _cssClasses[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/index.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap5/input/form.ejs.js":
-/*!****************************************************!*\
-  !*** ./lib/templates/bootstrap5/input/form.ejs.js ***!
-  \****************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n\n if (ctx.prefix || ctx.suffix) { ;\n__p += '\\n<div class=\"input-group\">\\n  ';\n } ;\n__p += '\\n  ';\n if (ctx.prefix) { ;\n__p += '\\n    <div class=\"input-group-text\" ref=\"prefix\">\\n      ';\n if(ctx.prefix instanceof HTMLElement){ ;\n__p += '\\n        ' +\n((__t = ( ctx.t(ctx.prefix.outerHTML, { _userInput: true }) )) == null ? '' : __t) +\n'\\n      ';\n } else{ ;\n__p += '\\n        ' +\n((__t = ( ctx.t(ctx.prefix, { _userInput: true }) )) == null ? '' : __t) +\n'\\n      ';\n } ;\n__p += '\\n    </div>\\n  ';\n } ;\n__p += '\\n  ';\n if (!ctx.component.editor && !ctx.component.wysiwyg) { ;\n__p += '\\n    <' +\n((__t = (ctx.input.type)) == null ? '' : __t) +\n'\\n      ref=\"' +\n((__t = (ctx.input.ref ? ctx.input.ref : 'input')) == null ? '' : __t) +\n'\"\\n      ';\n for (var attr in ctx.input.attr) { ;\n__p += '\\n        ' +\n((__t = (attr)) == null ? '' : __t) +\n'=\"' +\n((__t = (ctx.input.attr[attr])) == null ? '' : __t) +\n'\"\\n      ';\n } ;\n__p += '\\n      id=\"' +\n((__t = (ctx.instance.id)) == null ? '' : __t) +\n'-' +\n((__t = (ctx.component.key)) == null ? '' : __t) +\n'\"\\n      aria-labelledby=\"l-' +\n((__t = (ctx.instance.id)) == null ? '' : __t) +\n'-' +\n((__t = (ctx.component.key)) == null ? '' : __t) +\n' ';\n if (ctx.component.description) { ;\n__p += 'd-' +\n((__t = (ctx.instance.id)) == null ? '' : __t) +\n'-' +\n((__t = (ctx.component.key)) == null ? '' : __t);\n } ;\n__p += '\"\\n      aria-required=\"' +\n((__t = (ctx.input.ref === 'input' || !ctx.input.ref ? ctx.component.validate.required :\n        ctx.component.fields && ctx.component.fields[ctx.input.ref] && ctx.component.fields[ctx.input.ref].required || false)) == null ? '' : __t) +\n'\"\\n    >' +\n((__t = (ctx.input.content)) == null ? '' : __t) +\n'</' +\n((__t = (ctx.input.type)) == null ? '' : __t) +\n'>\\n    ';\n if (ctx.hasValueMaskInput) { ;\n__p += '\\n      <input ref=\"valueMaskInput\" />\\n    ';\n } ;\n__p += '\\n';\n } ;\n__p += '\\n';\n if (ctx.component.editor || ctx.component.wysiwyg) { ;\n__p += '\\n  <div ref=\"input\"></div>\\n';\n } ;\n__p += '\\n';\n if (ctx.component.type === 'datetime') { ;\n__p += '\\n<span aria-live=\"assertive\" id=\"' +\n((__t = (ctx.instance.id)) == null ? '' : __t) +\n'-liveRegion\" class=\"visually-hidden\" ref=\"liveRegion\"></span>\\n';\n } ;\n__p += '\\n';\n if (ctx.suffix) { ;\n__p += '\\n  <div class=\"input-group-text\" ref=\"suffix\">\\n    ';\n if(ctx.suffix instanceof HTMLElement){ ;\n__p += '\\n      ' +\n((__t = ( ctx.t(ctx.suffix.outerHTML, { _userInput: true }) )) == null ? '' : __t) +\n'\\n    ';\n } else{ ;\n__p += '\\n      ' +\n((__t = ( ctx.t(ctx.suffix, { _userInput: true }) )) == null ? '' : __t) +\n'\\n    ';\n } ;\n__p += '\\n  </div>\\n';\n } ;\n__p += '\\n';\n if (ctx.prefix || ctx.suffix) { ;\n__p += '\\n  </div>\\n';\n } ;\n__p += '\\n';\n if (ctx.component.showCharCount || ctx.component.showWordCount) { ;\n__p += '\\n<div class=\"form-text {{ctx.component.description ? float-end : text-end\">\\n  ';\n if (ctx.component.showCharCount) { ;\n__p += '\\n  <span class=\"text-muted\" ref=\"charcount\" aria-live=\"polite\"></span>\\n  ';\n } ;\n__p += '\\n  ';\n if (ctx.component.showWordCount) { ;\n__p += '\\n  <span class=\"text-muted\" ref=\"wordcount\" aria-live=\"polite\"></span>\\n  ';\n } ;\n__p += '\\n</div>\\n';\n } ;\n__p += '\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/input/form.ejs.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap5/input/html.ejs.js":
-/*!****************************************************!*\
-  !*** ./lib/templates/bootstrap5/input/html.ejs.js ***!
-  \****************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<div ref=\"value\">';\n if (ctx.value) { ;\n__p +=\n((__t = (ctx.value)) == null ? '' : __t);\n } else { ;\n__p += '-';\n } ;\n__p += '</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/input/html.ejs.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap5/input/index.js":
-/*!*************************************************!*\
-  !*** ./lib/templates/bootstrap5/input/index.js ***!
-  \*************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap5/input/form.ejs.js\"));\nvar _html = _interopRequireDefault(__webpack_require__(/*! ./html.ejs */ \"./lib/templates/bootstrap5/input/html.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"],\n  html: _html[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/input/index.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap5/label/form.ejs.js":
-/*!****************************************************!*\
-  !*** ./lib/templates/bootstrap5/label/form.ejs.js ***!
-  \****************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<label\\n  ref=\"label\"\\n  class=\"col-form-label ' +\n((__t = (ctx.label.className)) == null ? '' : __t) +\n'\"\\n  for=\"' +\n((__t = (ctx.instance.id)) == null ? '' : __t) +\n'-' +\n((__t = (ctx.component.key)) == null ? '' : __t) +\n'\"\\n  id=\"l-' +\n((__t = (ctx.instance.id)) == null ? '' : __t) +\n'-' +\n((__t = (ctx.component.key)) == null ? '' : __t) +\n'\"\\n>\\n  ' +\n((__t = ( ctx.t(ctx.component.label, { _userInput: true }) )) == null ? '' : __t) +\n'\\n  ';\n if (ctx.component.type === 'number' || ctx.component.type === 'phoneNumber' || ctx.component.type === 'currency') { ;\n__p += '\\n    <span class=\"visually-hidden\">, ' +\n((__t = (ctx.t('numeric only'))) == null ? '' : __t) +\n',</span>\\n  ';\n } ;\n__p += '\\n  ';\n if (ctx.component.tooltip) { ;\n__p += '\\n    <i ref=\"tooltip\" tabindex=\"0\" class=\"' +\n((__t = (ctx.iconClass('question-sign'))) == null ? '' : __t) +\n' text-muted\" data-tooltip=\"' +\n((__t = (ctx.component.tooltip)) == null ? '' : __t) +\n'\"></i>\\n  ';\n } ;\n__p += '\\n</label>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/label/form.ejs.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap5/label/index.js":
-/*!*************************************************!*\
-  !*** ./lib/templates/bootstrap5/label/index.js ***!
-  \*************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap5/label/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/label/index.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap5/modalPreview/form.ejs.js":
-/*!***********************************************************!*\
-  !*** ./lib/templates/bootstrap5/modalPreview/form.ejs.js ***!
-  \***********************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '';\n__p += '<label id=\"l-' +\n((__t = (ctx.component.key)) == null ? '' : __t) +\n'\" class=\"control-label ' +\n((__t = ( ctx.label.className )) == null ? '' : __t) +\n'\">\\n  ' +\n((__t = ( ctx.t(ctx.component.label, { _userInput: true }) )) == null ? '' : __t) +\n'<span ref=\"modalLabelValue\" class=\"visually-hidden\">. ' +\n((__t = ( ctx.component.type === 'signature' ? ctx.self.getValueAsString(ctx.previewText) : ctx.previewText )) == null ? '' : __t) +\n'</span>\\n</label><br>\\n<span class=\"visually-hidden\" ref=\"modalPreviewLiveRegion\" aria-live=\"assertive\"></span>\\n<button\\n  lang=\"en\"\\n  class=\"btn btn-light btn-md open-modal-button form-control ' +\n((__t = (ctx.openModalBtnClasses || '')) == null ? '' : __t) +\n'\"\\n  ref=\"openModal\"\\n  aria-labelledby=\"l-' +\n((__t = (ctx.component.key)) == null ? '' : __t) +\n'\"\\n>\\n  ' +\n((__t = ( ctx.previewText )) == null ? '' : __t) +\n'\\n</button>\\n<div class=\"formio-errors invalid-feedback\">\\n  ' +\n((__t = ( ctx.messages )) == null ? '' : __t) +\n'\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/modalPreview/form.ejs.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap5/modalPreview/index.js":
-/*!********************************************************!*\
-  !*** ./lib/templates/bootstrap5/modalPreview/index.js ***!
-  \********************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap5/modalPreview/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/modalPreview/index.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap5/radio/form.ejs.js":
-/*!****************************************************!*\
-  !*** ./lib/templates/bootstrap5/radio/form.ejs.js ***!
-  \****************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<div\\n  class=\"form-radio radio\"\\n  ref=\"radioGroup\"\\n  role=\"' +\n((__t = (ctx.component.type === 'selectboxes' ? 'group' : 'radiogroup')) == null ? '' : __t) +\n'\"\\n  aria-required=\"' +\n((__t = (ctx.input.component.validate.required)) == null ? '' : __t) +\n'\"\\n  aria-labelledby=\"l-' +\n((__t = (ctx.instance.id)) == null ? '' : __t) +\n'-' +\n((__t = (ctx.component.key)) == null ? '' : __t) +\n'\"\\n  ';\n if (ctx.component.description) { ;\n__p += '\\n    aria-describedby=\"d-' +\n((__t = (ctx.instance.id)) == null ? '' : __t) +\n'-' +\n((__t = (ctx.component.key)) == null ? '' : __t) +\n'\"\\n  ';\n } ;\n__p += '\\n>\\n  ';\n ctx.values.forEach(function(item) { ;\n__p += '\\n  <div class=\"' +\n((__t = (ctx.input.attr.type)) == null ? '' : __t) +\n' ' +\n((__t = ( ctx.component.optionsLabelPosition && ctx.component.optionsLabelPosition !== 'right' ? ps-0 : '')) == null ? '' : __t) +\n' form-check' +\n((__t = (ctx.inline ? '-inline' : '')) == null ? '' : __t) +\n'\" ref=\"wrapper\">\\n    <label class=\"form-check-label label-position-' +\n((__t = ( ctx.component.optionsLabelPosition )) == null ? '' : __t) +\n'\" for=\"' +\n((__t = (ctx.instance.root && ctx.instance.root.id)) == null ? '' : __t) +\n'-' +\n((__t = (ctx.id)) == null ? '' : __t) +\n'-' +\n((__t = (ctx.row)) == null ? '' : __t) +\n'-' +\n((__t = (item.value)) == null ? '' : __t) +\n'\">\\n      ';\n if (ctx.component.optionsLabelPosition === 'left' || ctx.component.optionsLabelPosition === 'top') { ;\n__p += '\\n      <span>' +\n((__t = (ctx.t(item.label, { _userInput: true }))) == null ? '' : __t) +\n'</span>\\n      ';\n } ;\n__p += '\\n      <' +\n((__t = (ctx.input.type)) == null ? '' : __t) +\n'\\n        ref=\"input\"\\n        ';\n for (var attr in ctx.input.attr) { ;\n__p += '\\n        ' +\n((__t = (attr)) == null ? '' : __t) +\n'=\"' +\n((__t = (ctx.input.attr[attr])) == null ? '' : __t) +\n'\"\\n        ';\n } ;\n__p += '\\n        value=\"' +\n((__t = (item.value)) == null ? '' : __t) +\n'\"\\n        ';\n if (ctx.value && (ctx.value === item.value || (typeof ctx.value === 'object' && ctx.value.hasOwnProperty(item.value) && ctx.value[item.value]))) { ;\n__p += '\\n          checked=true\\n        ';\n } ;\n__p += '\\n        ';\n if (item.disabled) { ;\n__p += '\\n          disabled=true\\n        ';\n } ;\n__p += '\\n        id=\"' +\n((__t = (ctx.instance.root && ctx.instance.root.id)) == null ? '' : __t) +\n'-' +\n((__t = (ctx.id)) == null ? '' : __t) +\n'-' +\n((__t = (ctx.row)) == null ? '' : __t) +\n'-' +\n((__t = (item.value)) == null ? '' : __t) +\n'\"\\n        role=\"' +\n((__t = (ctx.component.type === 'selectboxes' ? 'checkbox' : 'radio')) == null ? '' : __t) +\n'\"\\n      >\\n      ';\n if (!ctx.component.optionsLabelPosition || ctx.component.optionsLabelPosition === 'right' || ctx.component.optionsLabelPosition === 'bottom') { ;\n__p += '\\n      <span>' +\n((__t = (ctx.t(item.label, { _userInput: true }))) == null ? '' : __t) +\n'</span>\\n      ';\n } ;\n__p += '\\n    </label>\\n  </div>\\n  ';\n }) ;\n__p += '\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/radio/form.ejs.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap5/radio/index.js":
-/*!*************************************************!*\
-  !*** ./lib/templates/bootstrap5/radio/index.js ***!
-  \*************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap5/radio/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/radio/index.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap5/table/form.ejs.js":
-/*!****************************************************!*\
-  !*** ./lib/templates/bootstrap5/table/form.ejs.js ***!
-  \****************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<table class=\"table\\n    ' +\n((__t = ( ctx.component.striped ? 'table-striped' : '')) == null ? '' : __t) +\n'\\n    ' +\n((__t = ( ctx.component.bordered ? 'table-bordered' : '')) == null ? '' : __t) +\n'\\n    ' +\n((__t = ( ctx.component.hover ? 'table-hover' : '')) == null ? '' : __t) +\n'\\n    ' +\n((__t = ( ctx.component.condensed ? 'table-sm' : '')) == null ? '' : __t) +\n'\\n  \">\\n  <caption class=\"visually-hidden\">' +\n((__t = (ctx.t(ctx.component.label))) == null ? '' : __t) +\n'</caption>\\n  ';\n if (ctx.component.header && ctx.component.header.length > 0) { ;\n__p += '\\n  <thead>\\n    <tr>\\n      ';\n ctx.component.header.forEach(function(header) { ;\n__p += '\\n      <th>' +\n((__t = (ctx.t(header))) == null ? '' : __t) +\n'</th>\\n      ';\n }) ;\n__p += '\\n    </tr>\\n  </thead>\\n  ';\n } ;\n__p += '\\n  <tbody>\\n    ';\n ctx.tableComponents.forEach(function(row, rowIndex) { ;\n__p += '\\n    <tr ref=\"row-' +\n((__t = (ctx.id)) == null ? '' : __t) +\n'\">\\n      ';\n row.forEach(function(column, colIndex) { ;\n__p += '\\n      <td ref=\"' +\n((__t = (ctx.tableKey)) == null ? '' : __t) +\n'-' +\n((__t = (rowIndex)) == null ? '' : __t) +\n'\"';\n if (ctx.cellClassName) { ;\n__p += ' class=\"' +\n((__t = (ctx.cellClassName)) == null ? '' : __t) +\n'\"';\n } ;\n__p += '>' +\n((__t = (column)) == null ? '' : __t) +\n'</td>\\n      ';\n }) ;\n__p += '\\n    </tr>\\n    ';\n }) ;\n__p += '\\n  </tbody>\\n</table>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/table/form.ejs.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap5/table/index.js":
-/*!*************************************************!*\
-  !*** ./lib/templates/bootstrap5/table/index.js ***!
-  \*************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap5/table/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/table/index.js?");
-
-/***/ }),
-
 /***/ "./lib/templates/bootstrap/address/form.ejs.js":
 /*!*****************************************************!*\
   !*** ./lib/templates/bootstrap/address/form.ejs.js ***!
@@ -3067,6 +2783,27 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 
 "use strict";
 eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap/alert/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/alert/index.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap/builder/form.ejs.js":
+/*!*****************************************************!*\
+  !*** ./lib/templates/bootstrap/builder/form.ejs.js ***!
+  \*****************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '';\n__p += '<div class=\"formio builder row formbuilder\">\\n  <div class=\"col-xs-4 col-sm-3 col-md-2 formcomponents\">\\n    ' +\n((__t = (ctx.sidebar)) == null ? '' : __t) +\n'\\n  </div>\\n  <div class=\"col-xs-8 col-sm-9 col-md-10 formarea\" ref=\"form\">\\n    ' +\n((__t = (ctx.form)) == null ? '' : __t) +\n'\\n  </div>\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/builder/form.ejs.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap/builder/index.js":
+/*!**************************************************!*\
+  !*** ./lib/templates/bootstrap/builder/index.js ***!
+  \**************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap/builder/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/builder/index.js?");
 
 /***/ }),
 
@@ -3154,27 +2891,6 @@ eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js *
 
 /***/ }),
 
-/***/ "./lib/templates/bootstrap/builderSidebarGroup/form.ejs.js":
-/*!*****************************************************************!*\
-  !*** ./lib/templates/bootstrap/builderSidebarGroup/form.ejs.js ***!
-  \*****************************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<div class=\"card form-builder-panel\" ref=\"group-panel-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\">\\n  <div class=\"card-header form-builder-group-header\" id=\"heading-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\">\\n    <h5 class=\"mb-0 mt-0\">\\n      <button\\n        class=\"btn btn-block builder-group-button\"\\n        type=\"button\"\\n        data-toggle=\"collapse\"\\n        data-target=\"#group-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\"\\n        data-parent=\"#' +\n((__t = (ctx.groupId)) == null ? '' : __t) +\n'\"\\n        aria-expanded=\"' +\n((__t = (ctx.group.default)) == null ? '' : __t) +\n'\"\\n        aria-controls=\"group-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\"\\n        ref=\"sidebar-anchor\"\\n      >\\n        ' +\n((__t = (ctx.t(ctx.group.title, { _userInput: true }))) == null ? '' : __t) +\n'\\n      </button>\\n    </h5>\\n  </div>\\n  <div\\n    id=\"group-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\"\\n    class=\"collapse ' +\n((__t = (ctx.group.default ? ' show' : '')) == null ? '' : __t) +\n'\"\\n    data-parent=\"#' +\n((__t = (ctx.groupId)) == null ? '' : __t) +\n'\"\\n    data-default=\"' +\n((__t = (ctx.group.default)) == null ? '' : __t) +\n'\"\\n    aria-labelledby=\"heading-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\"\\n    ref=\"sidebar-group\"\\n  >\\n    <div id=\"group-container-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\" class=\"card-body no-drop p-2\" ref=\"sidebar-container\">\\n      ';\n if (ctx.group.componentOrder.length || ctx.subgroups.length) { ;\n__p += '\\n        ';\n !ctx.group.componentOrder || ctx.group.componentOrder.forEach(function(componentKey) { ;\n__p += '\\n          <span\\n            ref=\"sidebar-component\"\\n            data-group=\"' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\"\\n            data-key=\"' +\n((__t = (ctx.group.components[componentKey].key)) == null ? '' : __t) +\n'\"\\n            data-type=\"' +\n((__t = (ctx.group.components[componentKey].schema.type)) == null ? '' : __t) +\n'\"\\n            class=\"btn btn-primary btn-sm btn-block formcomponent drag-copy\"\\n            tabindex=\"' +\n((__t = (ctx.keyboardActionsEnabled ? 0 : -1)) == null ? '' : __t) +\n'\"\\n          >\\n            ';\n if (ctx.group.components[componentKey].icon) { ;\n__p += '\\n              <i class=\"' +\n((__t = (ctx.iconClass(ctx.group.components[componentKey].icon))) == null ? '' : __t) +\n'\" style=\"margin-right: 5px;\"></i>\\n            ';\n } ;\n__p += '\\n            ' +\n((__t = (ctx.t(ctx.group.components[componentKey].title, { _userInput: true }))) == null ? '' : __t) +\n'\\n          </span>\\n        ';\n }) ;\n__p += '\\n        ' +\n((__t = (ctx.subgroups.join(''))) == null ? '' : __t) +\n'\\n      ';\n } else { ;\n__p += '\\n        <div>' +\n((__t = (ctx.t('No Matches Found'))) == null ? '' : __t) +\n'</div>\\n      ';\n } ;\n__p += '\\n    </div>\\n  </div>\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/builderSidebarGroup/form.ejs.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap/builderSidebarGroup/index.js":
-/*!**************************************************************!*\
-  !*** ./lib/templates/bootstrap/builderSidebarGroup/index.js ***!
-  \**************************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap/builderSidebarGroup/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/builderSidebarGroup/index.js?");
-
-/***/ }),
-
 /***/ "./lib/templates/bootstrap/builderSidebar/form.ejs.js":
 /*!************************************************************!*\
   !*** ./lib/templates/bootstrap/builderSidebar/form.ejs.js ***!
@@ -3196,6 +2912,27 @@ eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js *
 
 /***/ }),
 
+/***/ "./lib/templates/bootstrap/builderSidebarGroup/form.ejs.js":
+/*!*****************************************************************!*\
+  !*** ./lib/templates/bootstrap/builderSidebarGroup/form.ejs.js ***!
+  \*****************************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<div class=\"card form-builder-panel\" ref=\"group-panel-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\">\\n  <div class=\"card-header form-builder-group-header\" id=\"heading-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\">\\n    <h5 class=\"mb-0 mt-0\">\\n      <button\\n        class=\"btn btn-block builder-group-button\"\\n        type=\"button\"\\n        data-toggle=\"collapse\"\\n        data-target=\"#group-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\"\\n        data-parent=\"#' +\n((__t = (ctx.groupId)) == null ? '' : __t) +\n'\"\\n        aria-expanded=\"' +\n((__t = (ctx.group.default)) == null ? '' : __t) +\n'\"\\n        aria-controls=\"group-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\"\\n        ref=\"sidebar-anchor\"\\n      >\\n        ' +\n((__t = (ctx.t(ctx.group.title, { _userInput: true }))) == null ? '' : __t) +\n'\\n      </button>\\n    </h5>\\n  </div>\\n  <div\\n    id=\"group-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\"\\n    class=\"collapse ' +\n((__t = (ctx.group.default ? ' show' : '')) == null ? '' : __t) +\n'\"\\n    data-parent=\"#' +\n((__t = (ctx.groupId)) == null ? '' : __t) +\n'\"\\n    data-default=\"' +\n((__t = (ctx.group.default)) == null ? '' : __t) +\n'\"\\n    aria-labelledby=\"heading-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\"\\n    ref=\"sidebar-group\"\\n  >\\n    <div id=\"group-container-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\" class=\"card-body no-drop p-2\" ref=\"sidebar-container\">\\n      ';\n if (ctx.group.componentOrder.length || ctx.subgroups.length) { ;\n__p += '\\n        ';\n !ctx.group.componentOrder || ctx.group.componentOrder.forEach(function(componentKey) { ;\n__p += '\\n          <span\\n            ref=\"sidebar-component\"\\n            data-group=\"' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\"\\n            data-key=\"' +\n((__t = (ctx.group.components[componentKey].key)) == null ? '' : __t) +\n'\"\\n            data-type=\"' +\n((__t = (ctx.group.components[componentKey].schema.type)) == null ? '' : __t) +\n'\"\\n            class=\"btn btn-primary btn-sm btn-block formcomponent drag-copy\"\\n            tabindex=\"' +\n((__t = (ctx.keyboardActionsEnabled ? 0 : -1)) == null ? '' : __t) +\n'\"\\n          >\\n            ';\n if (ctx.group.components[componentKey].icon) { ;\n__p += '\\n              <i class=\"' +\n((__t = (ctx.iconClass(ctx.group.components[componentKey].icon))) == null ? '' : __t) +\n'\" style=\"margin-right: 5px;\"></i>\\n            ';\n } ;\n__p += '\\n            ' +\n((__t = (ctx.t(ctx.group.components[componentKey].title, { _userInput: true }))) == null ? '' : __t) +\n'\\n          </span>\\n        ';\n }) ;\n__p += '\\n        ' +\n((__t = (ctx.subgroups.join(''))) == null ? '' : __t) +\n'\\n      ';\n } else { ;\n__p += '\\n        <div>' +\n((__t = (ctx.t('No Matches Found'))) == null ? '' : __t) +\n'</div>\\n      ';\n } ;\n__p += '\\n    </div>\\n  </div>\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/builderSidebarGroup/form.ejs.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap/builderSidebarGroup/index.js":
+/*!**************************************************************!*\
+  !*** ./lib/templates/bootstrap/builderSidebarGroup/index.js ***!
+  \**************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap/builderSidebarGroup/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/builderSidebarGroup/index.js?");
+
+/***/ }),
+
 /***/ "./lib/templates/bootstrap/builderWizard/form.ejs.js":
 /*!***********************************************************!*\
   !*** ./lib/templates/bootstrap/builderWizard/form.ejs.js ***!
@@ -3214,27 +2951,6 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 
 "use strict";
 eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap/builderWizard/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/builderWizard/index.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap/builder/form.ejs.js":
-/*!*****************************************************!*\
-  !*** ./lib/templates/bootstrap/builder/form.ejs.js ***!
-  \*****************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '';\n__p += '<div class=\"formio builder row formbuilder\">\\n  <div class=\"col-xs-4 col-sm-3 col-md-2 formcomponents\">\\n    ' +\n((__t = (ctx.sidebar)) == null ? '' : __t) +\n'\\n  </div>\\n  <div class=\"col-xs-8 col-sm-9 col-md-10 formarea\" ref=\"form\">\\n    ' +\n((__t = (ctx.form)) == null ? '' : __t) +\n'\\n  </div>\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/builder/form.ejs.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap/builder/index.js":
-/*!**************************************************!*\
-  !*** ./lib/templates/bootstrap/builder/index.js ***!
-  \**************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap/builder/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/builder/index.js?");
 
 /***/ }),
 
@@ -3321,27 +3037,6 @@ eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js *
 
 /***/ }),
 
-/***/ "./lib/templates/bootstrap/componentModal/form.ejs.js":
-/*!************************************************************!*\
-  !*** ./lib/templates/bootstrap/componentModal/form.ejs.js ***!
-  \************************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<div class=\"formio-component-modal-wrapper formio-component-modal-wrapper-' +\n((__t = ( ctx.component.type )) == null ? '' : __t) +\n'\" ref=\"componentModalWrapper\">\\n  <div ref=\"openModalWrapper\"></div>\\n  <div class=\"formio-dialog formio-dialog-theme-default component-rendering-hidden\" ref=\"modalWrapper\">\\n    <div class=\"formio-dialog-overlay\" ref=\"modalOverlay\"></div>\\n    <div class=\"formio-dialog-content\" aria-labelledby=\"ml-' +\n((__t = (ctx.instance.id)) == null ? '' : __t) +\n'-' +\n((__t = (ctx.component.key)) == null ? '' : __t) +\n'\" ';\n if (!ctx.self.isIE()) { ;\n__p += ' role=\"dialog\" ';\n } ;\n__p += ' ref=\"modalContents\">\\n      <label class=\"sr-only\" id=\"ml-' +\n((__t = (ctx.instance.id)) == null ? '' : __t) +\n'-' +\n((__t = (ctx.component.key)) == null ? '' : __t) +\n'\">' +\n((__t = ( ctx.t(ctx.component.label) )) == null ? '' : __t) +\n'' +\n((__t = (ctx.self.isIE() ? ', dialog' : '')) == null ? '' : __t) +\n'</label>\\n      ';\n if (ctx.options.vpat) { ;\n__p += '\\n      <button class=\"formio-dialog-close float-right\" title=\"Close\" aria-label=\"Close button. Click to get back to the form\" ref=\"modalCloseButton\"></button>\\n      ';\n } else { ;\n__p += '\\n      <button class=\"formio-dialog-close float-right btn btn-secondary btn-sm\" aria-label=\"Close button. Click to get back to the form\" ref=\"modalClose\"></button>\\n      ';\n } ;\n__p += '\\n      <div ref=\"modalContents\">\\n        ';\n if (ctx.visible) { ;\n__p += '\\n        ' +\n((__t = (ctx.children)) == null ? '' : __t) +\n'\\n        ';\n } ;\n__p += '\\n        <div class=\"formio-dialog-buttons\">\\n          ';\n if (ctx.options.vpat) { ;\n__p += '\\n          <button class=\"btn btn-secondary formio-dialog-button\" aria-label=\"Cancel button. Click to cancel the changes and get back to the form.\" ref=\"modalClose\">' +\n((__t = (ctx.t('Cancel'))) == null ? '' : __t) +\n'</button>\\n          ';\n } ;\n__p += '\\n          <button class=\"btn btn-success formio-dialog-button\" ref=\"modalSave\" aria-label=\"Save button. Click to save the changes and get back to the form.\">' +\n((__t = (ctx.t('Save'))) == null ? '' : __t) +\n'</button>\\n        </div>\\n      </div>\\n    </div>\\n    <span class=\"sr-only\" ref=\"modalLiveRegion\" aria-live=\"assertive\"></span>\\n  </div>\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/componentModal/form.ejs.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap/componentModal/index.js":
-/*!*********************************************************!*\
-  !*** ./lib/templates/bootstrap/componentModal/index.js ***!
-  \*********************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap/componentModal/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/componentModal/index.js?");
-
-/***/ }),
-
 /***/ "./lib/templates/bootstrap/component/form.ejs.js":
 /*!*******************************************************!*\
   !*** ./lib/templates/bootstrap/component/form.ejs.js ***!
@@ -3360,6 +3055,27 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 
 "use strict";
 eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap/component/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/component/index.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap/componentModal/form.ejs.js":
+/*!************************************************************!*\
+  !*** ./lib/templates/bootstrap/componentModal/form.ejs.js ***!
+  \************************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<div class=\"formio-component-modal-wrapper formio-component-modal-wrapper-' +\n((__t = ( ctx.component.type )) == null ? '' : __t) +\n'\" ref=\"componentModalWrapper\">\\n  <div ref=\"openModalWrapper\"></div>\\n  <div class=\"formio-dialog formio-dialog-theme-default component-rendering-hidden\" ref=\"modalWrapper\">\\n    <div class=\"formio-dialog-overlay\" ref=\"modalOverlay\"></div>\\n    <div class=\"formio-dialog-content\" aria-labelledby=\"ml-' +\n((__t = (ctx.instance.id)) == null ? '' : __t) +\n'-' +\n((__t = (ctx.component.key)) == null ? '' : __t) +\n'\" ';\n if (!ctx.self.isIE()) { ;\n__p += ' role=\"dialog\" ';\n } ;\n__p += ' ref=\"modalContents\">\\n      <label class=\"sr-only\" id=\"ml-' +\n((__t = (ctx.instance.id)) == null ? '' : __t) +\n'-' +\n((__t = (ctx.component.key)) == null ? '' : __t) +\n'\">' +\n((__t = ( ctx.t(ctx.component.label) )) == null ? '' : __t) +\n'' +\n((__t = (ctx.self.isIE() ? ', dialog' : '')) == null ? '' : __t) +\n'</label>\\n      ';\n if (ctx.options.vpat) { ;\n__p += '\\n      <button class=\"formio-dialog-close float-right\" title=\"Close\" aria-label=\"Close button. Click to get back to the form\" ref=\"modalCloseButton\"></button>\\n      ';\n } else { ;\n__p += '\\n      <button class=\"formio-dialog-close float-right btn btn-secondary btn-sm\" aria-label=\"Close button. Click to get back to the form\" ref=\"modalClose\"></button>\\n      ';\n } ;\n__p += '\\n      <div ref=\"modalContents\">\\n        ';\n if (ctx.visible) { ;\n__p += '\\n        ' +\n((__t = (ctx.children)) == null ? '' : __t) +\n'\\n        ';\n } ;\n__p += '\\n        <div class=\"formio-dialog-buttons\">\\n          ';\n if (ctx.options.vpat) { ;\n__p += '\\n          <button class=\"btn btn-secondary formio-dialog-button\" aria-label=\"Cancel button. Click to cancel the changes and get back to the form.\" ref=\"modalClose\">' +\n((__t = (ctx.t('Cancel'))) == null ? '' : __t) +\n'</button>\\n          ';\n } ;\n__p += '\\n          <button class=\"btn btn-success formio-dialog-button\" ref=\"modalSave\" aria-label=\"Save button. Click to save the changes and get back to the form.\">' +\n((__t = (ctx.t('Save'))) == null ? '' : __t) +\n'</button>\\n        </div>\\n      </div>\\n    </div>\\n    <span class=\"sr-only\" ref=\"modalLiveRegion\" aria-live=\"assertive\"></span>\\n  </div>\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/componentModal/form.ejs.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap/componentModal/index.js":
+/*!*********************************************************!*\
+  !*** ./lib/templates/bootstrap/componentModal/index.js ***!
+  \*********************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap/componentModal/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/componentModal/index.js?");
 
 /***/ }),
 
@@ -3489,37 +3205,6 @@ eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js *
 
 /***/ }),
 
-/***/ "./lib/templates/bootstrap/editgridTable/form.ejs.js":
-/*!***********************************************************!*\
-  !*** ./lib/templates/bootstrap/editgridTable/form.ejs.js ***!
-  \***********************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<div class=\"editgrid-table-container\">\\n  <div class=\"table-responsive\">\\n    <table class=\"table\\n      ' +\n((__t = ( ctx.component.striped ? 'table-striped' : '')) == null ? '' : __t) +\n'\\n      ' +\n((__t = ( ctx.component.bordered ? 'table-bordered' : '')) == null ? '' : __t) +\n'\\n      ' +\n((__t = ( ctx.component.hover ? 'table-hover' : '')) == null ? '' : __t) +\n'\\n      ' +\n((__t = ( ctx.component.condensed ? 'table-sm' : '')) == null ? '' : __t) +\n'\\n    \">\\n      ';\n if (ctx.header) { ;\n__p += '\\n      <thead class=\"editgrid-table-head\">\\n        ' +\n((__t = (ctx.header)) == null ? '' : __t) +\n'\\n      </thead>\\n      ';\n } ;\n__p += '\\n      <tbody class=\"editgrid-table-body\">\\n        ';\n ctx.rows.forEach(function(row, rowIndex) { ;\n__p += '\\n        <tr ref=\"' +\n((__t = (ctx.ref.row)) == null ? '' : __t) +\n'\">\\n          ' +\n((__t = (row)) == null ? '' : __t) +\n'\\n          ';\n if (ctx.openRows[rowIndex] && !ctx.readOnly) { ;\n__p += '\\n            <td class=\"editgrid-table-column\">\\n              <div class=\"editgrid-actions\">\\n                <button class=\"btn btn-primary\" ref=\"' +\n((__t = (ctx.ref.saveRow)) == null ? '' : __t) +\n'\">' +\n((__t = (ctx.t(ctx.component.saveRow || 'Save', { _userInput: true }))) == null ? '' : __t) +\n'</button>\\n                ';\n if (ctx.component.removeRow) { ;\n__p += '\\n                <button class=\"btn btn-danger\" ref=\"' +\n((__t = (ctx.ref.cancelRow)) == null ? '' : __t) +\n'\">' +\n((__t = (ctx.t(ctx.component.removeRow || 'Cancel', { _userInput: true }))) == null ? '' : __t) +\n'</button>\\n                ';\n } ;\n__p += '\\n              </div>\\n            </td>\\n          ';\n } ;\n__p += '\\n          ';\n if (ctx.errors[rowIndex]) { ;\n__p += '\\n          <td class=\"editgrid-table-column\">\\n            <div class=\"has-error\">\\n              <div class=\"editgrid-row-error help-block\">\\n                ' +\n((__t = (ctx.errors[rowIndex])) == null ? '' : __t) +\n'\\n              </div>\\n            </div>\\n          </td>\\n          ';\n } ;\n__p += '\\n        </tr>\\n        ';\n }) ;\n__p += '\\n      </tbody>\\n      ';\n if (ctx.footer) { ;\n__p += '\\n      <tfoot>\\n        <tr>\\n          ' +\n((__t = (ctx.footer)) == null ? '' : __t) +\n'\\n        </tr>\\n      <tfoot>\\n      ';\n } ;\n__p += '\\n    </table>\\n  </div>\\n</div>\\n';\n if (!ctx.readOnly && ctx.hasAddButton) { ;\n__p += '\\n<button class=\"btn btn-primary\" ref=\"' +\n((__t = (ctx.ref.addRow)) == null ? '' : __t) +\n'\">\\n  <i class=\"' +\n((__t = (ctx.iconClass('plus'))) == null ? '' : __t) +\n'\"></i>\\n  ' +\n((__t = (ctx.t(ctx.component.addAnother || 'Add Another', { _userInput: true }))) == null ? '' : __t) +\n'\\n</button>\\n';\n } ;\n__p += '\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/editgridTable/form.ejs.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap/editgridTable/html.ejs.js":
-/*!***********************************************************!*\
-  !*** ./lib/templates/bootstrap/editgridTable/html.ejs.js ***!
-  \***********************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<div class=\"editgrid-table-container\">\\n  <div class=\"table-responsive\">\\n    <table class=\"table\\n      ' +\n((__t = ( ctx.component.striped ? 'table-striped' : '')) == null ? '' : __t) +\n'\\n      ' +\n((__t = ( ctx.component.bordered ? 'table-bordered' : '')) == null ? '' : __t) +\n'\\n      ' +\n((__t = ( ctx.component.hover ? 'table-hover' : '')) == null ? '' : __t) +\n'\\n      ' +\n((__t = ( ctx.component.condensed ? 'table-sm' : '')) == null ? '' : __t) +\n'\\n    \">\\n      ';\n if (ctx.header) { ;\n__p += '\\n      <thead class=\"editgrid-table-head\">\\n        ' +\n((__t = (ctx.header)) == null ? '' : __t) +\n'\\n      </thead>\\n      ';\n } ;\n__p += '\\n      <tbody class=\"editgrid-table-body\">\\n        ';\n ctx.rows.forEach(function(row, rowIndex) { ;\n__p += '\\n        <tr ref=\"' +\n((__t = (ctx.ref.row)) == null ? '' : __t) +\n'\">\\n          ' +\n((__t = (row)) == null ? '' : __t) +\n'\\n          ';\n if (ctx.openRows[rowIndex] && !ctx.readOnly) { ;\n__p += '\\n          <td class=\"editgrid-table-column\">\\n            <div class=\"editgrid-actions\">\\n              <button class=\"btn btn-primary\" ref=\"' +\n((__t = (ctx.ref.saveRow)) == null ? '' : __t) +\n'\">' +\n((__t = (ctx.t(ctx.component.saveRow || 'Save', { _userInput: true }))) == null ? '' : __t) +\n'</button>\\n              ';\n if (ctx.component.removeRow) { ;\n__p += '\\n              <button class=\"btn btn-danger\" ref=\"' +\n((__t = (ctx.ref.cancelRow)) == null ? '' : __t) +\n'\">' +\n((__t = (ctx.t(ctx.component.removeRow || 'Cancel', { _userInput: true }))) == null ? '' : __t) +\n'</button>\\n              ';\n } ;\n__p += '\\n            </div>\\n          </td>\\n          ';\n } ;\n__p += '\\n          ';\n if (ctx.errors[rowIndex]) { ;\n__p += '\\n          <td class=\"editgrid-table-column\">\\n            <div class=\"has-error\">\\n              <div class=\"editgrid-row-error help-block\">\\n                ' +\n((__t = (ctx.errors[rowIndex])) == null ? '' : __t) +\n'\\n              </div>\\n            </div>\\n          </td>\\n          ';\n } ;\n__p += '\\n        </tr>\\n        ';\n }) ;\n__p += '\\n      </tbody>\\n      ';\n if (ctx.footer) { ;\n__p += '\\n      <tfoot>\\n        <tr>\\n          ' +\n((__t = (ctx.footer)) == null ? '' : __t) +\n'\\n         </tr>\\n      <tfoot>\\n      ';\n } ;\n__p += '\\n    </table>\\n  </div>\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/editgridTable/html.ejs.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap/editgridTable/index.js":
-/*!********************************************************!*\
-  !*** ./lib/templates/bootstrap/editgridTable/index.js ***!
-  \********************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap/editgridTable/form.ejs.js\"));\nvar _html = _interopRequireDefault(__webpack_require__(/*! ./html.ejs */ \"./lib/templates/bootstrap/editgridTable/html.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"],\n  html: _html[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/editgridTable/index.js?");
-
-/***/ }),
-
 /***/ "./lib/templates/bootstrap/editgrid/form.ejs.js":
 /*!******************************************************!*\
   !*** ./lib/templates/bootstrap/editgrid/form.ejs.js ***!
@@ -3548,6 +3233,37 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 
 "use strict";
 eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap/editgrid/form.ejs.js\"));\nvar _html = _interopRequireDefault(__webpack_require__(/*! ./html.ejs */ \"./lib/templates/bootstrap/editgrid/html.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"],\n  html: _html[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/editgrid/index.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap/editgridTable/form.ejs.js":
+/*!***********************************************************!*\
+  !*** ./lib/templates/bootstrap/editgridTable/form.ejs.js ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<div class=\"editgrid-table-container\">\\n  <div class=\"table-responsive\">\\n    <table class=\"table\\n      ' +\n((__t = ( ctx.component.striped ? 'table-striped' : '')) == null ? '' : __t) +\n'\\n      ' +\n((__t = ( ctx.component.bordered ? 'table-bordered' : '')) == null ? '' : __t) +\n'\\n      ' +\n((__t = ( ctx.component.hover ? 'table-hover' : '')) == null ? '' : __t) +\n'\\n      ' +\n((__t = ( ctx.component.condensed ? 'table-sm' : '')) == null ? '' : __t) +\n'\\n    \">\\n      ';\n if (ctx.header) { ;\n__p += '\\n      <thead class=\"editgrid-table-head\">\\n        ' +\n((__t = (ctx.header)) == null ? '' : __t) +\n'\\n      </thead>\\n      ';\n } ;\n__p += '\\n      <tbody class=\"editgrid-table-body\">\\n        ';\n ctx.rows.forEach(function(row, rowIndex) { ;\n__p += '\\n        <tr ref=\"' +\n((__t = (ctx.ref.row)) == null ? '' : __t) +\n'\">\\n          ' +\n((__t = (row)) == null ? '' : __t) +\n'\\n          ';\n if (ctx.openRows[rowIndex] && !ctx.readOnly) { ;\n__p += '\\n            <td class=\"editgrid-table-column\">\\n              <div class=\"editgrid-actions\">\\n                <button class=\"btn btn-primary\" ref=\"' +\n((__t = (ctx.ref.saveRow)) == null ? '' : __t) +\n'\">' +\n((__t = (ctx.t(ctx.component.saveRow || 'Save', { _userInput: true }))) == null ? '' : __t) +\n'</button>\\n                ';\n if (ctx.component.removeRow) { ;\n__p += '\\n                <button class=\"btn btn-danger\" ref=\"' +\n((__t = (ctx.ref.cancelRow)) == null ? '' : __t) +\n'\">' +\n((__t = (ctx.t(ctx.component.removeRow || 'Cancel', { _userInput: true }))) == null ? '' : __t) +\n'</button>\\n                ';\n } ;\n__p += '\\n              </div>\\n            </td>\\n          ';\n } ;\n__p += '\\n          ';\n if (ctx.errors[rowIndex]) { ;\n__p += '\\n          <td class=\"editgrid-table-column\">\\n            <div class=\"has-error\">\\n              <div class=\"editgrid-row-error help-block\">\\n                ' +\n((__t = (ctx.errors[rowIndex])) == null ? '' : __t) +\n'\\n              </div>\\n            </div>\\n          </td>\\n          ';\n } ;\n__p += '\\n        </tr>\\n        ';\n }) ;\n__p += '\\n      </tbody>\\n      ';\n if (ctx.footer) { ;\n__p += '\\n      <tfoot>\\n        <tr>\\n          ' +\n((__t = (ctx.footer)) == null ? '' : __t) +\n'\\n        </tr>\\n      <tfoot>\\n      ';\n } ;\n__p += '\\n    </table>\\n  </div>\\n</div>\\n';\n if (!ctx.readOnly && ctx.hasAddButton) { ;\n__p += '\\n<button class=\"btn btn-primary\" ref=\"' +\n((__t = (ctx.ref.addRow)) == null ? '' : __t) +\n'\">\\n  <i class=\"' +\n((__t = (ctx.iconClass('plus'))) == null ? '' : __t) +\n'\"></i>\\n  ' +\n((__t = (ctx.t(ctx.component.addAnother || 'Add Another', { _userInput: true }))) == null ? '' : __t) +\n'\\n</button>\\n';\n } ;\n__p += '\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/editgridTable/form.ejs.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap/editgridTable/html.ejs.js":
+/*!***********************************************************!*\
+  !*** ./lib/templates/bootstrap/editgridTable/html.ejs.js ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<div class=\"editgrid-table-container\">\\n  <div class=\"table-responsive\">\\n    <table class=\"table\\n      ' +\n((__t = ( ctx.component.striped ? 'table-striped' : '')) == null ? '' : __t) +\n'\\n      ' +\n((__t = ( ctx.component.bordered ? 'table-bordered' : '')) == null ? '' : __t) +\n'\\n      ' +\n((__t = ( ctx.component.hover ? 'table-hover' : '')) == null ? '' : __t) +\n'\\n      ' +\n((__t = ( ctx.component.condensed ? 'table-sm' : '')) == null ? '' : __t) +\n'\\n    \">\\n      ';\n if (ctx.header) { ;\n__p += '\\n      <thead class=\"editgrid-table-head\">\\n        ' +\n((__t = (ctx.header)) == null ? '' : __t) +\n'\\n      </thead>\\n      ';\n } ;\n__p += '\\n      <tbody class=\"editgrid-table-body\">\\n        ';\n ctx.rows.forEach(function(row, rowIndex) { ;\n__p += '\\n        <tr ref=\"' +\n((__t = (ctx.ref.row)) == null ? '' : __t) +\n'\">\\n          ' +\n((__t = (row)) == null ? '' : __t) +\n'\\n          ';\n if (ctx.openRows[rowIndex] && !ctx.readOnly) { ;\n__p += '\\n          <td class=\"editgrid-table-column\">\\n            <div class=\"editgrid-actions\">\\n              <button class=\"btn btn-primary\" ref=\"' +\n((__t = (ctx.ref.saveRow)) == null ? '' : __t) +\n'\">' +\n((__t = (ctx.t(ctx.component.saveRow || 'Save', { _userInput: true }))) == null ? '' : __t) +\n'</button>\\n              ';\n if (ctx.component.removeRow) { ;\n__p += '\\n              <button class=\"btn btn-danger\" ref=\"' +\n((__t = (ctx.ref.cancelRow)) == null ? '' : __t) +\n'\">' +\n((__t = (ctx.t(ctx.component.removeRow || 'Cancel', { _userInput: true }))) == null ? '' : __t) +\n'</button>\\n              ';\n } ;\n__p += '\\n            </div>\\n          </td>\\n          ';\n } ;\n__p += '\\n          ';\n if (ctx.errors[rowIndex]) { ;\n__p += '\\n          <td class=\"editgrid-table-column\">\\n            <div class=\"has-error\">\\n              <div class=\"editgrid-row-error help-block\">\\n                ' +\n((__t = (ctx.errors[rowIndex])) == null ? '' : __t) +\n'\\n              </div>\\n            </div>\\n          </td>\\n          ';\n } ;\n__p += '\\n        </tr>\\n        ';\n }) ;\n__p += '\\n      </tbody>\\n      ';\n if (ctx.footer) { ;\n__p += '\\n      <tfoot>\\n        <tr>\\n          ' +\n((__t = (ctx.footer)) == null ? '' : __t) +\n'\\n         </tr>\\n      <tfoot>\\n      ';\n } ;\n__p += '\\n    </table>\\n  </div>\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/editgridTable/html.ejs.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap/editgridTable/index.js":
+/*!********************************************************!*\
+  !*** ./lib/templates/bootstrap/editgridTable/index.js ***!
+  \********************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap/editgridTable/form.ejs.js\"));\nvar _html = _interopRequireDefault(__webpack_require__(/*! ./html.ejs */ \"./lib/templates/bootstrap/editgridTable/html.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"],\n  html: _html[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/editgridTable/index.js?");
 
 /***/ }),
 
@@ -3666,17 +3382,6 @@ eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js *
 
 /***/ }),
 
-/***/ "./lib/templates/bootstrap/iconClass.js":
-/*!**********************************************!*\
-  !*** ./lib/templates/bootstrap/iconClass.js ***!
-  \**********************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\n__webpack_require__(/*! core-js/modules/es.array.concat.js */ \"./node_modules/core-js/modules/es.array.concat.js\");\nvar _default = function _default(iconset, name, spinning) {\n  if (iconset === 'fa') {\n    switch (name) {\n      case 'save':\n        name = 'download';\n        break;\n      case 'zoom-in':\n        name = 'search-plus';\n        break;\n      case 'zoom-out':\n        name = 'search-minus';\n        break;\n      case 'question-sign':\n        name = 'question-circle';\n        break;\n      case 'remove-circle':\n        name = 'times-circle-o';\n        break;\n      case 'new-window':\n        name = 'window-restore';\n        break;\n      case 'move':\n        name = 'arrows';\n        break;\n      case 'time':\n        name = 'clock-o';\n        break;\n    }\n  }\n  return spinning ? \"\".concat(iconset, \" \").concat(iconset, \"-\").concat(name, \" \").concat(iconset, \"-spin\") : \"\".concat(iconset, \" \").concat(iconset, \"-\").concat(name);\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/iconClass.js?");
-
-/***/ }),
-
 /***/ "./lib/templates/bootstrap/icon/form.ejs.js":
 /*!**************************************************!*\
   !*** ./lib/templates/bootstrap/icon/form.ejs.js ***!
@@ -3695,6 +3400,17 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 
 "use strict";
 eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap/icon/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/icon/index.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap/iconClass.js":
+/*!**********************************************!*\
+  !*** ./lib/templates/bootstrap/iconClass.js ***!
+  \**********************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\n__webpack_require__(/*! core-js/modules/es.array.concat.js */ \"./node_modules/core-js/modules/es.array.concat.js\");\nvar _default = function _default(iconset, name, spinning) {\n  if (iconset === 'fa') {\n    switch (name) {\n      case 'save':\n        name = 'download';\n        break;\n      case 'zoom-in':\n        name = 'search-plus';\n        break;\n      case 'zoom-out':\n        name = 'search-minus';\n        break;\n      case 'question-sign':\n        name = 'question-circle';\n        break;\n      case 'remove-circle':\n        name = 'times-circle-o';\n        break;\n      case 'new-window':\n        name = 'window-restore';\n        break;\n      case 'move':\n        name = 'arrows';\n        break;\n      case 'time':\n        name = 'clock-o';\n        break;\n    }\n  }\n  return spinning ? \"\".concat(iconset, \" \").concat(iconset, \"-\").concat(name, \" \").concat(iconset, \"-spin\") : \"\".concat(iconset, \" \").concat(iconset, \"-\").concat(name);\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/iconClass.js?");
 
 /***/ }),
 
@@ -3992,24 +3708,24 @@ eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js *
 
 /***/ }),
 
-/***/ "./lib/templates/bootstrap/pdfBuilderUpload/form.ejs.js":
-/*!**************************************************************!*\
-  !*** ./lib/templates/bootstrap/pdfBuilderUpload/form.ejs.js ***!
-  \**************************************************************/
+/***/ "./lib/templates/bootstrap/pdf/form.ejs.js":
+/*!*************************************************!*\
+  !*** ./lib/templates/bootstrap/pdf/form.ejs.js ***!
+  \*************************************************/
 /***/ (function(__unused_webpack_module, exports) {
 
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '';\n__p += '<div class=\"pdf-upload formio-component-file\">\\n  <h3 class=\"label\">' +\n((__t = (ctx.t('Upload a PDF File'))) == null ? '' : __t) +\n'</h3>\\n  <input type=\"file\" style=\"opacity: 0; position: absolute;\" tabindex=\"-1\" accept=\".pdf\" ref=\"hiddenFileInputElement\">\\n  <div class=\"fileSelector\" ref=\"fileDrop\">\\n    <span ref=\"dragDropText\">\\n      <i class=\"' +\n((__t = (ctx.iconClass('cloud-upload'))) == null ? '' : __t) +\n'\"></i>' +\n((__t = (ctx.t('Drop pdf to start, or'))) == null ? '' : __t) +\n' <a href=\"#\" ref=\"fileBrowse\" class=\"browse\">' +\n((__t = (ctx.t('browse'))) == null ? '' : __t) +\n'</a>\\n    </span>\\n    <div class=\"progress pdf-progress\" ref=\"uploadProgressWrapper\" style=\"display:none;\">\\n      <div class=\"progress-bar\" ref=\"uploadProgress\" role=\"progressbar\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>\\n    </div>\\n  </div>\\n  <div class=\"alert alert-danger\" ref=\"uploadError\">\\n\\n  </div>\\n</div>\\n\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/pdfBuilderUpload/form.ejs.js?");
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '';\n__p += '<div class=\"' +\n((__t = (ctx.classes)) == null ? '' : __t) +\n'\" ref=\"webform\">\\n\t<span data-noattach=\"true\" ref=\"zoomIn\" style=\"position:absolute;right:10px;top:10px;cursor:pointer;\" class=\"btn btn-default btn-secondary no-disable\">\\n\t\t<i class=\"' +\n((__t = ( ctx.iconClass('zoom-in') )) == null ? '' : __t) +\n'\"></i>\\n\t</span>\\n\t<span data-noattach=\"true\" ref=\"zoomOut\" style=\"position:absolute;right:10px;top:60px;cursor:pointer;\" class=\"btn btn-default btn-secondary no-disable\">\\n\t\t<i class=\"' +\n((__t = ( ctx.iconClass('zoom-out') )) == null ? '' : __t) +\n'\"></i>\\n\t</span>\\n  <div data-noattach=\"true\" ref=\"iframeContainer\"></div>\\n  ' +\n((__t = ( ctx.submitButton )) == null ? '' : __t) +\n'\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/pdf/form.ejs.js?");
 
 /***/ }),
 
-/***/ "./lib/templates/bootstrap/pdfBuilderUpload/index.js":
-/*!***********************************************************!*\
-  !*** ./lib/templates/bootstrap/pdfBuilderUpload/index.js ***!
-  \***********************************************************/
+/***/ "./lib/templates/bootstrap/pdf/index.js":
+/*!**********************************************!*\
+  !*** ./lib/templates/bootstrap/pdf/index.js ***!
+  \**********************************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap/pdfBuilderUpload/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/pdfBuilderUpload/index.js?");
+eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap/pdf/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/pdf/index.js?");
 
 /***/ }),
 
@@ -4034,24 +3750,24 @@ eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js *
 
 /***/ }),
 
-/***/ "./lib/templates/bootstrap/pdf/form.ejs.js":
-/*!*************************************************!*\
-  !*** ./lib/templates/bootstrap/pdf/form.ejs.js ***!
-  \*************************************************/
+/***/ "./lib/templates/bootstrap/pdfBuilderUpload/form.ejs.js":
+/*!**************************************************************!*\
+  !*** ./lib/templates/bootstrap/pdfBuilderUpload/form.ejs.js ***!
+  \**************************************************************/
 /***/ (function(__unused_webpack_module, exports) {
 
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '';\n__p += '<div class=\"' +\n((__t = (ctx.classes)) == null ? '' : __t) +\n'\" ref=\"webform\">\\n\t<span data-noattach=\"true\" ref=\"zoomIn\" style=\"position:absolute;right:10px;top:10px;cursor:pointer;\" class=\"btn btn-default btn-secondary no-disable\">\\n\t\t<i class=\"' +\n((__t = ( ctx.iconClass('zoom-in') )) == null ? '' : __t) +\n'\"></i>\\n\t</span>\\n\t<span data-noattach=\"true\" ref=\"zoomOut\" style=\"position:absolute;right:10px;top:60px;cursor:pointer;\" class=\"btn btn-default btn-secondary no-disable\">\\n\t\t<i class=\"' +\n((__t = ( ctx.iconClass('zoom-out') )) == null ? '' : __t) +\n'\"></i>\\n\t</span>\\n  <div data-noattach=\"true\" ref=\"iframeContainer\"></div>\\n  ' +\n((__t = ( ctx.submitButton )) == null ? '' : __t) +\n'\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/pdf/form.ejs.js?");
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '';\n__p += '<div class=\"pdf-upload formio-component-file\">\\n  <h3 class=\"label\">' +\n((__t = (ctx.t('Upload a PDF File'))) == null ? '' : __t) +\n'</h3>\\n  <input type=\"file\" style=\"opacity: 0; position: absolute;\" tabindex=\"-1\" accept=\".pdf\" ref=\"hiddenFileInputElement\">\\n  <div class=\"fileSelector\" ref=\"fileDrop\">\\n    <span ref=\"dragDropText\">\\n      <i class=\"' +\n((__t = (ctx.iconClass('cloud-upload'))) == null ? '' : __t) +\n'\"></i>' +\n((__t = (ctx.t('Drop pdf to start, or'))) == null ? '' : __t) +\n' <a href=\"#\" ref=\"fileBrowse\" class=\"browse\">' +\n((__t = (ctx.t('browse'))) == null ? '' : __t) +\n'</a>\\n    </span>\\n    <div class=\"progress pdf-progress\" ref=\"uploadProgressWrapper\" style=\"display:none;\">\\n      <div class=\"progress-bar\" ref=\"uploadProgress\" role=\"progressbar\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\"></div>\\n    </div>\\n  </div>\\n  <div class=\"alert alert-danger\" ref=\"uploadError\">\\n\\n  </div>\\n</div>\\n\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/pdfBuilderUpload/form.ejs.js?");
 
 /***/ }),
 
-/***/ "./lib/templates/bootstrap/pdf/index.js":
-/*!**********************************************!*\
-  !*** ./lib/templates/bootstrap/pdf/index.js ***!
-  \**********************************************/
+/***/ "./lib/templates/bootstrap/pdfBuilderUpload/index.js":
+/*!***********************************************************!*\
+  !*** ./lib/templates/bootstrap/pdfBuilderUpload/index.js ***!
+  \***********************************************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap/pdf/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/pdf/index.js?");
+eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap/pdfBuilderUpload/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/pdfBuilderUpload/index.js?");
 
 /***/ }),
 
@@ -4107,37 +3823,6 @@ eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js *
 
 /***/ }),
 
-/***/ "./lib/templates/bootstrap/selectOption/form.ejs.js":
-/*!**********************************************************!*\
-  !*** ./lib/templates/bootstrap/selectOption/form.ejs.js ***!
-  \**********************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<option ' +\n((__t = ( ctx.selected ? 'selected=\"selected\"' : '' )) == null ? '' : __t) +\n'\\n  value=\\'' +\n((__t = (ctx.useId ? ctx.id : ctx.option.value)) == null ? '' : __t) +\n'\\'\\n  ';\n for (var attr in ctx.attrs) { ;\n__p += '\\n  ' +\n((__t = (attr)) == null ? '' : __t) +\n'=\"' +\n((__t = (ctx.attrs[attr])) == null ? '' : __t) +\n'\"\\n  ';\n } ;\n__p += '\\n  >\\n  ' +\n((__t = (ctx.t(ctx.option.label, { _userInput: true }))) == null ? '' : __t) +\n'\\n</option>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/selectOption/form.ejs.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap/selectOption/html.ejs.js":
-/*!**********************************************************!*\
-  !*** ./lib/templates/bootstrap/selectOption/html.ejs.js ***!
-  \**********************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n\n if (ctx.selected) { ;\n__p +=\n((__t = (ctx.t(ctx.option.label, { _userInput: true }))) == null ? '' : __t);\n } ;\n__p += '\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/selectOption/html.ejs.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap/selectOption/index.js":
-/*!*******************************************************!*\
-  !*** ./lib/templates/bootstrap/selectOption/index.js ***!
-  \*******************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap/selectOption/form.ejs.js\"));\nvar _html = _interopRequireDefault(__webpack_require__(/*! ./html.ejs */ \"./lib/templates/bootstrap/selectOption/html.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"],\n  html: _html[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/selectOption/index.js?");
-
-/***/ }),
-
 /***/ "./lib/templates/bootstrap/select/form.ejs.js":
 /*!****************************************************!*\
   !*** ./lib/templates/bootstrap/select/form.ejs.js ***!
@@ -4166,6 +3851,37 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 
 "use strict";
 eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap/select/form.ejs.js\"));\nvar _html = _interopRequireDefault(__webpack_require__(/*! ./html.ejs */ \"./lib/templates/bootstrap/select/html.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"],\n  html: _html[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/select/index.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap/selectOption/form.ejs.js":
+/*!**********************************************************!*\
+  !*** ./lib/templates/bootstrap/selectOption/form.ejs.js ***!
+  \**********************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<option ' +\n((__t = ( ctx.selected ? 'selected=\"selected\"' : '' )) == null ? '' : __t) +\n'\\n  value=\\'' +\n((__t = (ctx.useId ? ctx.id : ctx.option.value)) == null ? '' : __t) +\n'\\'\\n  ';\n for (var attr in ctx.attrs) { ;\n__p += '\\n  ' +\n((__t = (attr)) == null ? '' : __t) +\n'=\"' +\n((__t = (ctx.attrs[attr])) == null ? '' : __t) +\n'\"\\n  ';\n } ;\n__p += '\\n  >\\n  ' +\n((__t = (ctx.t(ctx.option.label, { _userInput: true }))) == null ? '' : __t) +\n'\\n</option>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/selectOption/form.ejs.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap/selectOption/html.ejs.js":
+/*!**********************************************************!*\
+  !*** ./lib/templates/bootstrap/selectOption/html.ejs.js ***!
+  \**********************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n\n if (ctx.selected) { ;\n__p +=\n((__t = (ctx.t(ctx.option.label, { _userInput: true }))) == null ? '' : __t);\n } ;\n__p += '\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/selectOption/html.ejs.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap/selectOption/index.js":
+/*!*******************************************************!*\
+  !*** ./lib/templates/bootstrap/selectOption/index.js ***!
+  \*******************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap/selectOption/form.ejs.js\"));\nvar _html = _interopRequireDefault(__webpack_require__(/*! ./html.ejs */ \"./lib/templates/bootstrap/selectOption/html.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"],\n  html: _html[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/selectOption/index.js?");
 
 /***/ }),
 
@@ -4262,27 +3978,6 @@ eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js *
 
 /***/ }),
 
-/***/ "./lib/templates/bootstrap/tableComponents/form.ejs.js":
-/*!*************************************************************!*\
-  !*** ./lib/templates/bootstrap/tableComponents/form.ejs.js ***!
-  \*************************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n\n ctx.children.forEach(function(component) { ;\n__p += '\\n  <td class=\"editgrid-table-column\">\\n    ' +\n((__t = ( component )) == null ? '' : __t) +\n'\\n  </td>\\n';\n }) ;\n__p += '\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/tableComponents/form.ejs.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap/tableComponents/index.js":
-/*!**********************************************************!*\
-  !*** ./lib/templates/bootstrap/tableComponents/index.js ***!
-  \**********************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap/tableComponents/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/tableComponents/index.js?");
-
-/***/ }),
-
 /***/ "./lib/templates/bootstrap/table/form.ejs.js":
 /*!***************************************************!*\
   !*** ./lib/templates/bootstrap/table/form.ejs.js ***!
@@ -4301,6 +3996,27 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 
 "use strict";
 eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap/table/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/table/index.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap/tableComponents/form.ejs.js":
+/*!*************************************************************!*\
+  !*** ./lib/templates/bootstrap/tableComponents/form.ejs.js ***!
+  \*************************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n\n ctx.children.forEach(function(component) { ;\n__p += '\\n  <td class=\"editgrid-table-column\">\\n    ' +\n((__t = ( component )) == null ? '' : __t) +\n'\\n  </td>\\n';\n }) ;\n__p += '\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/tableComponents/form.ejs.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap/tableComponents/index.js":
+/*!**********************************************************!*\
+  !*** ./lib/templates/bootstrap/tableComponents/index.js ***!
+  \**********************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap/tableComponents/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/tableComponents/index.js?");
 
 /***/ }),
 
@@ -4408,6 +4124,58 @@ eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js *
 
 /***/ }),
 
+/***/ "./lib/templates/bootstrap/wizard/builder.ejs.js":
+/*!*******************************************************!*\
+  !*** ./lib/templates/bootstrap/wizard/builder.ejs.js ***!
+  \*******************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '';\n__p += '<div class=\"text-muted text-center p-2\">' +\n((__t = ( ctx.t(ctx.component.title, { _userInput: true }) )) == null ? '' : __t) +\n'</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/wizard/builder.ejs.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap/wizard/form.ejs.js":
+/*!****************************************************!*\
+  !*** ./lib/templates/bootstrap/wizard/form.ejs.js ***!
+  \****************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<div class=\"' +\n((__t = (ctx.className)) == null ? '' : __t) +\n'\">\\n    <div style=\"position: relative;\">\\n        ';\n if (ctx.wizardHeaderType === 'wizardHeaderVertical') { ;\n__p += '\\n        <div class=\"row\">\\n            ';\n if (ctx.wizardHeaderLocation !== 'right') { ;\n__p += '\\n            <div class=\"col-sm-2\">\\n                ' +\n((__t = ( ctx.wizardHeader )) == null ? '' : __t) +\n'\\n            </div>\\n            ';\n } ;\n__p += '\\n            <div class=\"wizard-page col-sm-10\" ref=\"' +\n((__t = (ctx.wizardKey)) == null ? '' : __t) +\n'\">\\n                ' +\n((__t = (ctx.components)) == null ? '' : __t) +\n'\\n            </div>\\n            ';\n if (ctx.wizardHeaderLocation === 'right') { ;\n__p += '\\n            <div class=\"col-sm-2\">\\n                ' +\n((__t = ( ctx.wizardHeader )) == null ? '' : __t) +\n'\\n            </div>\\n            ';\n } ;\n__p += '\\n        </div>\\n        <div class=\"col-sm-offset-2 col-sm-10 ' +\n((__t = (ctx.wizardHeaderLocation === 'right' ? 'col-sm-offset-0 col-md-offset-0' : '')) == null ? '' : __t) +\n'\">\\n            ' +\n((__t = ( ctx.wizardNav )) == null ? '' : __t) +\n'\\n        </div>\\n        ';\n } else { ;\n__p += '\\n        ' +\n((__t = ( ctx.wizardHeader )) == null ? '' : __t) +\n'\\n        <div class=\"wizard-page\" ref=\"' +\n((__t = (ctx.wizardKey)) == null ? '' : __t) +\n'\">\\n            ' +\n((__t = (ctx.components)) == null ? '' : __t) +\n'\\n        </div>\\n        ' +\n((__t = ( ctx.wizardNav )) == null ? '' : __t) +\n'\\n        ';\n } ;\n__p += '\\n    </div>\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/wizard/form.ejs.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap/wizard/index.js":
+/*!*************************************************!*\
+  !*** ./lib/templates/bootstrap/wizard/index.js ***!
+  \*************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap/wizard/form.ejs.js\"));\nvar _builder = _interopRequireDefault(__webpack_require__(/*! ./builder.ejs */ \"./lib/templates/bootstrap/wizard/builder.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"],\n  builder: _builder[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/wizard/index.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap/wizardHeader/form.ejs.js":
+/*!**********************************************************!*\
+  !*** ./lib/templates/bootstrap/wizardHeader/form.ejs.js ***!
+  \**********************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<nav aria-label=\"Wizard navigation\" id=\"' +\n((__t = ( ctx.wizardKey )) == null ? '' : __t) +\n'-header\" ref=\"' +\n((__t = (ctx.wizardKey)) == null ? '' : __t) +\n'-header\">\\n  <ul class=\"pagination\" role=\"tablist\">\\n    ';\n ctx.panels.forEach(function(panel, index) { ;\n__p += '\\n    <li class=\"page-item' +\n((__t = (ctx.currentPage === index ? ' active' : '')) == null ? '' : __t) +\n'\" style=\"cursor: pointer;\">\\n      <button tabindex=\"0\" data-index=\"' +\n((__t = (index)) == null ? '' : __t) +\n'\" role=\"tab\" class=\"page-link\" ref=\"' +\n((__t = (ctx.wizardKey)) == null ? '' : __t) +\n'-link\">\\n        ' +\n((__t = (ctx.t(panel.title, { _userInput: true }))) == null ? '' : __t) +\n'\\n        ';\n if (panel.tooltip && ctx.currentPage === index) { ;\n__p += '\\n        <i ref=\"' +\n((__t = (ctx.wizardKey)) == null ? '' : __t) +\n'-tooltip\" class=\"' +\n((__t = (ctx.iconClass('question-sign'))) == null ? '' : __t) +\n' text-muted\" data-tooltip=\"' +\n((__t = (panel.tooltip)) == null ? '' : __t) +\n'\"></i>\\n        ';\n } ;\n__p += '\\n      </button>\\n    </li>\\n    ';\n }) ;\n__p += '\\n  </ul>\\n</nav>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/wizardHeader/form.ejs.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap/wizardHeader/index.js":
+/*!*******************************************************!*\
+  !*** ./lib/templates/bootstrap/wizardHeader/index.js ***!
+  \*******************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap/wizardHeader/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/wizardHeader/index.js?");
+
+/***/ }),
+
 /***/ "./lib/templates/bootstrap/wizardHeaderClassic/form.ejs.js":
 /*!*****************************************************************!*\
   !*** ./lib/templates/bootstrap/wizardHeaderClassic/form.ejs.js ***!
@@ -4450,27 +4218,6 @@ eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js *
 
 /***/ }),
 
-/***/ "./lib/templates/bootstrap/wizardHeader/form.ejs.js":
-/*!**********************************************************!*\
-  !*** ./lib/templates/bootstrap/wizardHeader/form.ejs.js ***!
-  \**********************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<nav aria-label=\"Wizard navigation\" id=\"' +\n((__t = ( ctx.wizardKey )) == null ? '' : __t) +\n'-header\" ref=\"' +\n((__t = (ctx.wizardKey)) == null ? '' : __t) +\n'-header\">\\n  <ul class=\"pagination\" role=\"tablist\">\\n    ';\n ctx.panels.forEach(function(panel, index) { ;\n__p += '\\n    <li class=\"page-item' +\n((__t = (ctx.currentPage === index ? ' active' : '')) == null ? '' : __t) +\n'\" style=\"cursor: pointer;\">\\n      <button tabindex=\"0\" data-index=\"' +\n((__t = (index)) == null ? '' : __t) +\n'\" role=\"tab\" class=\"page-link\" ref=\"' +\n((__t = (ctx.wizardKey)) == null ? '' : __t) +\n'-link\">\\n        ' +\n((__t = (ctx.t(panel.title, { _userInput: true }))) == null ? '' : __t) +\n'\\n        ';\n if (panel.tooltip && ctx.currentPage === index) { ;\n__p += '\\n        <i ref=\"' +\n((__t = (ctx.wizardKey)) == null ? '' : __t) +\n'-tooltip\" class=\"' +\n((__t = (ctx.iconClass('question-sign'))) == null ? '' : __t) +\n' text-muted\" data-tooltip=\"' +\n((__t = (panel.tooltip)) == null ? '' : __t) +\n'\"></i>\\n        ';\n } ;\n__p += '\\n      </button>\\n    </li>\\n    ';\n }) ;\n__p += '\\n  </ul>\\n</nav>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/wizardHeader/form.ejs.js?");
-
-/***/ }),
-
-/***/ "./lib/templates/bootstrap/wizardHeader/index.js":
-/*!*******************************************************!*\
-  !*** ./lib/templates/bootstrap/wizardHeader/index.js ***!
-  \*******************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap/wizardHeader/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/wizardHeader/index.js?");
-
-/***/ }),
-
 /***/ "./lib/templates/bootstrap/wizardNav/form.ejs.js":
 /*!*******************************************************!*\
   !*** ./lib/templates/bootstrap/wizardNav/form.ejs.js ***!
@@ -4492,34 +4239,287 @@ eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js *
 
 /***/ }),
 
-/***/ "./lib/templates/bootstrap/wizard/builder.ejs.js":
+/***/ "./lib/templates/bootstrap5/builderSidebar/form.ejs.js":
+/*!*************************************************************!*\
+  !*** ./lib/templates/bootstrap5/builderSidebar/form.ejs.js ***!
+  \*************************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<div id=\"' +\n((__t = (ctx.groupId)) == null ? '' : __t) +\n'\" class=\"accordion builder-sidebar' +\n((__t = (ctx.scrollEnabled ? ' builder-sidebar_scroll' : '')) == null ? '' : __t) +\n'\" ref=\"sidebar\" role=\"tablist\">\\n  <input class=\"form-control builder-sidebar_search\" type=\"search\" ref=\"sidebar-search\" placeholder=\"Search field(s)\" />\\n    ';\n ctx.groups.forEach(function(group) { ;\n__p += '\\n      ' +\n((__t = ( group )) == null ? '' : __t) +\n'\\n    ';\n }) ;\n__p += '\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/builderSidebar/form.ejs.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap5/builderSidebar/index.js":
+/*!**********************************************************!*\
+  !*** ./lib/templates/bootstrap5/builderSidebar/index.js ***!
+  \**********************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap5/builderSidebar/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/builderSidebar/index.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap5/builderSidebarGroup/form.ejs.js":
+/*!******************************************************************!*\
+  !*** ./lib/templates/bootstrap5/builderSidebarGroup/form.ejs.js ***!
+  \******************************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<div class=\"card form-builder-panel\" ref=\"group-panel-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\">\\n  <div class=\"card-header form-builder-group-header\" id=\"heading-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\">\\n    <h5 class=\"mb-0 mt-0 d-grid\">\\n      <button\\n        class=\"btn builder-group-button\"\\n        type=\"button\"\\n        data-toggle=\"collapse\"\\n        data-target=\"#group-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\"\\n        data-parent=\"#' +\n((__t = (ctx.groupId)) == null ? '' : __t) +\n'\"\\n        aria-expanded=\"' +\n((__t = (ctx.group.default)) == null ? '' : __t) +\n'\"\\n        aria-controls=\"group-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\"\\n        ref=\"sidebar-anchor\"\\n      >\\n        ' +\n((__t = (ctx.t(ctx.group.title, { _userInput: true }))) == null ? '' : __t) +\n'\\n      </button>\\n    </h5>\\n  </div>\\n  <div\\n    id=\"group-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\"\\n    class=\"collapse ' +\n((__t = (ctx.group.default ? ' show' : '')) == null ? '' : __t) +\n'\"\\n    data-parent=\"#' +\n((__t = (ctx.groupId)) == null ? '' : __t) +\n'\"\\n    data-default=\"' +\n((__t = (ctx.group.default)) == null ? '' : __t) +\n'\"\\n    aria-labelledby=\"heading-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\"\\n    ref=\"sidebar-group\"\\n  >\\n    <div id=\"group-container-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\" class=\"d-grid gap-1 no-drop p-2 w-100\" ref=\"sidebar-container\">\\n      ';\n if (ctx.group.componentOrder.length || ctx.subgroups.length) { ;\n__p += '\\n        ';\n !ctx.group.componentOrder || ctx.group.componentOrder.forEach(function(componentKey) { ;\n__p += '\\n          <span\\n            data-group=\"' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\"\\n            data-key=\"' +\n((__t = (ctx.group.components[componentKey].key)) == null ? '' : __t) +\n'\"\\n            data-type=\"' +\n((__t = (ctx.group.components[componentKey].schema.type)) == null ? '' : __t) +\n'\"\\n            class=\"btn btn-primary btn-sm formcomponent drag-copy m-0\"\\n          >\\n            ';\n if (ctx.group.components[componentKey].icon) { ;\n__p += '\\n              <i class=\"' +\n((__t = (ctx.iconClass(ctx.group.components[componentKey].icon))) == null ? '' : __t) +\n'\" style=\"margin-right: 5px;\"></i>\\n            ';\n } ;\n__p += '\\n            ' +\n((__t = (ctx.t(ctx.group.components[componentKey].title, { _userInput: true }))) == null ? '' : __t) +\n'\\n          </span>\\n        ';\n }) ;\n__p += '\\n        ' +\n((__t = (ctx.subgroups.join(''))) == null ? '' : __t) +\n'\\n      ';\n } else { ;\n__p += '\\n        <div>' +\n((__t = (ctx.t('No Matches Found'))) == null ? '' : __t) +\n'</div>\\n      ';\n } ;\n__p += '\\n    </div>\\n  </div>\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/builderSidebarGroup/form.ejs.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap5/builderSidebarGroup/index.js":
+/*!***************************************************************!*\
+  !*** ./lib/templates/bootstrap5/builderSidebarGroup/index.js ***!
+  \***************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap5/builderSidebarGroup/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/builderSidebarGroup/index.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap5/builderWizard/form.ejs.js":
+/*!************************************************************!*\
+  !*** ./lib/templates/bootstrap5/builderWizard/form.ejs.js ***!
+  \************************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<div class=\"formio builder row formbuilder\">\\n  <div class=\"col-xs-4 col-sm-3 col-md-2 formcomponents\">\\n    ' +\n((__t = (ctx.sidebar)) == null ? '' : __t) +\n'\\n  </div>\\n  <div class=\"col-xs-8 col-sm-9 col-md-10 formarea\">\\n    <ol class=\"breadcrumb wizard-pages\">\\n      ';\n ctx.pages.forEach(function(page, pageIndex) { ;\n__p += '\\n      <li>\\n        <span title=\"' +\n((__t = (page.title)) == null ? '' : __t) +\n'\" class=\"me-2 badge ';\n if (pageIndex === ctx.self.page) { ;\n__p += 'bg-primary';\n } else { ;\n__p += 'bg-info';\n } ;\n__p += ' wizard-page-label\" ref=\"gotoPage\">' +\n((__t = (page.title)) == null ? '' : __t) +\n'</span>\\n      </li>\\n      ';\n }) ;\n__p += '\\n      <li class=\"wizard-add-page\">\\n        <span title=\"' +\n((__t = (ctx.t('Create Page'))) == null ? '' : __t) +\n'\" class=\"me-2 badge bg-success wizard-page-label\" ref=\"addPage\">\\n          <i class=\"' +\n((__t = (ctx.iconClass('plus'))) == null ? '' : __t) +\n'\"></i> ' +\n((__t = (ctx.t('Page'))) == null ? '' : __t) +\n'\\n        </span>\\n      </li>\\n    </ol>\\n    <div ref=\"form\">\\n      ' +\n((__t = (ctx.form)) == null ? '' : __t) +\n'\\n    </div>\\n  </div>\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/builderWizard/form.ejs.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap5/builderWizard/index.js":
+/*!*********************************************************!*\
+  !*** ./lib/templates/bootstrap5/builderWizard/index.js ***!
+  \*********************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap5/builderWizard/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/builderWizard/index.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap5/componentModal/form.ejs.js":
+/*!*************************************************************!*\
+  !*** ./lib/templates/bootstrap5/componentModal/form.ejs.js ***!
+  \*************************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<div class=\"formio-component-modal-wrapper formio-component-modal-wrapper-' +\n((__t = ( ctx.component.type )) == null ? '' : __t) +\n'\" ref=\"componentModalWrapper\">\\n  <div ref=\"openModalWrapper\"></div>\\n  <div class=\"formio-dialog formio-dialog-theme-default component-rendering-hidden\" ref=\"modalWrapper\">\\n    <div class=\"formio-dialog-overlay\" ref=\"modalOverlay\"></div>\\n    <div class=\"formio-dialog-content\" aria-labelledby=\"ml-' +\n((__t = (ctx.instance.id)) == null ? '' : __t) +\n'-' +\n((__t = (ctx.component.key)) == null ? '' : __t) +\n'\" ';\n if (!ctx.self.isIE()) { ;\n__p += ' role=\"dialog\" ';\n } ;\n__p += ' ref=\"modalContents\">\\n      <label class=\"visually-hidden\" id=\"ml-' +\n((__t = (ctx.instance.id)) == null ? '' : __t) +\n'-' +\n((__t = (ctx.component.key)) == null ? '' : __t) +\n'\">' +\n((__t = ( ctx.t(ctx.component.label) )) == null ? '' : __t) +\n'' +\n((__t = (ctx.self.isIE() ? ', dialog' : '')) == null ? '' : __t) +\n'</label>\\n      ';\n if (ctx.options.vpat) { ;\n__p += '\\n      <button class=\"formio-dialog-close float-end\" title=\"Close\" aria-label=\"Close button. Click to get back to the form\" ref=\"modalCloseButton\"></button>\\n      ';\n } else { ;\n__p += '\\n      <button class=\"formio-dialog-close float-end btn btn-secondary btn-sm\" aria-label=\"Close button. Click to get back to the form\" ref=\"modalClose\"></button>\\n      ';\n } ;\n__p += '\\n      <div ref=\"modalContents\">\\n        ';\n if (ctx.visible) { ;\n__p += '\\n        ' +\n((__t = (ctx.children)) == null ? '' : __t) +\n'\\n        ';\n } ;\n__p += '\\n        <div class=\"formio-dialog-buttons\">\\n          ';\n if (ctx.options.vpat) { ;\n__p += '\\n          <button class=\"btn btn-secondary formio-dialog-button\" aria-label=\"Cancel button. Click to cancel the changes and get back to the form.\" ref=\"modalClose\">' +\n((__t = (ctx.t('Cancel'))) == null ? '' : __t) +\n'</button>\\n          ';\n } ;\n__p += '\\n          <button class=\"btn btn-success formio-dialog-button\" ref=\"modalSave\" aria-label=\"Save button. Click to save the changes and get back to the form.\">' +\n((__t = (ctx.t('Save'))) == null ? '' : __t) +\n'</button>\\n        </div>\\n      </div>\\n    </div>\\n    <span class=\"visually-hidden\" ref=\"modalLiveRegion\" aria-live=\"assertive\"></span>\\n  </div>\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/componentModal/form.ejs.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap5/componentModal/index.js":
+/*!**********************************************************!*\
+  !*** ./lib/templates/bootstrap5/componentModal/index.js ***!
+  \**********************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap5/componentModal/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/componentModal/index.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap5/cssClasses.js":
+/*!************************************************!*\
+  !*** ./lib/templates/bootstrap5/cssClasses.js ***!
+  \************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _default = {\n  'form-group': 'formio-form-group'\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/cssClasses.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap5/datagrid/form.ejs.js":
 /*!*******************************************************!*\
-  !*** ./lib/templates/bootstrap/wizard/builder.ejs.js ***!
+  !*** ./lib/templates/bootstrap5/datagrid/form.ejs.js ***!
   \*******************************************************/
 /***/ (function(__unused_webpack_module, exports) {
 
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '';\n__p += '<div class=\"text-muted text-center p-2\">' +\n((__t = ( ctx.t(ctx.component.title, { _userInput: true }) )) == null ? '' : __t) +\n'</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/wizard/builder.ejs.js?");
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<table class=\"table datagrid-table table-bordered\\n    ' +\n((__t = ( ctx.component.striped ? 'table-striped' : '')) == null ? '' : __t) +\n'\\n    ' +\n((__t = ( ctx.component.hover ? 'table-hover' : '')) == null ? '' : __t) +\n'\\n    ' +\n((__t = ( ctx.component.condensed ? 'table-sm' : '')) == null ? '' : __t) +\n'\\n    \" ';\n if (ctx.component.layoutFixed) { ;\n__p += 'style=\"table-layout: fixed;\"';\n } ;\n__p += '>\\n  ';\n if (ctx.hasHeader) { ;\n__p += '\\n  <thead>\\n    <tr>\\n      ';\n if (ctx.component.reorder) { ;\n__p += '<th></th>';\n } ;\n__p += '\\n      ';\n ctx.columns.forEach(function(col) { ;\n__p += '\\n        <th class=\"' +\n((__t = (col.validate && col.validate.required ? 'field-required' : '')) == null ? '' : __t) +\n'\">\\n          ' +\n((__t = ( col.hideLabel ? '' : ctx.t(col.label || col.title, { _userInput: true }) )) == null ? '' : __t) +\n'\\n          ';\n if (col.tooltip) { ;\n__p += ' <i ref=\"tooltip\" tabindex=\"0\" data-title=\"' +\n((__t = (col.tooltip)) == null ? '' : __t) +\n'\" class=\"' +\n((__t = (ctx.iconClass('question-sign'))) == null ? '' : __t) +\n' text-muted\" data-tooltip=\"' +\n((__t = (col.tooltip)) == null ? '' : __t) +\n'\"></i>';\n } ;\n__p += '\\n        </th>\\n      ';\n }) ;\n__p += '\\n      ';\n if (ctx.hasExtraColumn) { ;\n__p += '\\n      <th>\\n        <span class=\"visually-hidden\">' +\n((__t = ( ctx.t('Add/Remove') )) == null ? '' : __t) +\n'</span>\\n        ';\n if (!ctx.builder && ctx.hasAddButton && ctx.hasTopSubmit) { ;\n__p += '\\n        <button class=\"btn btn-primary formio-button-add-row\" ref=\"' +\n((__t = (ctx.datagridKey)) == null ? '' : __t) +\n'-addRow\" tabindex=\"' +\n((__t = (ctx.tabIndex)) == null ? '' : __t) +\n'\">\\n          <i class=\"' +\n((__t = (ctx.iconClass('plus'))) == null ? '' : __t) +\n'\"></i>' +\n((__t = (ctx.t(ctx.component.addAnother || 'Add Another', { _userInput: true }))) == null ? '' : __t) +\n'\\n        </button>\\n        ';\n } ;\n__p += '\\n      </th>\\n      ';\n } ;\n__p += '\\n    </tr>\\n  </thead>\\n  ';\n } ;\n__p += '\\n  <tbody ref=\"' +\n((__t = (ctx.datagridKey)) == null ? '' : __t) +\n'-tbody\" data-key=\"' +\n((__t = (ctx.datagridKey)) == null ? '' : __t) +\n'\">\\n    ';\n ctx.rows.forEach(function(row, index) { ;\n__p += '\\n    ';\n if (ctx.hasGroups && ctx.groups[index]) { ;\n__p += '\\n    <tr ref=\"' +\n((__t = (ctx.datagridKey)) == null ? '' : __t) +\n'-group-header\" class=\"datagrid-group-header' +\n((__t = (ctx.hasToggle ? ' clickable' : '')) == null ? '' : __t) +\n'\">\\n      <td\\n        ref=\"' +\n((__t = (ctx.datagridKey)) == null ? '' : __t) +\n'-group-label\"\\n        colspan=\"' +\n((__t = (ctx.numColumns)) == null ? '' : __t) +\n'\"\\n        class=\"datagrid-group-label\">' +\n((__t = (ctx.groups[index].label)) == null ? '' : __t) +\n'</td>\\n    </tr>\\n    ';\n } ;\n__p += '\\n    <tr ref=\"' +\n((__t = (ctx.datagridKey)) == null ? '' : __t) +\n'-row\">\\n      ';\n if (ctx.component.reorder) { ;\n__p += '\\n        <td>\\n          <button type=\"button\" class=\"formio-drag-button btn btn-default fa fa-bars\" data-key=\"' +\n((__t = (ctx.datagridKey)) == null ? '' : __t) +\n'\"></button>\\n        </td>\\n      ';\n } ;\n__p += '\\n      ';\n ctx.columns.forEach(function(col) { ;\n__p += '\\n        <td ref=\"' +\n((__t = (ctx.datagridKey)) == null ? '' : __t) +\n'\" ';\n if (col.key && col.overlay && col.overlay.width) { ;\n__p += ' style=\"width: ' +\n((__t = (col.overlay.width + 'px')) == null ? '' : __t) +\n'\"';\n } ;\n__p += ' >\\n          ' +\n((__t = (row[col.key])) == null ? '' : __t) +\n'\\n        </td>\\n      ';\n }) ;\n__p += '\\n      ';\n if (ctx.hasExtraColumn) { ;\n__p += '\\n        ';\n if (ctx.hasRemoveButtons) { ;\n__p += '\\n        <td>\\n          <button type=\"button\" class=\"btn btn-secondary formio-button-remove-row\" ref=\"' +\n((__t = (ctx.datagridKey)) == null ? '' : __t) +\n'-removeRow\" tabindex=\"' +\n((__t = (ctx.tabIndex)) == null ? '' : __t) +\n'\" aria-label=\"' +\n((__t = (ctx.t('remove'))) == null ? '' : __t) +\n'\">\\n            <i class=\"' +\n((__t = (ctx.iconClass('remove-circle'))) == null ? '' : __t) +\n'\"></i>\\n          </button>\\n        </td>\\n        ';\n } ;\n__p += '\\n        ';\n if (ctx.canAddColumn) { ;\n__p += '\\n        <td ref=\"' +\n((__t = (ctx.key)) == null ? '' : __t) +\n'-container\">\\n          ' +\n((__t = (ctx.placeholder)) == null ? '' : __t) +\n'\\n        </td>\\n        ';\n } ;\n__p += '\\n      ';\n } ;\n__p += '\\n    </tr>\\n    ';\n }) ;\n__p += '\\n  </tbody>\\n  ';\n if (!ctx.builder && ctx.hasAddButton && ctx.hasBottomSubmit) { ;\n__p += '\\n  <tfoot>\\n    <tr>\\n      <td colspan=\"' +\n((__t = (ctx.component.layoutFixed ? ctx.numColumns :  ctx.numColumns + 1)) == null ? '' : __t) +\n'\">\\n        <button class=\"btn btn-primary formio-button-add-row\" ref=\"' +\n((__t = (ctx.datagridKey)) == null ? '' : __t) +\n'-addRow\" tabindex=\"' +\n((__t = (ctx.tabIndex)) == null ? '' : __t) +\n'\">\\n          <i class=\"' +\n((__t = (ctx.iconClass('plus'))) == null ? '' : __t) +\n'\"></i> ' +\n((__t = (ctx.t(ctx.component.addAnother || 'Add Another', { _userInput: true }))) == null ? '' : __t) +\n'\\n        </button>\\n      </td>\\n    </tr>\\n  </tfoot>\\n  ';\n } ;\n__p += '\\n</table>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/datagrid/form.ejs.js?");
 
 /***/ }),
 
-/***/ "./lib/templates/bootstrap/wizard/form.ejs.js":
+/***/ "./lib/templates/bootstrap5/datagrid/index.js":
 /*!****************************************************!*\
-  !*** ./lib/templates/bootstrap/wizard/form.ejs.js ***!
+  !*** ./lib/templates/bootstrap5/datagrid/index.js ***!
+  \****************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap5/datagrid/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/datagrid/index.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap5/dialog/form.ejs.js":
+/*!*****************************************************!*\
+  !*** ./lib/templates/bootstrap5/dialog/form.ejs.js ***!
+  \*****************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '';\n__p += '<div class=\"formio-dialog formio-dialog-theme-default component-settings\">\\n  <div class=\"formio-dialog-overlay\" ref=\"dialogOverlay\"></div>\\n  <div class=\"formio-dialog-content\" ref=\"dialogContents\" role=\"dialog\">\\n    <div ref=\"dialogContents\"></div>\\n    <button class=\"formio-dialog-close float-end btn-sm\" aria-label=\"Close modal window.\" ref=\"dialogClose\"></button>\\n  </div>\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/dialog/form.ejs.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap5/dialog/index.js":
+/*!**************************************************!*\
+  !*** ./lib/templates/bootstrap5/dialog/index.js ***!
+  \**************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap5/dialog/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/dialog/index.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap5/file/form.ejs.js":
+/*!***************************************************!*\
+  !*** ./lib/templates/bootstrap5/file/form.ejs.js ***!
+  \***************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n\n if (ctx.options.vpat) { ;\n__p += '\\n  <span tabindex=\"-1\" class=\"visually-hidden\" id=\"invisible-' +\n((__t = (ctx.instance.id)) == null ? '' : __t) +\n'-' +\n((__t = (ctx.component.key)) == null ? '' : __t) +\n'\"></span>\\n';\n } ;\n__p += '\\n';\n if (!ctx.self.imageUpload) { ;\n__p += '\\n  ';\n if (ctx.options.vpat) { ;\n__p += '\\n    <div>' +\n((__t = ((!ctx.component.filePattern || ctx.component.filePattern === '*') ? 'Any file types are allowed' : ctx.t('Allowed file types: ') + ctx.component.filePattern)) == null ? '' : __t) +\n'</div>\\n  ';\n } ;\n__p += '\\n  <ul class=\"list-group list-group-striped\">\\n    <li class=\"list-group-item list-group-header hidden-xs hidden-sm\">\\n      <div class=\"row\">\\n        ';\n if (!ctx.disabled) { ;\n__p += '\\n          <div class=\"col-md-1\"></div>\\n        ';\n } ;\n__p += '\\n        <div class=\"col-md-';\n if (ctx.self.hasTypes) { ;\n__p += '7';\n } else { ;\n__p += '9';\n } ;\n__p += '\"><strong>' +\n((__t = (ctx.t('File Name'))) == null ? '' : __t) +\n'</strong></div>\\n        <div class=\"col-md-2\"><strong>' +\n((__t = (ctx.t('Size'))) == null ? '' : __t) +\n'</strong></div>\\n        ';\n if (ctx.self.hasTypes) { ;\n__p += '\\n          <div class=\"col-md-2\"><strong>' +\n((__t = (ctx.t('Type'))) == null ? '' : __t) +\n'</strong></div>\\n        ';\n } ;\n__p += '\\n      </div>\\n    </li>\\n    ';\n ctx.files.forEach(function(file) { ;\n__p += '\\n      <li class=\"list-group-item\">\\n        <div class=\"row\">\\n          ';\n if (!ctx.disabled) { ;\n__p += '\\n            <div class=\"col-md-1\"><i tabindex=\"0\" class=\"' +\n((__t = (ctx.iconClass('remove'))) == null ? '' : __t) +\n'\" ref=\"removeLink\"></i></div>\\n          ';\n } ;\n__p += '\\n          <div class=\"col-md-';\n if (ctx.self.hasTypes) { ;\n__p += '7';\n } else { ;\n__p += '9';\n } ;\n__p += '\">\\n            ';\n if (ctx.component.uploadOnly) { ;\n__p += '\\n              ' +\n((__t = (file.originalName || file.name)) == null ? '' : __t) +\n'\\n            ';\n } else { ;\n__p += '\\n              <a href=\"' +\n((__t = (file.url || '#')) == null ? '' : __t) +\n'\" target=\"_blank\" ref=\"fileLink\">\\n                <span class=\"visually-hidden\">' +\n((__t = (ctx.t('Press to open '))) == null ? '' : __t) +\n'</span>' +\n((__t = (file.originalName || file.name)) == null ? '' : __t) +\n'\\n              </a>\\n            ';\n } ;\n__p += '\\n          </div>\\n          <div class=\"col-md-2\">' +\n((__t = (ctx.fileSize(file.size))) == null ? '' : __t) +\n'</div>\\n          ';\n if (ctx.self.hasTypes && !ctx.disabled) { ;\n__p += '\\n            <div class=\"col-md-2\">\\n              <select class=\"file-type\" ref=\"fileType\">\\n                ';\n ctx.component.fileTypes.map(function(type) { ;\n__p += '\\n                  <option class=\"test\" value=\"' +\n((__t = ( type.value )) == null ? '' : __t) +\n'\" ';\n if (type.label === file.fileType) { ;\n__p += 'selected=\"selected\"';\n } ;\n__p += '>' +\n((__t = (ctx.t(type.label))) == null ? '' : __t) +\n'</option>\\n                ';\n }); ;\n__p += '\\n              </select>\\n            </div>\\n          ';\n } ;\n__p += '\\n          ';\n if (ctx.self.hasTypes && ctx.disabled) { ;\n__p += '\\n          <div class=\"col-md-2\">' +\n((__t = (file.fileType)) == null ? '' : __t) +\n'</div>\\n          ';\n } ;\n__p += '\\n        </div>\\n      </li>\\n    ';\n }) ;\n__p += '\\n  </ul>\\n';\n } else { ;\n__p += '\\n  <div>\\n    ';\n ctx.files.forEach(function(file) { ;\n__p += '\\n      <div>\\n        <span>\\n          <img ref=\"fileImage\" src=\"\" alt=\"' +\n((__t = (file.originalName || file.name)) == null ? '' : __t) +\n'\" style=\"width:' +\n((__t = (ctx.component.imageSize)) == null ? '' : __t) +\n'px\">\\n          ';\n if (!ctx.disabled) { ;\n__p += '\\n            <i tabindex=\"0\" class=\"' +\n((__t = (ctx.iconClass('remove'))) == null ? '' : __t) +\n'\" ref=\"removeLink\"></i>\\n          ';\n } ;\n__p += '\\n        </span>\\n      </div>\\n    ';\n }) ;\n__p += '\\n  </div>\\n';\n } ;\n__p += '\\n';\n if (!ctx.disabled && (ctx.component.multiple || !ctx.files.length)) { ;\n__p += '\\n  ';\n if (ctx.self.useWebViewCamera) { ;\n__p += '\\n    <div class=\"fileSelector\">\\n      <button class=\"btn btn-primary\" ref=\"galleryButton\"><i class=\"fa fa-book\"></i> ' +\n((__t = (ctx.t('Gallery'))) == null ? '' : __t) +\n'</button>\\n      <button class=\"btn btn-primary\" ref=\"cameraButton\"><i class=\"fa fa-camera\"></i> ' +\n((__t = (ctx.t('Camera'))) == null ? '' : __t) +\n'</button>\\n    </div>\\n  ';\n } else if (!ctx.self.cameraMode) { ;\n__p += '\\n    <div class=\"fileSelector\" ref=\"fileDrop\" ' +\n((__t = (ctx.fileDropHidden ?'hidden' : '')) == null ? '' : __t) +\n'>\\n      <i class=\"' +\n((__t = (ctx.iconClass('cloud-upload'))) == null ? '' : __t) +\n'\"></i> ' +\n((__t = (ctx.t('Drop files to attach,'))) == null ? '' : __t) +\n'\\n        ';\n if (ctx.self.imageUpload && ctx.component.webcam) { ;\n__p += '\\n          <a href=\"#\" ref=\"toggleCameraMode\"><i class=\"fa fa-camera\"></i> ' +\n((__t = (ctx.t('use camera'))) == null ? '' : __t) +\n'</a>\\n        ';\n } ;\n__p += '\\n        ' +\n((__t = (ctx.t('or'))) == null ? '' : __t) +\n'\\n        <a href=\"#\" ref=\"fileBrowse\" class=\"browse\">\\n          ' +\n((__t = (ctx.t('browse'))) == null ? '' : __t) +\n'\\n          <span class=\"visually-hidden\">\\n            ' +\n((__t = (ctx.t('Browse to attach file for ' + ctx.component.label + '. ' + \n            (ctx.component.description ? ctx.component.description + '. ' : '') + \n            ((!ctx.component.filePattern || ctx.component.filePattern === '*') ? 'Any file types are allowed' : ctx.t('Allowed file types: ') + ctx.component.filePattern)))) == null ? '' : __t) +\n'\\n          </span>\\n        </a>\\n      <div ref=\"fileProcessingLoader\" class=\"loader-wrapper\">\\n        <div class=\"loader text-center\"></div>\\n      </div>\\n    </div>\\n  ';\n } else { ;\n__p += '\\n    <div class=\"video-container\">\\n      <video class=\"video\" autoplay=\"true\" ref=\"videoPlayer\" tabindex=\"-1\"></video>\\n    </div>\\n    <button class=\"btn btn-primary\" ref=\"takePictureButton\"><i class=\"fa fa-camera\"></i> ' +\n((__t = (ctx.t('Take Picture'))) == null ? '' : __t) +\n'</button>\\n    <button class=\"btn btn-primary\" ref=\"toggleCameraMode\">' +\n((__t = (ctx.t('Switch to file upload'))) == null ? '' : __t) +\n'</button>\\n  ';\n } ;\n__p += '\\n';\n } ;\n__p += '\\n';\n ctx.statuses.forEach(function(status) { ;\n__p += '\\n  <div class=\"file ' +\n((__t = (ctx.statuses.status === 'error' ? ' has-error' : '')) == null ? '' : __t) +\n'\">\\n    <div class=\"row\">\\n      <div class=\"fileName col-form-label col-sm-10\">' +\n((__t = (status.originalName)) == null ? '' : __t) +\n'\\n        <i class=\"' +\n((__t = (ctx.iconClass('remove'))) == null ? '' : __t) +\n'\" ref=\"fileStatusRemove\">\\n          <span class=\"visually-hidden\">' +\n((__t = (ctx.t('Remove button. Press to remove ' + status.originalName || 0))) == null ? '' : __t) +\n'</span>\\n          <span class=\"visually-hidden\">' +\n((__t = (status.message ? status.message.replace(';', '.') : '')) == null ? '' : __t) +\n'</span>\\n        </i>\\n      </div>\\n      <div class=\"fileSize col-form-label col-sm-2 text-end\">' +\n((__t = (ctx.fileSize(status.size))) == null ? '' : __t) +\n'</div>\\n    </div>\\n    <div class=\"row\">\\n      <div class=\"col-sm-12\">\\n        ';\n if (status.status === 'progress') { ;\n__p += '\\n          <div class=\"progress\">\\n            <div class=\"progress-bar\" role=\"progressbar\" aria-valuenow=\"' +\n((__t = (status.progress)) == null ? '' : __t) +\n'\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: ' +\n((__t = (status.progress)) == null ? '' : __t) +\n'%\">\\n              <span class=\"visually-hidden\">' +\n((__t = (status.progress)) == null ? '' : __t) +\n'% ' +\n((__t = (ctx.t('Complete'))) == null ? '' : __t) +\n'</span>\\n            </div>\\n          </div>\\n        ';\n } else if (status.status === 'error') { ;\n__p += '\\n          <div class=\"alert alert-danger bg-' +\n((__t = (status.status)) == null ? '' : __t) +\n'\">' +\n((__t = (ctx.t(status.message))) == null ? '' : __t) +\n'</div>\\n        ';\n } else { ;\n__p += '\\n          <div class=\"bg-' +\n((__t = (status.status)) == null ? '' : __t) +\n'\">' +\n((__t = (ctx.t(status.message))) == null ? '' : __t) +\n'</div>\\n        ';\n } ;\n__p += '\\n      </div>\\n    </div>\\n  </div>\\n';\n }) ;\n__p += '\\n';\n if (!ctx.component.storage || ctx.support.hasWarning) { ;\n__p += '\\n  <div class=\"alert alert-warning\">\\n    ';\n if (!ctx.component.storage) { ;\n__p += '\\n      <p>' +\n((__t = (ctx.t('No storage has been set for this field. File uploads are disabled until storage is set up.'))) == null ? '' : __t) +\n'</p>\\n    ';\n } ;\n__p += '\\n    ';\n if (!ctx.support.filereader) { ;\n__p += '\\n      <p>' +\n((__t = (ctx.t('File API & FileReader API not supported.'))) == null ? '' : __t) +\n'</p>\\n    ';\n } ;\n__p += '\\n    ';\n if (!ctx.support.formdata) { ;\n__p += '\\n      <p>' +\n((__t = (ctx.t(\"XHR2's FormData is not supported.\"))) == null ? '' : __t) +\n'</p>\\n    ';\n } ;\n__p += '\\n    ';\n if (!ctx.support.progress) { ;\n__p += '\\n      <p>' +\n((__t = (ctx.t(\"XHR2's upload progress isn't supported.\"))) == null ? '' : __t) +\n'</p>\\n    ';\n } ;\n__p += '\\n  </div>\\n';\n } ;\n__p += '\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/file/form.ejs.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap5/file/index.js":
+/*!************************************************!*\
+  !*** ./lib/templates/bootstrap5/file/index.js ***!
+  \************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap5/file/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/file/index.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap5/index.js":
+/*!*******************************************!*\
+  !*** ./lib/templates/bootstrap5/index.js ***!
+  \*******************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\n__webpack_require__(/*! core-js/modules/es.date.to-string.js */ \"./node_modules/core-js/modules/es.date.to-string.js\");\n__webpack_require__(/*! core-js/modules/es.object.to-string.js */ \"./node_modules/core-js/modules/es.object.to-string.js\");\n__webpack_require__(/*! core-js/modules/es.regexp.to-string.js */ \"./node_modules/core-js/modules/es.regexp.to-string.js\");\nvar _builderSidebar = _interopRequireDefault(__webpack_require__(/*! ./builderSidebar */ \"./lib/templates/bootstrap5/builderSidebar/index.js\"));\nvar _builderSidebarGroup = _interopRequireDefault(__webpack_require__(/*! ./builderSidebarGroup */ \"./lib/templates/bootstrap5/builderSidebarGroup/index.js\"));\nvar _builderWizard = _interopRequireDefault(__webpack_require__(/*! ./builderWizard */ \"./lib/templates/bootstrap5/builderWizard/index.js\"));\nvar _componentModal = _interopRequireDefault(__webpack_require__(/*! ./componentModal */ \"./lib/templates/bootstrap5/componentModal/index.js\"));\nvar _datagrid = _interopRequireDefault(__webpack_require__(/*! ./datagrid */ \"./lib/templates/bootstrap5/datagrid/index.js\"));\nvar _dialog = _interopRequireDefault(__webpack_require__(/*! ./dialog */ \"./lib/templates/bootstrap5/dialog/index.js\"));\nvar _file = _interopRequireDefault(__webpack_require__(/*! ./file */ \"./lib/templates/bootstrap5/file/index.js\"));\nvar _input = _interopRequireDefault(__webpack_require__(/*! ./input */ \"./lib/templates/bootstrap5/input/index.js\"));\nvar _label = _interopRequireDefault(__webpack_require__(/*! ./label */ \"./lib/templates/bootstrap5/label/index.js\"));\nvar _modalPreview = _interopRequireDefault(__webpack_require__(/*! ./modalPreview */ \"./lib/templates/bootstrap5/modalPreview/index.js\"));\nvar _radio = _interopRequireDefault(__webpack_require__(/*! ./radio */ \"./lib/templates/bootstrap5/radio/index.js\"));\nvar _table = _interopRequireDefault(__webpack_require__(/*! ./table */ \"./lib/templates/bootstrap5/table/index.js\"));\nvar _cssClasses = _interopRequireDefault(__webpack_require__(/*! ./cssClasses */ \"./lib/templates/bootstrap5/cssClasses.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  transform: function transform(type, text) {\n    if (!text) {\n      return text;\n    }\n    switch (type) {\n      case 'class':\n        return this.cssClasses.hasOwnProperty(text.toString()) ? this.cssClasses[text.toString()] : text;\n    }\n    return text;\n  },\n  builderSidebar: _builderSidebar[\"default\"],\n  builderSidebarGroup: _builderSidebarGroup[\"default\"],\n  builderWizard: _builderWizard[\"default\"],\n  componentModal: _componentModal[\"default\"],\n  datagrid: _datagrid[\"default\"],\n  dialog: _dialog[\"default\"],\n  file: _file[\"default\"],\n  input: _input[\"default\"],\n  label: _label[\"default\"],\n  modalPreview: _modalPreview[\"default\"],\n  radio: _radio[\"default\"],\n  table: _table[\"default\"],\n  cssClasses: _cssClasses[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/index.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap5/input/form.ejs.js":
+/*!****************************************************!*\
+  !*** ./lib/templates/bootstrap5/input/form.ejs.js ***!
   \****************************************************/
 /***/ (function(__unused_webpack_module, exports) {
 
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<div class=\"' +\n((__t = (ctx.className)) == null ? '' : __t) +\n'\">\\n    <div style=\"position: relative;\">\\n        ';\n if (ctx.wizardHeaderType === 'wizardHeaderVertical') { ;\n__p += '\\n        <div class=\"row\">\\n            ';\n if (ctx.wizardHeaderLocation !== 'right') { ;\n__p += '\\n            <div class=\"col-sm-2\">\\n                ' +\n((__t = ( ctx.wizardHeader )) == null ? '' : __t) +\n'\\n            </div>\\n            ';\n } ;\n__p += '\\n            <div class=\"wizard-page col-sm-10\" ref=\"' +\n((__t = (ctx.wizardKey)) == null ? '' : __t) +\n'\">\\n                ' +\n((__t = (ctx.components)) == null ? '' : __t) +\n'\\n            </div>\\n            ';\n if (ctx.wizardHeaderLocation === 'right') { ;\n__p += '\\n            <div class=\"col-sm-2\">\\n                ' +\n((__t = ( ctx.wizardHeader )) == null ? '' : __t) +\n'\\n            </div>\\n            ';\n } ;\n__p += '\\n        </div>\\n        <div class=\"col-sm-offset-2 col-sm-10 ' +\n((__t = (ctx.wizardHeaderLocation === 'right' ? 'col-sm-offset-0 col-md-offset-0' : '')) == null ? '' : __t) +\n'\">\\n            ' +\n((__t = ( ctx.wizardNav )) == null ? '' : __t) +\n'\\n        </div>\\n        ';\n } else { ;\n__p += '\\n        ' +\n((__t = ( ctx.wizardHeader )) == null ? '' : __t) +\n'\\n        <div class=\"wizard-page\" ref=\"' +\n((__t = (ctx.wizardKey)) == null ? '' : __t) +\n'\">\\n            ' +\n((__t = (ctx.components)) == null ? '' : __t) +\n'\\n        </div>\\n        ' +\n((__t = ( ctx.wizardNav )) == null ? '' : __t) +\n'\\n        ';\n } ;\n__p += '\\n    </div>\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/wizard/form.ejs.js?");
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n\n if (ctx.prefix || ctx.suffix) { ;\n__p += '\\n<div class=\"input-group\">\\n  ';\n } ;\n__p += '\\n  ';\n if (ctx.prefix) { ;\n__p += '\\n    <div class=\"input-group-text\" ref=\"prefix\">\\n      ';\n if(ctx.prefix instanceof HTMLElement){ ;\n__p += '\\n        ' +\n((__t = ( ctx.t(ctx.prefix.outerHTML, { _userInput: true }) )) == null ? '' : __t) +\n'\\n      ';\n } else{ ;\n__p += '\\n        ' +\n((__t = ( ctx.t(ctx.prefix, { _userInput: true }) )) == null ? '' : __t) +\n'\\n      ';\n } ;\n__p += '\\n    </div>\\n  ';\n } ;\n__p += '\\n  ';\n if (!ctx.component.editor && !ctx.component.wysiwyg) { ;\n__p += '\\n    <' +\n((__t = (ctx.input.type)) == null ? '' : __t) +\n'\\n      ref=\"' +\n((__t = (ctx.input.ref ? ctx.input.ref : 'input')) == null ? '' : __t) +\n'\"\\n      ';\n for (var attr in ctx.input.attr) { ;\n__p += '\\n        ' +\n((__t = (attr)) == null ? '' : __t) +\n'=\"' +\n((__t = (ctx.input.attr[attr])) == null ? '' : __t) +\n'\"\\n      ';\n } ;\n__p += '\\n      id=\"' +\n((__t = (ctx.instance.id)) == null ? '' : __t) +\n'-' +\n((__t = (ctx.component.key)) == null ? '' : __t) +\n'\"\\n      aria-labelledby=\"l-' +\n((__t = (ctx.instance.id)) == null ? '' : __t) +\n'-' +\n((__t = (ctx.component.key)) == null ? '' : __t) +\n' ';\n if (ctx.component.description) { ;\n__p += 'd-' +\n((__t = (ctx.instance.id)) == null ? '' : __t) +\n'-' +\n((__t = (ctx.component.key)) == null ? '' : __t);\n } ;\n__p += '\"\\n      aria-required=\"' +\n((__t = (ctx.input.ref === 'input' || !ctx.input.ref ? ctx.component.validate.required :\n        ctx.component.fields && ctx.component.fields[ctx.input.ref] && ctx.component.fields[ctx.input.ref].required || false)) == null ? '' : __t) +\n'\"\\n    >' +\n((__t = (ctx.input.content)) == null ? '' : __t) +\n'</' +\n((__t = (ctx.input.type)) == null ? '' : __t) +\n'>\\n    ';\n if (ctx.hasValueMaskInput) { ;\n__p += '\\n      <input ref=\"valueMaskInput\" />\\n    ';\n } ;\n__p += '\\n';\n } ;\n__p += '\\n';\n if (ctx.component.editor || ctx.component.wysiwyg) { ;\n__p += '\\n  <div ref=\"input\"></div>\\n';\n } ;\n__p += '\\n';\n if (ctx.component.type === 'datetime') { ;\n__p += '\\n<span aria-live=\"assertive\" id=\"' +\n((__t = (ctx.instance.id)) == null ? '' : __t) +\n'-liveRegion\" class=\"visually-hidden\" ref=\"liveRegion\"></span>\\n';\n } ;\n__p += '\\n';\n if (ctx.suffix) { ;\n__p += '\\n  <div class=\"input-group-text\" ref=\"suffix\">\\n    ';\n if(ctx.suffix instanceof HTMLElement){ ;\n__p += '\\n      ' +\n((__t = ( ctx.t(ctx.suffix.outerHTML, { _userInput: true }) )) == null ? '' : __t) +\n'\\n    ';\n } else{ ;\n__p += '\\n      ' +\n((__t = ( ctx.t(ctx.suffix, { _userInput: true }) )) == null ? '' : __t) +\n'\\n    ';\n } ;\n__p += '\\n  </div>\\n';\n } ;\n__p += '\\n';\n if (ctx.prefix || ctx.suffix) { ;\n__p += '\\n  </div>\\n';\n } ;\n__p += '\\n';\n if (ctx.component.showCharCount || ctx.component.showWordCount) { ;\n__p += '\\n<div class=\"form-text {{ctx.component.description ? float-end : text-end\">\\n  ';\n if (ctx.component.showCharCount) { ;\n__p += '\\n  <span class=\"text-muted\" ref=\"charcount\" aria-live=\"polite\"></span>\\n  ';\n } ;\n__p += '\\n  ';\n if (ctx.component.showWordCount) { ;\n__p += '\\n  <span class=\"text-muted\" ref=\"wordcount\" aria-live=\"polite\"></span>\\n  ';\n } ;\n__p += '\\n</div>\\n';\n } ;\n__p += '\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/input/form.ejs.js?");
 
 /***/ }),
 
-/***/ "./lib/templates/bootstrap/wizard/index.js":
+/***/ "./lib/templates/bootstrap5/input/html.ejs.js":
+/*!****************************************************!*\
+  !*** ./lib/templates/bootstrap5/input/html.ejs.js ***!
+  \****************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<div ref=\"value\">';\n if (ctx.value) { ;\n__p +=\n((__t = (ctx.value)) == null ? '' : __t);\n } else { ;\n__p += '-';\n } ;\n__p += '</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/input/html.ejs.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap5/input/index.js":
 /*!*************************************************!*\
-  !*** ./lib/templates/bootstrap/wizard/index.js ***!
+  !*** ./lib/templates/bootstrap5/input/index.js ***!
   \*************************************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap/wizard/form.ejs.js\"));\nvar _builder = _interopRequireDefault(__webpack_require__(/*! ./builder.ejs */ \"./lib/templates/bootstrap/wizard/builder.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"],\n  builder: _builder[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap/wizard/index.js?");
+eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap5/input/form.ejs.js\"));\nvar _html = _interopRequireDefault(__webpack_require__(/*! ./html.ejs */ \"./lib/templates/bootstrap5/input/html.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"],\n  html: _html[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/input/index.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap5/label/form.ejs.js":
+/*!****************************************************!*\
+  !*** ./lib/templates/bootstrap5/label/form.ejs.js ***!
+  \****************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<label\\n  ref=\"label\"\\n  class=\"col-form-label ' +\n((__t = (ctx.label.className)) == null ? '' : __t) +\n'\"\\n  for=\"' +\n((__t = (ctx.instance.id)) == null ? '' : __t) +\n'-' +\n((__t = (ctx.component.key)) == null ? '' : __t) +\n'\"\\n  id=\"l-' +\n((__t = (ctx.instance.id)) == null ? '' : __t) +\n'-' +\n((__t = (ctx.component.key)) == null ? '' : __t) +\n'\"\\n>\\n  ' +\n((__t = ( ctx.t(ctx.component.label, { _userInput: true }) )) == null ? '' : __t) +\n'\\n  ';\n if (ctx.component.type === 'number' || ctx.component.type === 'phoneNumber' || ctx.component.type === 'currency') { ;\n__p += '\\n    <span class=\"visually-hidden\">, ' +\n((__t = (ctx.t('numeric only'))) == null ? '' : __t) +\n',</span>\\n  ';\n } ;\n__p += '\\n  ';\n if (ctx.component.tooltip) { ;\n__p += '\\n    <i ref=\"tooltip\" tabindex=\"0\" class=\"' +\n((__t = (ctx.iconClass('question-sign'))) == null ? '' : __t) +\n' text-muted\" data-tooltip=\"' +\n((__t = (ctx.component.tooltip)) == null ? '' : __t) +\n'\"></i>\\n  ';\n } ;\n__p += '\\n</label>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/label/form.ejs.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap5/label/index.js":
+/*!*************************************************!*\
+  !*** ./lib/templates/bootstrap5/label/index.js ***!
+  \*************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap5/label/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/label/index.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap5/modalPreview/form.ejs.js":
+/*!***********************************************************!*\
+  !*** ./lib/templates/bootstrap5/modalPreview/form.ejs.js ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '';\n__p += '<label id=\"l-' +\n((__t = (ctx.component.key)) == null ? '' : __t) +\n'\" class=\"control-label ' +\n((__t = ( ctx.label.className )) == null ? '' : __t) +\n'\">\\n  ' +\n((__t = ( ctx.t(ctx.component.label, { _userInput: true }) )) == null ? '' : __t) +\n'<span ref=\"modalLabelValue\" class=\"visually-hidden\">. ' +\n((__t = ( ctx.component.type === 'signature' ? ctx.self.getValueAsString(ctx.previewText) : ctx.previewText )) == null ? '' : __t) +\n'</span>\\n</label><br>\\n<span class=\"visually-hidden\" ref=\"modalPreviewLiveRegion\" aria-live=\"assertive\"></span>\\n<button\\n  lang=\"en\"\\n  class=\"btn btn-light btn-md open-modal-button form-control ' +\n((__t = (ctx.openModalBtnClasses || '')) == null ? '' : __t) +\n'\"\\n  ref=\"openModal\"\\n  aria-labelledby=\"l-' +\n((__t = (ctx.component.key)) == null ? '' : __t) +\n'\"\\n>\\n  ' +\n((__t = ( ctx.previewText )) == null ? '' : __t) +\n'\\n</button>\\n<div class=\"formio-errors invalid-feedback\">\\n  ' +\n((__t = ( ctx.messages )) == null ? '' : __t) +\n'\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/modalPreview/form.ejs.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap5/modalPreview/index.js":
+/*!********************************************************!*\
+  !*** ./lib/templates/bootstrap5/modalPreview/index.js ***!
+  \********************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap5/modalPreview/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/modalPreview/index.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap5/radio/form.ejs.js":
+/*!****************************************************!*\
+  !*** ./lib/templates/bootstrap5/radio/form.ejs.js ***!
+  \****************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<div\\n  class=\"form-radio radio\"\\n  ref=\"radioGroup\"\\n  role=\"' +\n((__t = (ctx.component.type === 'selectboxes' ? 'group' : 'radiogroup')) == null ? '' : __t) +\n'\"\\n  aria-required=\"' +\n((__t = (ctx.input.component.validate.required)) == null ? '' : __t) +\n'\"\\n  aria-labelledby=\"l-' +\n((__t = (ctx.instance.id)) == null ? '' : __t) +\n'-' +\n((__t = (ctx.component.key)) == null ? '' : __t) +\n'\"\\n  ';\n if (ctx.component.description) { ;\n__p += '\\n    aria-describedby=\"d-' +\n((__t = (ctx.instance.id)) == null ? '' : __t) +\n'-' +\n((__t = (ctx.component.key)) == null ? '' : __t) +\n'\"\\n  ';\n } ;\n__p += '\\n>\\n  ';\n ctx.values.forEach(function(item) { ;\n__p += '\\n  <div class=\"' +\n((__t = (ctx.input.attr.type)) == null ? '' : __t) +\n' ' +\n((__t = ( ctx.component.optionsLabelPosition && ctx.component.optionsLabelPosition !== 'right' ? ps-0 : '')) == null ? '' : __t) +\n' form-check' +\n((__t = (ctx.inline ? '-inline' : '')) == null ? '' : __t) +\n'\" ref=\"wrapper\">\\n    <label class=\"form-check-label label-position-' +\n((__t = ( ctx.component.optionsLabelPosition )) == null ? '' : __t) +\n'\" for=\"' +\n((__t = (ctx.instance.root && ctx.instance.root.id)) == null ? '' : __t) +\n'-' +\n((__t = (ctx.id)) == null ? '' : __t) +\n'-' +\n((__t = (ctx.row)) == null ? '' : __t) +\n'-' +\n((__t = (item.value)) == null ? '' : __t) +\n'\">\\n      ';\n if (ctx.component.optionsLabelPosition === 'left' || ctx.component.optionsLabelPosition === 'top') { ;\n__p += '\\n      <span>' +\n((__t = (ctx.t(item.label, { _userInput: true }))) == null ? '' : __t) +\n'</span>\\n      ';\n } ;\n__p += '\\n      <' +\n((__t = (ctx.input.type)) == null ? '' : __t) +\n'\\n        ref=\"input\"\\n        ';\n for (var attr in ctx.input.attr) { ;\n__p += '\\n        ' +\n((__t = (attr)) == null ? '' : __t) +\n'=\"' +\n((__t = (ctx.input.attr[attr])) == null ? '' : __t) +\n'\"\\n        ';\n } ;\n__p += '\\n        value=\"' +\n((__t = (item.value)) == null ? '' : __t) +\n'\"\\n        ';\n if (ctx.value && (ctx.value === item.value || (typeof ctx.value === 'object' && ctx.value.hasOwnProperty(item.value) && ctx.value[item.value]))) { ;\n__p += '\\n          checked=true\\n        ';\n } ;\n__p += '\\n        ';\n if (item.disabled) { ;\n__p += '\\n          disabled=true\\n        ';\n } ;\n__p += '\\n        id=\"' +\n((__t = (ctx.instance.root && ctx.instance.root.id)) == null ? '' : __t) +\n'-' +\n((__t = (ctx.id)) == null ? '' : __t) +\n'-' +\n((__t = (ctx.row)) == null ? '' : __t) +\n'-' +\n((__t = (item.value)) == null ? '' : __t) +\n'\"\\n        role=\"' +\n((__t = (ctx.component.type === 'selectboxes' ? 'checkbox' : 'radio')) == null ? '' : __t) +\n'\"\\n      >\\n      ';\n if (!ctx.component.optionsLabelPosition || ctx.component.optionsLabelPosition === 'right' || ctx.component.optionsLabelPosition === 'bottom') { ;\n__p += '\\n      <span>' +\n((__t = (ctx.t(item.label, { _userInput: true }))) == null ? '' : __t) +\n'</span>\\n      ';\n } ;\n__p += '\\n    </label>\\n  </div>\\n  ';\n }) ;\n__p += '\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/radio/form.ejs.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap5/radio/index.js":
+/*!*************************************************!*\
+  !*** ./lib/templates/bootstrap5/radio/index.js ***!
+  \*************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap5/radio/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/radio/index.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap5/table/form.ejs.js":
+/*!****************************************************!*\
+  !*** ./lib/templates/bootstrap5/table/form.ejs.js ***!
+  \****************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<table class=\"table\\n    ' +\n((__t = ( ctx.component.striped ? 'table-striped' : '')) == null ? '' : __t) +\n'\\n    ' +\n((__t = ( ctx.component.bordered ? 'table-bordered' : '')) == null ? '' : __t) +\n'\\n    ' +\n((__t = ( ctx.component.hover ? 'table-hover' : '')) == null ? '' : __t) +\n'\\n    ' +\n((__t = ( ctx.component.condensed ? 'table-sm' : '')) == null ? '' : __t) +\n'\\n  \">\\n  <caption class=\"visually-hidden\">' +\n((__t = (ctx.t(ctx.component.label))) == null ? '' : __t) +\n'</caption>\\n  ';\n if (ctx.component.header && ctx.component.header.length > 0) { ;\n__p += '\\n  <thead>\\n    <tr>\\n      ';\n ctx.component.header.forEach(function(header) { ;\n__p += '\\n      <th>' +\n((__t = (ctx.t(header))) == null ? '' : __t) +\n'</th>\\n      ';\n }) ;\n__p += '\\n    </tr>\\n  </thead>\\n  ';\n } ;\n__p += '\\n  <tbody>\\n    ';\n ctx.tableComponents.forEach(function(row, rowIndex) { ;\n__p += '\\n    <tr ref=\"row-' +\n((__t = (ctx.id)) == null ? '' : __t) +\n'\">\\n      ';\n row.forEach(function(column, colIndex) { ;\n__p += '\\n      <td ref=\"' +\n((__t = (ctx.tableKey)) == null ? '' : __t) +\n'-' +\n((__t = (rowIndex)) == null ? '' : __t) +\n'\"';\n if (ctx.cellClassName) { ;\n__p += ' class=\"' +\n((__t = (ctx.cellClassName)) == null ? '' : __t) +\n'\"';\n } ;\n__p += '>' +\n((__t = (column)) == null ? '' : __t) +\n'</td>\\n      ';\n }) ;\n__p += '\\n    </tr>\\n    ';\n }) ;\n__p += '\\n  </tbody>\\n</table>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/table/form.ejs.js?");
+
+/***/ }),
+
+/***/ "./lib/templates/bootstrap5/table/index.js":
+/*!*************************************************!*\
+  !*** ./lib/templates/bootstrap5/table/index.js ***!
+  \*************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n__webpack_require__(/*! core-js/modules/es.object.define-property.js */ \"./node_modules/core-js/modules/es.object.define-property.js\");\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\nvar _form = _interopRequireDefault(__webpack_require__(/*! ./form.ejs */ \"./lib/templates/bootstrap5/table/form.ejs.js\"));\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\nvar _default = {\n  form: _form[\"default\"]\n};\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://Formio/./lib/templates/bootstrap5/table/index.js?");
 
 /***/ }),
 
@@ -5259,6 +5259,27 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar 
 
 /***/ }),
 
+/***/ "./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/builder/form.ejs.js":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/builder/form.ejs.js ***!
+  \**************************************************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '';\n__p += '<div class=\"formio builder row formbuilder\">\\n  <div class=\"col-xs-4 col-sm-3 col-md-2 formcomponents\">\\n    ' +\n((__t = (ctx.sidebar)) == null ? '' : __t) +\n'\\n  </div>\\n  <div class=\"col-xs-8 col-sm-9 col-md-10 formarea\" ref=\"form\">\\n    ' +\n((__t = (ctx.form)) == null ? '' : __t) +\n'\\n  </div>\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/builder/form.ejs.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/builder/index.js":
+/*!***********************************************************************************!*\
+  !*** ./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/builder/index.js ***!
+  \***********************************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/builder/form.ejs.js\");\nexports[\"default\"] = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/builder/index.js?");
+
+/***/ }),
+
 /***/ "./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/builderComponent/form.ejs.js":
 /*!***********************************************************************************************!*\
   !*** ./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/builderComponent/form.ejs.js ***!
@@ -5343,27 +5364,6 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar 
 
 /***/ }),
 
-/***/ "./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/builderSidebarGroup/form.ejs.js":
-/*!**************************************************************************************************!*\
-  !*** ./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/builderSidebarGroup/form.ejs.js ***!
-  \**************************************************************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<div class=\"panel panel-default form-builder-panel\" ref=\"group-panel-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\">\\n  <div class=\"panel-heading form-builder-group-header\">\\n    <h5 class=\"panel-title\">\\n      <button\\n        class=\"btn btn-block builder-group-button\"\\n        type=\"button\"\\n        data-toggle=\"collapse\"\\n        data-target=\"#group-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\"\\n        data-parent=\"#' +\n((__t = (ctx.groupId)) == null ? '' : __t) +\n'\"\\n        href=\"#group-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\"\\n        ref=\"sidebar-anchor\"\\n      >\\n        ' +\n((__t = (ctx.t(ctx.group.title, { _userInput: true }))) == null ? '' : __t) +\n'\\n      </button>\\n    </h5>\\n  </div>\\n  <div\\n    id=\"group-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\"\\n    class=\"panel-collapse collapse' +\n((__t = (ctx.group.default ? ' in' : '')) == null ? '' : __t) +\n'\"\\n    data-parent=\"#' +\n((__t = (ctx.groupId)) == null ? '' : __t) +\n'\"\\n    data-default=\"' +\n((__t = (ctx.group.default)) == null ? '' : __t) +\n'\"\\n    ref=\"sidebar-group\"\\n  >\\n    <div id=\"group-container-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\" class=\"panel-body no-drop\" ref=\"sidebar-container\">\\n      ';\n if (ctx.group.componentOrder.length || ctx.subgroups.length) { ;\n__p += '\\n        ';\n ctx.group.componentOrder.forEach(function(componentKey) { ;\n__p += '\\n          <span\\n            data-group=\"' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\"\\n            data-key=\"' +\n((__t = (ctx.group.components[componentKey].key)) == null ? '' : __t) +\n'\"\\n            data-type=\"' +\n((__t = (ctx.group.components[componentKey].schema.type)) == null ? '' : __t) +\n'\"\\n            class=\"btn btn-primary btn-xs btn-block formcomponent drag-copy\"\\n          >\\n            ';\n if (ctx.group.components[componentKey].icon) { ;\n__p += '\\n              <i class=\"' +\n((__t = (ctx.iconClass(ctx.group.components[componentKey].icon))) == null ? '' : __t) +\n'\" style=\"margin-right: 5px;\"></i>\\n            ';\n } ;\n__p += '\\n            ' +\n((__t = (ctx.t(ctx.group.components[componentKey].title, { _userInput: true }))) == null ? '' : __t) +\n'\\n          </span>\\n        ';\n }) ;\n__p += '\\n        ' +\n((__t = (ctx.subgroups.join(''))) == null ? '' : __t) +\n'\\n      ';\n } else { ;\n__p += '\\n        <div>' +\n((__t = (ctx.t('No Matches Found'))) == null ? '' : __t) +\n'</div>\\n      ';\n } ;\n__p += '\\n    </div>\\n  </div>\\n</div>\\n\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/builderSidebarGroup/form.ejs.js?");
-
-/***/ }),
-
-/***/ "./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/builderSidebarGroup/index.js":
-/*!***********************************************************************************************!*\
-  !*** ./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/builderSidebarGroup/index.js ***!
-  \***********************************************************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/builderSidebarGroup/form.ejs.js\");\nexports[\"default\"] = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/builderSidebarGroup/index.js?");
-
-/***/ }),
-
 /***/ "./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/builderSidebar/form.ejs.js":
 /*!*********************************************************************************************!*\
   !*** ./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/builderSidebar/form.ejs.js ***!
@@ -5385,24 +5385,24 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar 
 
 /***/ }),
 
-/***/ "./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/builder/form.ejs.js":
-/*!**************************************************************************************!*\
-  !*** ./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/builder/form.ejs.js ***!
-  \**************************************************************************************/
+/***/ "./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/builderSidebarGroup/form.ejs.js":
+/*!**************************************************************************************************!*\
+  !*** ./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/builderSidebarGroup/form.ejs.js ***!
+  \**************************************************************************************************/
 /***/ (function(__unused_webpack_module, exports) {
 
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '';\n__p += '<div class=\"formio builder row formbuilder\">\\n  <div class=\"col-xs-4 col-sm-3 col-md-2 formcomponents\">\\n    ' +\n((__t = (ctx.sidebar)) == null ? '' : __t) +\n'\\n  </div>\\n  <div class=\"col-xs-8 col-sm-9 col-md-10 formarea\" ref=\"form\">\\n    ' +\n((__t = (ctx.form)) == null ? '' : __t) +\n'\\n  </div>\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/builder/form.ejs.js?");
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<div class=\"panel panel-default form-builder-panel\" ref=\"group-panel-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\">\\n  <div class=\"panel-heading form-builder-group-header\">\\n    <h5 class=\"panel-title\">\\n      <button\\n        class=\"btn btn-block builder-group-button\"\\n        type=\"button\"\\n        data-toggle=\"collapse\"\\n        data-target=\"#group-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\"\\n        data-parent=\"#' +\n((__t = (ctx.groupId)) == null ? '' : __t) +\n'\"\\n        href=\"#group-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\"\\n        ref=\"sidebar-anchor\"\\n      >\\n        ' +\n((__t = (ctx.t(ctx.group.title, { _userInput: true }))) == null ? '' : __t) +\n'\\n      </button>\\n    </h5>\\n  </div>\\n  <div\\n    id=\"group-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\"\\n    class=\"panel-collapse collapse' +\n((__t = (ctx.group.default ? ' in' : '')) == null ? '' : __t) +\n'\"\\n    data-parent=\"#' +\n((__t = (ctx.groupId)) == null ? '' : __t) +\n'\"\\n    data-default=\"' +\n((__t = (ctx.group.default)) == null ? '' : __t) +\n'\"\\n    ref=\"sidebar-group\"\\n  >\\n    <div id=\"group-container-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\" class=\"panel-body no-drop\" ref=\"sidebar-container\">\\n      ';\n if (ctx.group.componentOrder.length || ctx.subgroups.length) { ;\n__p += '\\n        ';\n ctx.group.componentOrder.forEach(function(componentKey) { ;\n__p += '\\n          <span\\n            data-group=\"' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\"\\n            data-key=\"' +\n((__t = (ctx.group.components[componentKey].key)) == null ? '' : __t) +\n'\"\\n            data-type=\"' +\n((__t = (ctx.group.components[componentKey].schema.type)) == null ? '' : __t) +\n'\"\\n            class=\"btn btn-primary btn-xs btn-block formcomponent drag-copy\"\\n          >\\n            ';\n if (ctx.group.components[componentKey].icon) { ;\n__p += '\\n              <i class=\"' +\n((__t = (ctx.iconClass(ctx.group.components[componentKey].icon))) == null ? '' : __t) +\n'\" style=\"margin-right: 5px;\"></i>\\n            ';\n } ;\n__p += '\\n            ' +\n((__t = (ctx.t(ctx.group.components[componentKey].title, { _userInput: true }))) == null ? '' : __t) +\n'\\n          </span>\\n        ';\n }) ;\n__p += '\\n        ' +\n((__t = (ctx.subgroups.join(''))) == null ? '' : __t) +\n'\\n      ';\n } else { ;\n__p += '\\n        <div>' +\n((__t = (ctx.t('No Matches Found'))) == null ? '' : __t) +\n'</div>\\n      ';\n } ;\n__p += '\\n    </div>\\n  </div>\\n</div>\\n\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/builderSidebarGroup/form.ejs.js?");
 
 /***/ }),
 
-/***/ "./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/builder/index.js":
-/*!***********************************************************************************!*\
-  !*** ./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/builder/index.js ***!
-  \***********************************************************************************/
+/***/ "./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/builderSidebarGroup/index.js":
+/*!***********************************************************************************************!*\
+  !*** ./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/builderSidebarGroup/index.js ***!
+  \***********************************************************************************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/builder/form.ejs.js\");\nexports[\"default\"] = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/builder/index.js?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/builderSidebarGroup/form.ejs.js\");\nexports[\"default\"] = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/builderSidebarGroup/index.js?");
 
 /***/ }),
 
@@ -5615,17 +5615,6 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar 
 
 /***/ }),
 
-/***/ "./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/iconClass.js":
-/*!*******************************************************************************!*\
-  !*** ./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/iconClass.js ***!
-  \*******************************************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-"use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports[\"default\"] = (function (iconset, name, spinning) {\n    if (iconset === 'fa') {\n        switch (name) {\n            case 'save':\n                name = 'download';\n                break;\n            case 'zoom-in':\n                name = 'search-plus';\n                break;\n            case 'zoom-out':\n                name = 'search-minus';\n                break;\n            case 'question-sign':\n                name = 'question-circle';\n                break;\n            case 'remove-circle':\n                name = 'times-circle-o';\n                break;\n            case 'new-window':\n                name = 'window-restore';\n                break;\n            case 'move':\n                name = 'arrows';\n                break;\n        }\n    }\n    return spinning ? iconset + \" \" + iconset + \"-\" + name + \" \" + iconset + \"-spin\" : iconset + \" \" + iconset + \"-\" + name;\n});\n\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/iconClass.js?");
-
-/***/ }),
-
 /***/ "./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/icon/form.ejs.js":
 /*!***********************************************************************************!*\
   !*** ./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/icon/form.ejs.js ***!
@@ -5644,6 +5633,17 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 
 "use strict";
 eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/icon/form.ejs.js\");\nexports[\"default\"] = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/icon/index.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/iconClass.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/iconClass.js ***!
+  \*******************************************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports[\"default\"] = (function (iconset, name, spinning) {\n    if (iconset === 'fa') {\n        switch (name) {\n            case 'save':\n                name = 'download';\n                break;\n            case 'zoom-in':\n                name = 'search-plus';\n                break;\n            case 'zoom-out':\n                name = 'search-minus';\n                break;\n            case 'question-sign':\n                name = 'question-circle';\n                break;\n            case 'remove-circle':\n                name = 'times-circle-o';\n                break;\n            case 'new-window':\n                name = 'window-restore';\n                break;\n            case 'move':\n                name = 'arrows';\n                break;\n        }\n    }\n    return spinning ? iconset + \" \" + iconset + \"-\" + name + \" \" + iconset + \"-spin\" : iconset + \" \" + iconset + \"-\" + name;\n});\n\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/iconClass.js?");
 
 /***/ }),
 
@@ -6023,6 +6023,58 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar 
 
 /***/ }),
 
+/***/ "./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizard/builder.ejs.js":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizard/builder.ejs.js ***!
+  \****************************************************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '';\n__p += '<div class=\"text-muted text-center\">' +\n((__t = ( ctx.t(ctx.component.title, { _userInput: true }) )) == null ? '' : __t) +\n'</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizard/builder.ejs.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizard/form.ejs.js":
+/*!*************************************************************************************!*\
+  !*** ./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizard/form.ejs.js ***!
+  \*************************************************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<div class=\"' +\n((__t = (ctx.className)) == null ? '' : __t) +\n'\">\\n  <div style=\"position: relative;\">\\n    ';\n if (ctx.wizardHeaderType === 'wizardHeaderVertical') { ;\n__p += '\\n      <div class=\"row\">\\n        <div class=\"col-sm-12 col-md-2\">\\n          ' +\n((__t = ( ctx.wizardHeader )) == null ? '' : __t) +\n'\\n        </div>\\n        <div class=\"wizard-page col-sm-offset-1 col-md-offset-0 col-sm-10\" ref=\"' +\n((__t = (ctx.wizardKey)) == null ? '' : __t) +\n'\">\\n          ' +\n((__t = (ctx.components)) == null ? '' : __t) +\n'\\n        </div>\\n      </div>\\n      <div class=\"col-sm-offset-4 col-sm-7 col-md-offset-2 col-md-10\" style=\"margin-top: 10px;\">\\n        ' +\n((__t = ( ctx.wizardNav )) == null ? '' : __t) +\n'\\n      </div>\\n    ';\n } else { ;\n__p += ' \\n      ' +\n((__t = ( ctx.wizardHeader )) == null ? '' : __t) +\n'\\n      <div class=\"wizard-page\" ref=\"' +\n((__t = (ctx.wizardKey)) == null ? '' : __t) +\n'\">\\n        ' +\n((__t = (ctx.components)) == null ? '' : __t) +\n'\\n      </div>\\n      ' +\n((__t = ( ctx.wizardNav )) == null ? '' : __t) +\n'\\n    ';\n } ;\n__p += ' \\n  </div>\\n</div>';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizard/form.ejs.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizard/index.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizard/index.js ***!
+  \**********************************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar builder_ejs_1 = __webpack_require__(/*! ./builder.ejs */ \"./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizard/builder.ejs.js\");\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizard/form.ejs.js\");\nexports[\"default\"] = { form: form_ejs_1.default, builder: builder_ejs_1.default };\n\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizard/index.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizardHeader/form.ejs.js":
+/*!*******************************************************************************************!*\
+  !*** ./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizardHeader/form.ejs.js ***!
+  \*******************************************************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<nav aria-label=\"navigation\" id=\"' +\n((__t = ( ctx.wizardKey )) == null ? '' : __t) +\n'-header\" ref=\"' +\n((__t = (ctx.wizardKey)) == null ? '' : __t) +\n'-header\">\\n  <ul class=\"pagination\">\\n    ';\n ctx.panels.forEach(function(panel, index) { ;\n__p += '\\n    <li class=\"page-item' +\n((__t = (ctx.currentPage === index ? ' active' : '')) == null ? '' : __t) +\n'\" style=\"\">\\n      <span class=\"page-link\" ref=\"' +\n((__t = (ctx.wizardKey)) == null ? '' : __t) +\n'-link\">\\n        ' +\n((__t = (ctx.t(panel.title, { _userInput: true }))) == null ? '' : __t) +\n'\\n        ';\n if (panel.tooltip && ctx.currentPage === index) { ;\n__p += '\\n        <i ref=\"' +\n((__t = (ctx.wizardKey)) == null ? '' : __t) +\n'-tooltip\" class=\"' +\n((__t = (ctx.iconClass('question-sign'))) == null ? '' : __t) +\n' text-muted\" data-tooltip=\"' +\n((__t = (panel.tooltip)) == null ? '' : __t) +\n'\"></i>\\n        ';\n } ;\n__p += '\\n      </span>\\n    </li>\\n    ';\n }) ;\n__p += '\\n  </ul>\\n</nav>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizardHeader/form.ejs.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizardHeader/index.js":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizardHeader/index.js ***!
+  \****************************************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizardHeader/form.ejs.js\");\nexports[\"default\"] = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizardHeader/index.js?");
+
+/***/ }),
+
 /***/ "./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizardHeaderClassic/form.ejs.js":
 /*!**************************************************************************************************!*\
   !*** ./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizardHeaderClassic/form.ejs.js ***!
@@ -6065,27 +6117,6 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar 
 
 /***/ }),
 
-/***/ "./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizardHeader/form.ejs.js":
-/*!*******************************************************************************************!*\
-  !*** ./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizardHeader/form.ejs.js ***!
-  \*******************************************************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<nav aria-label=\"navigation\" id=\"' +\n((__t = ( ctx.wizardKey )) == null ? '' : __t) +\n'-header\" ref=\"' +\n((__t = (ctx.wizardKey)) == null ? '' : __t) +\n'-header\">\\n  <ul class=\"pagination\">\\n    ';\n ctx.panels.forEach(function(panel, index) { ;\n__p += '\\n    <li class=\"page-item' +\n((__t = (ctx.currentPage === index ? ' active' : '')) == null ? '' : __t) +\n'\" style=\"\">\\n      <span class=\"page-link\" ref=\"' +\n((__t = (ctx.wizardKey)) == null ? '' : __t) +\n'-link\">\\n        ' +\n((__t = (ctx.t(panel.title, { _userInput: true }))) == null ? '' : __t) +\n'\\n        ';\n if (panel.tooltip && ctx.currentPage === index) { ;\n__p += '\\n        <i ref=\"' +\n((__t = (ctx.wizardKey)) == null ? '' : __t) +\n'-tooltip\" class=\"' +\n((__t = (ctx.iconClass('question-sign'))) == null ? '' : __t) +\n' text-muted\" data-tooltip=\"' +\n((__t = (panel.tooltip)) == null ? '' : __t) +\n'\"></i>\\n        ';\n } ;\n__p += '\\n      </span>\\n    </li>\\n    ';\n }) ;\n__p += '\\n  </ul>\\n</nav>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizardHeader/form.ejs.js?");
-
-/***/ }),
-
-/***/ "./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizardHeader/index.js":
-/*!****************************************************************************************!*\
-  !*** ./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizardHeader/index.js ***!
-  \****************************************************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizardHeader/form.ejs.js\");\nexports[\"default\"] = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizardHeader/index.js?");
-
-/***/ }),
-
 /***/ "./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizardNav/form.ejs.js":
 /*!****************************************************************************************!*\
   !*** ./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizardNav/form.ejs.js ***!
@@ -6104,37 +6135,6 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 
 "use strict";
 eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizardNav/form.ejs.js\");\nexports[\"default\"] = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizardNav/index.js?");
-
-/***/ }),
-
-/***/ "./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizard/builder.ejs.js":
-/*!****************************************************************************************!*\
-  !*** ./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizard/builder.ejs.js ***!
-  \****************************************************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '';\n__p += '<div class=\"text-muted text-center\">' +\n((__t = ( ctx.t(ctx.component.title, { _userInput: true }) )) == null ? '' : __t) +\n'</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizard/builder.ejs.js?");
-
-/***/ }),
-
-/***/ "./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizard/form.ejs.js":
-/*!*************************************************************************************!*\
-  !*** ./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizard/form.ejs.js ***!
-  \*************************************************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<div class=\"' +\n((__t = (ctx.className)) == null ? '' : __t) +\n'\">\\n  <div style=\"position: relative;\">\\n    ';\n if (ctx.wizardHeaderType === 'wizardHeaderVertical') { ;\n__p += '\\n      <div class=\"row\">\\n        <div class=\"col-sm-12 col-md-2\">\\n          ' +\n((__t = ( ctx.wizardHeader )) == null ? '' : __t) +\n'\\n        </div>\\n        <div class=\"wizard-page col-sm-offset-1 col-md-offset-0 col-sm-10\" ref=\"' +\n((__t = (ctx.wizardKey)) == null ? '' : __t) +\n'\">\\n          ' +\n((__t = (ctx.components)) == null ? '' : __t) +\n'\\n        </div>\\n      </div>\\n      <div class=\"col-sm-offset-4 col-sm-7 col-md-offset-2 col-md-10\" style=\"margin-top: 10px;\">\\n        ' +\n((__t = ( ctx.wizardNav )) == null ? '' : __t) +\n'\\n      </div>\\n    ';\n } else { ;\n__p += ' \\n      ' +\n((__t = ( ctx.wizardHeader )) == null ? '' : __t) +\n'\\n      <div class=\"wizard-page\" ref=\"' +\n((__t = (ctx.wizardKey)) == null ? '' : __t) +\n'\">\\n        ' +\n((__t = (ctx.components)) == null ? '' : __t) +\n'\\n      </div>\\n      ' +\n((__t = ( ctx.wizardNav )) == null ? '' : __t) +\n'\\n    ';\n } ;\n__p += ' \\n  </div>\\n</div>';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizard/form.ejs.js?");
-
-/***/ }),
-
-/***/ "./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizard/index.js":
-/*!**********************************************************************************!*\
-  !*** ./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizard/index.js ***!
-  \**********************************************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar builder_ejs_1 = __webpack_require__(/*! ./builder.ejs */ \"./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizard/builder.ejs.js\");\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizard/form.ejs.js\");\nexports[\"default\"] = { form: form_ejs_1.default, builder: builder_ejs_1.default };\n\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/bootstrap3/lib/templates/bootstrap3/wizard/index.js?");
 
 /***/ }),
 
@@ -6199,6 +6199,27 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 
 "use strict";
 eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./node_modules/@formio/semantic/lib/templates/semantic/alert/form.ejs.js\");\nexports[\"default\"] = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/semantic/lib/templates/semantic/alert/index.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@formio/semantic/lib/templates/semantic/builder/form.ejs.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/@formio/semantic/lib/templates/semantic/builder/form.ejs.js ***!
+  \**********************************************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '';\n__p += '<div class=\"formio builder ui grid formbuilder\">\\n  <div class=\"four wide column formcomponents\">\\n    ' +\n((__t = (ctx.sidebar)) == null ? '' : __t) +\n'\\n  </div>\\n  <div class=\"twelve wide column formarea\" ref=\"form\">\\n    ' +\n((__t = (ctx.form)) == null ? '' : __t) +\n'\\n  </div>\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/semantic/lib/templates/semantic/builder/form.ejs.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@formio/semantic/lib/templates/semantic/builder/index.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/@formio/semantic/lib/templates/semantic/builder/index.js ***!
+  \*******************************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./node_modules/@formio/semantic/lib/templates/semantic/builder/form.ejs.js\");\nexports[\"default\"] = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/semantic/lib/templates/semantic/builder/index.js?");
 
 /***/ }),
 
@@ -6286,27 +6307,6 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar 
 
 /***/ }),
 
-/***/ "./node_modules/@formio/semantic/lib/templates/semantic/builderSidebarGroup/form.ejs.js":
-/*!**********************************************************************************************!*\
-  !*** ./node_modules/@formio/semantic/lib/templates/semantic/builderSidebarGroup/form.ejs.js ***!
-  \**********************************************************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<div class=\"ui segment secondary form-builder-panel\" style=\"padding: 0\" ref=\"group-panel-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\">\\n  <div class=\"form-builder-group-header\">\\n    <h5 class=\"panel-title\">\\n      <button\\n        class=\"ui button basic fluid builder-group-button\"\\n        type=\"button\"\\n        data-toggle=\"collapse\"\\n        data-target=\"#group-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\"\\n        data-parent=\"' +\n((__t = (ctx.groupId)) == null ? '' : __t) +\n'\"\\n        ref=\"sidebar-anchor\"\\n      >\\n        ' +\n((__t = (ctx.t(ctx.group.title))) == null ? '' : __t) +\n'\\n      </button>\\n    </h5>\\n  </div>\\n</div>\\n<div class=\"ui segment\" style=\"padding: 0\">\\n  <div\\n    class=\"panel-collapse collapse ' +\n((__t = (ctx.group.default ? ' in' : '')) == null ? '' : __t) +\n'\"\\n    data-parent=\"#' +\n((__t = (ctx.groupId)) == null ? '' : __t) +\n'\"\\n    data-default=\"' +\n((__t = (ctx.group.default)) == null ? '' : __t) +\n'\"\\n    id=\"group-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\"\\n    ref=\"sidebar-group\"\\n  >\\n    <div id=\"group-container-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\" class=\"card-body panel-body no-drop\" ref=\"sidebar-container\">\\n      ';\n ctx.group.componentOrder.forEach(function(componentKey) { ;\n__p += '\\n      <span\\n        data-group=\"' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\"\\n        data-key=\"' +\n((__t = (ctx.group.components[componentKey].key)) == null ? '' : __t) +\n'\"\\n        data-type=\"' +\n((__t = (ctx.group.components[componentKey].schema.type)) == null ? '' : __t) +\n'\"\\n        class=\"ui button mini primary fluid formcomponent drag-copy\"\\n      >\\n        ';\n if (ctx.group.components[componentKey].icon) { ;\n__p += '\\n          <i class=\"' +\n((__t = (ctx.iconClass(ctx.group.components[componentKey].icon))) == null ? '' : __t) +\n'\" style=\"margin-right: 5px;\"></i>\\n        ';\n } ;\n__p += '\\n        ' +\n((__t = (ctx.t(ctx.group.components[componentKey].title))) == null ? '' : __t) +\n'\\n        </span>\\n      ';\n }) ;\n__p += '\\n      ' +\n((__t = (ctx.subgroups.join(''))) == null ? '' : __t) +\n'\\n    </div>\\n  </div>\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/semantic/lib/templates/semantic/builderSidebarGroup/form.ejs.js?");
-
-/***/ }),
-
-/***/ "./node_modules/@formio/semantic/lib/templates/semantic/builderSidebarGroup/index.js":
-/*!*******************************************************************************************!*\
-  !*** ./node_modules/@formio/semantic/lib/templates/semantic/builderSidebarGroup/index.js ***!
-  \*******************************************************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./node_modules/@formio/semantic/lib/templates/semantic/builderSidebarGroup/form.ejs.js\");\nexports[\"default\"] = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/semantic/lib/templates/semantic/builderSidebarGroup/index.js?");
-
-/***/ }),
-
 /***/ "./node_modules/@formio/semantic/lib/templates/semantic/builderSidebar/form.ejs.js":
 /*!*****************************************************************************************!*\
   !*** ./node_modules/@formio/semantic/lib/templates/semantic/builderSidebar/form.ejs.js ***!
@@ -6328,6 +6328,27 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar 
 
 /***/ }),
 
+/***/ "./node_modules/@formio/semantic/lib/templates/semantic/builderSidebarGroup/form.ejs.js":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/@formio/semantic/lib/templates/semantic/builderSidebarGroup/form.ejs.js ***!
+  \**********************************************************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<div class=\"ui segment secondary form-builder-panel\" style=\"padding: 0\" ref=\"group-panel-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\">\\n  <div class=\"form-builder-group-header\">\\n    <h5 class=\"panel-title\">\\n      <button\\n        class=\"ui button basic fluid builder-group-button\"\\n        type=\"button\"\\n        data-toggle=\"collapse\"\\n        data-target=\"#group-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\"\\n        data-parent=\"' +\n((__t = (ctx.groupId)) == null ? '' : __t) +\n'\"\\n        ref=\"sidebar-anchor\"\\n      >\\n        ' +\n((__t = (ctx.t(ctx.group.title))) == null ? '' : __t) +\n'\\n      </button>\\n    </h5>\\n  </div>\\n</div>\\n<div class=\"ui segment\" style=\"padding: 0\">\\n  <div\\n    class=\"panel-collapse collapse ' +\n((__t = (ctx.group.default ? ' in' : '')) == null ? '' : __t) +\n'\"\\n    data-parent=\"#' +\n((__t = (ctx.groupId)) == null ? '' : __t) +\n'\"\\n    data-default=\"' +\n((__t = (ctx.group.default)) == null ? '' : __t) +\n'\"\\n    id=\"group-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\"\\n    ref=\"sidebar-group\"\\n  >\\n    <div id=\"group-container-' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\" class=\"card-body panel-body no-drop\" ref=\"sidebar-container\">\\n      ';\n ctx.group.componentOrder.forEach(function(componentKey) { ;\n__p += '\\n      <span\\n        data-group=\"' +\n((__t = (ctx.groupKey)) == null ? '' : __t) +\n'\"\\n        data-key=\"' +\n((__t = (ctx.group.components[componentKey].key)) == null ? '' : __t) +\n'\"\\n        data-type=\"' +\n((__t = (ctx.group.components[componentKey].schema.type)) == null ? '' : __t) +\n'\"\\n        class=\"ui button mini primary fluid formcomponent drag-copy\"\\n      >\\n        ';\n if (ctx.group.components[componentKey].icon) { ;\n__p += '\\n          <i class=\"' +\n((__t = (ctx.iconClass(ctx.group.components[componentKey].icon))) == null ? '' : __t) +\n'\" style=\"margin-right: 5px;\"></i>\\n        ';\n } ;\n__p += '\\n        ' +\n((__t = (ctx.t(ctx.group.components[componentKey].title))) == null ? '' : __t) +\n'\\n        </span>\\n      ';\n }) ;\n__p += '\\n      ' +\n((__t = (ctx.subgroups.join(''))) == null ? '' : __t) +\n'\\n    </div>\\n  </div>\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/semantic/lib/templates/semantic/builderSidebarGroup/form.ejs.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@formio/semantic/lib/templates/semantic/builderSidebarGroup/index.js":
+/*!*******************************************************************************************!*\
+  !*** ./node_modules/@formio/semantic/lib/templates/semantic/builderSidebarGroup/index.js ***!
+  \*******************************************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./node_modules/@formio/semantic/lib/templates/semantic/builderSidebarGroup/form.ejs.js\");\nexports[\"default\"] = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/semantic/lib/templates/semantic/builderSidebarGroup/index.js?");
+
+/***/ }),
+
 /***/ "./node_modules/@formio/semantic/lib/templates/semantic/builderWizard/form.ejs.js":
 /*!****************************************************************************************!*\
   !*** ./node_modules/@formio/semantic/lib/templates/semantic/builderWizard/form.ejs.js ***!
@@ -6346,27 +6367,6 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 
 "use strict";
 eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./node_modules/@formio/semantic/lib/templates/semantic/builderWizard/form.ejs.js\");\nexports[\"default\"] = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/semantic/lib/templates/semantic/builderWizard/index.js?");
-
-/***/ }),
-
-/***/ "./node_modules/@formio/semantic/lib/templates/semantic/builder/form.ejs.js":
-/*!**********************************************************************************!*\
-  !*** ./node_modules/@formio/semantic/lib/templates/semantic/builder/form.ejs.js ***!
-  \**********************************************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '';\n__p += '<div class=\"formio builder ui grid formbuilder\">\\n  <div class=\"four wide column formcomponents\">\\n    ' +\n((__t = (ctx.sidebar)) == null ? '' : __t) +\n'\\n  </div>\\n  <div class=\"twelve wide column formarea\" ref=\"form\">\\n    ' +\n((__t = (ctx.form)) == null ? '' : __t) +\n'\\n  </div>\\n</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/semantic/lib/templates/semantic/builder/form.ejs.js?");
-
-/***/ }),
-
-/***/ "./node_modules/@formio/semantic/lib/templates/semantic/builder/index.js":
-/*!*******************************************************************************!*\
-  !*** ./node_modules/@formio/semantic/lib/templates/semantic/builder/index.js ***!
-  \*******************************************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./node_modules/@formio/semantic/lib/templates/semantic/builder/form.ejs.js\");\nexports[\"default\"] = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/semantic/lib/templates/semantic/builder/index.js?");
 
 /***/ }),
 
@@ -6662,17 +6662,6 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar 
 
 /***/ }),
 
-/***/ "./node_modules/@formio/semantic/lib/templates/semantic/iconClass.js":
-/*!***************************************************************************!*\
-  !*** ./node_modules/@formio/semantic/lib/templates/semantic/iconClass.js ***!
-  \***************************************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-"use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports[\"default\"] = (function (iconset, name, spinning) {\n    var icons = {\n        'plus-squre-o': 'plus square outline',\n        'minus-squre-o': 'minus square outline',\n        'question-sign': 'question circle',\n        'remove-circle': 'trash alternate outline',\n        'new-window': 'external alternate',\n        'files-o': 'file outline',\n        'move': 'arrows alternate',\n        'link': 'linkify',\n    };\n    if (icons.hasOwnProperty(name)) {\n        name = icons[name];\n    }\n    name = name || '';\n    name = name.replace(/-/g, ' ');\n    name = name.replace(/ o$/, ' outline');\n    return spinning ? \"icon \".concat(name, \" loading\") : \"icon \".concat(name);\n});\n\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/semantic/lib/templates/semantic/iconClass.js?");
-
-/***/ }),
-
 /***/ "./node_modules/@formio/semantic/lib/templates/semantic/icon/form.ejs.js":
 /*!*******************************************************************************!*\
   !*** ./node_modules/@formio/semantic/lib/templates/semantic/icon/form.ejs.js ***!
@@ -6691,6 +6680,17 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 
 "use strict";
 eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./node_modules/@formio/semantic/lib/templates/semantic/icon/form.ejs.js\");\nexports[\"default\"] = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/semantic/lib/templates/semantic/icon/index.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@formio/semantic/lib/templates/semantic/iconClass.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@formio/semantic/lib/templates/semantic/iconClass.js ***!
+  \***************************************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nexports[\"default\"] = (function (iconset, name, spinning) {\n    var icons = {\n        'plus-squre-o': 'plus square outline',\n        'minus-squre-o': 'minus square outline',\n        'question-sign': 'question circle',\n        'remove-circle': 'trash alternate outline',\n        'new-window': 'external alternate',\n        'files-o': 'file outline',\n        'move': 'arrows alternate',\n        'link': 'linkify',\n    };\n    if (icons.hasOwnProperty(name)) {\n        name = icons[name];\n    }\n    name = name || '';\n    name = name.replace(/-/g, ' ');\n    name = name.replace(/ o$/, ' outline');\n    return spinning ? \"icon \".concat(name, \" loading\") : \"icon \".concat(name);\n});\n\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/semantic/lib/templates/semantic/iconClass.js?");
 
 /***/ }),
 
@@ -6935,37 +6935,6 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar 
 
 /***/ }),
 
-/***/ "./node_modules/@formio/semantic/lib/templates/semantic/selectOption/form.ejs.js":
-/*!***************************************************************************************!*\
-  !*** ./node_modules/@formio/semantic/lib/templates/semantic/selectOption/form.ejs.js ***!
-  \***************************************************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<option ' +\n((__t = ( ctx.selected ? 'selected=\"selected\"' : '' )) == null ? '' : __t) +\n'\\n  value=\\'' +\n((__t = (ctx.option.value)) == null ? '' : __t) +\n'\\'\\n  ';\n for (var attr in ctx.attrs) { ;\n__p += '\\n  ' +\n((__t = (attr)) == null ? '' : __t) +\n'=\"' +\n((__t = (ctx.attrs[attr])) == null ? '' : __t) +\n'\"\\n  ';\n } ;\n__p += '\\n  >\\n  ' +\n((__t = (ctx.t(ctx.option.label))) == null ? '' : __t) +\n'\\n</option>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/semantic/lib/templates/semantic/selectOption/form.ejs.js?");
-
-/***/ }),
-
-/***/ "./node_modules/@formio/semantic/lib/templates/semantic/selectOption/html.ejs.js":
-/*!***************************************************************************************!*\
-  !*** ./node_modules/@formio/semantic/lib/templates/semantic/selectOption/html.ejs.js ***!
-  \***************************************************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n\n if (ctx.selected) { ;\n__p +=\n((__t = (ctx.t(ctx.option.label))) == null ? '' : __t);\n } ;\n__p += '\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/semantic/lib/templates/semantic/selectOption/html.ejs.js?");
-
-/***/ }),
-
-/***/ "./node_modules/@formio/semantic/lib/templates/semantic/selectOption/index.js":
-/*!************************************************************************************!*\
-  !*** ./node_modules/@formio/semantic/lib/templates/semantic/selectOption/index.js ***!
-  \************************************************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./node_modules/@formio/semantic/lib/templates/semantic/selectOption/form.ejs.js\");\nvar html_ejs_1 = __webpack_require__(/*! ./html.ejs */ \"./node_modules/@formio/semantic/lib/templates/semantic/selectOption/html.ejs.js\");\nexports[\"default\"] = { form: form_ejs_1.default, html: html_ejs_1.default };\n\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/semantic/lib/templates/semantic/selectOption/index.js?");
-
-/***/ }),
-
 /***/ "./node_modules/@formio/semantic/lib/templates/semantic/select/form.ejs.js":
 /*!*********************************************************************************!*\
   !*** ./node_modules/@formio/semantic/lib/templates/semantic/select/form.ejs.js ***!
@@ -6994,6 +6963,37 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 
 "use strict";
 eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./node_modules/@formio/semantic/lib/templates/semantic/select/form.ejs.js\");\nvar html_ejs_1 = __webpack_require__(/*! ./html.ejs */ \"./node_modules/@formio/semantic/lib/templates/semantic/select/html.ejs.js\");\nexports[\"default\"] = { form: form_ejs_1.default, html: html_ejs_1.default };\n\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/semantic/lib/templates/semantic/select/index.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@formio/semantic/lib/templates/semantic/selectOption/form.ejs.js":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/@formio/semantic/lib/templates/semantic/selectOption/form.ejs.js ***!
+  \***************************************************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<option ' +\n((__t = ( ctx.selected ? 'selected=\"selected\"' : '' )) == null ? '' : __t) +\n'\\n  value=\\'' +\n((__t = (ctx.option.value)) == null ? '' : __t) +\n'\\'\\n  ';\n for (var attr in ctx.attrs) { ;\n__p += '\\n  ' +\n((__t = (attr)) == null ? '' : __t) +\n'=\"' +\n((__t = (ctx.attrs[attr])) == null ? '' : __t) +\n'\"\\n  ';\n } ;\n__p += '\\n  >\\n  ' +\n((__t = (ctx.t(ctx.option.label))) == null ? '' : __t) +\n'\\n</option>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/semantic/lib/templates/semantic/selectOption/form.ejs.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@formio/semantic/lib/templates/semantic/selectOption/html.ejs.js":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/@formio/semantic/lib/templates/semantic/selectOption/html.ejs.js ***!
+  \***************************************************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n\n if (ctx.selected) { ;\n__p +=\n((__t = (ctx.t(ctx.option.label))) == null ? '' : __t);\n } ;\n__p += '\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/semantic/lib/templates/semantic/selectOption/html.ejs.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@formio/semantic/lib/templates/semantic/selectOption/index.js":
+/*!************************************************************************************!*\
+  !*** ./node_modules/@formio/semantic/lib/templates/semantic/selectOption/index.js ***!
+  \************************************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./node_modules/@formio/semantic/lib/templates/semantic/selectOption/form.ejs.js\");\nvar html_ejs_1 = __webpack_require__(/*! ./html.ejs */ \"./node_modules/@formio/semantic/lib/templates/semantic/selectOption/html.ejs.js\");\nexports[\"default\"] = { form: form_ejs_1.default, html: html_ejs_1.default };\n\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/semantic/lib/templates/semantic/selectOption/index.js?");
 
 /***/ }),
 
@@ -7215,6 +7215,58 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar 
 
 /***/ }),
 
+/***/ "./node_modules/@formio/semantic/lib/templates/semantic/wizard/builder.ejs.js":
+/*!************************************************************************************!*\
+  !*** ./node_modules/@formio/semantic/lib/templates/semantic/wizard/builder.ejs.js ***!
+  \************************************************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '';\n__p += '<div class=\"formio-wizard-builder-component-title\">' +\n((__t = ( ctx.t(ctx.component.title) )) == null ? '' : __t) +\n'</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/semantic/lib/templates/semantic/wizard/builder.ejs.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@formio/semantic/lib/templates/semantic/wizard/form.ejs.js":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/@formio/semantic/lib/templates/semantic/wizard/form.ejs.js ***!
+  \*********************************************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<div class=\"' +\n((__t = (ctx.className)) == null ? '' : __t) +\n'\">\\n  <div style=\"position: relative;\">\\n    ';\n if (ctx.wizardHeaderType === 'wizardHeaderVertical') { ;\n__p += '\\n      <div class=\"ui stackable grid\">\\n        <div class=\"three wide computer sixteen wide tablet sixteen wide mobile column\">\\n          ' +\n((__t = ( ctx.wizardHeader )) == null ? '' : __t) +\n'\\n        </div>\\n        <div class=\"one wide computer one wide mobile one wide tablet column\"></div>\\n        <div class=\"wizard-page ten wide computer fourteen wide tablet fourteen wide mobiles column\" ref=\"' +\n((__t = (ctx.wizardKey)) == null ? '' : __t) +\n'\">\\n          ' +\n((__t = (ctx.components)) == null ? '' : __t) +\n'\\n        </div>\\n      </div>\\n      <div class=\"ui grid\" style=\"margin-top: 10px;\">\\n        <div class=\"four wide column\"></div>\\n        <div class=\"twelve wide column\">\\n          ' +\n((__t = ( ctx.wizardNav )) == null ? '' : __t) +\n'\\n        </div>\\n      </div>\\n    ';\n } else { ;\n__p += ' \\n      ' +\n((__t = ( ctx.wizardHeader )) == null ? '' : __t) +\n'\\n      <div class=\"wizard-page\" ref=\"' +\n((__t = (ctx.wizardKey)) == null ? '' : __t) +\n'\">\\n        ' +\n((__t = (ctx.components)) == null ? '' : __t) +\n'\\n      </div>\\n      ' +\n((__t = ( ctx.wizardNav )) == null ? '' : __t) +\n'\\n    ';\n } ;\n__p += ' \\n  </div>\\n</div>';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/semantic/lib/templates/semantic/wizard/form.ejs.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@formio/semantic/lib/templates/semantic/wizard/index.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@formio/semantic/lib/templates/semantic/wizard/index.js ***!
+  \******************************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar builder_ejs_1 = __webpack_require__(/*! ./builder.ejs */ \"./node_modules/@formio/semantic/lib/templates/semantic/wizard/builder.ejs.js\");\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./node_modules/@formio/semantic/lib/templates/semantic/wizard/form.ejs.js\");\nexports[\"default\"] = { form: form_ejs_1.default, builder: builder_ejs_1.default };\n\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/semantic/lib/templates/semantic/wizard/index.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@formio/semantic/lib/templates/semantic/wizardHeader/form.ejs.js":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/@formio/semantic/lib/templates/semantic/wizardHeader/form.ejs.js ***!
+  \***************************************************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<nav aria-label=\"navigation\" id=\"' +\n((__t = ( ctx.wizardKey )) == null ? '' : __t) +\n'-header\" ref=\"' +\n((__t = (ctx.wizardKey)) == null ? '' : __t) +\n'-header\">\\n  <div class=\"ui steps\">\\n    ';\n ctx.panels.forEach(function(panel, index) { ;\n__p += '\\n    <a class=\"' +\n((__t = (ctx.currentPage === index ? ' active' : '')) == null ? '' : __t) +\n' step\" ref=\"' +\n((__t = (ctx.wizardKey)) == null ? '' : __t) +\n'-link\">\\n      <div class=\"content\">\\n        <div class=\"title\">\\n        ' +\n((__t = (panel.title)) == null ? '' : __t) +\n'\\n        ';\n if (panel.tooltip && ctx.currentPage === index) { ;\n__p += '\\n        <span data-tooltip=\"' +\n((__t = (ctx.wizardPageTooltip)) == null ? '' : __t) +\n'\" data-position=\"right center\">\\n        <i class=\"' +\n((__t = (ctx.iconClass('question-sign'))) == null ? '' : __t) +\n'\"></i>\\n        </span>\\n        ';\n } ;\n__p += '\\n        </div>\\n      </div>\\n    </a>\\n    ';\n }) ;\n__p += '\\n  </div>\\n</nav>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/semantic/lib/templates/semantic/wizardHeader/form.ejs.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@formio/semantic/lib/templates/semantic/wizardHeader/index.js":
+/*!************************************************************************************!*\
+  !*** ./node_modules/@formio/semantic/lib/templates/semantic/wizardHeader/index.js ***!
+  \************************************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./node_modules/@formio/semantic/lib/templates/semantic/wizardHeader/form.ejs.js\");\nexports[\"default\"] = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/semantic/lib/templates/semantic/wizardHeader/index.js?");
+
+/***/ }),
+
 /***/ "./node_modules/@formio/semantic/lib/templates/semantic/wizardHeaderClassic/form.ejs.js":
 /*!**********************************************************************************************!*\
   !*** ./node_modules/@formio/semantic/lib/templates/semantic/wizardHeaderClassic/form.ejs.js ***!
@@ -7257,27 +7309,6 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar 
 
 /***/ }),
 
-/***/ "./node_modules/@formio/semantic/lib/templates/semantic/wizardHeader/form.ejs.js":
-/*!***************************************************************************************!*\
-  !*** ./node_modules/@formio/semantic/lib/templates/semantic/wizardHeader/form.ejs.js ***!
-  \***************************************************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<nav aria-label=\"navigation\" id=\"' +\n((__t = ( ctx.wizardKey )) == null ? '' : __t) +\n'-header\" ref=\"' +\n((__t = (ctx.wizardKey)) == null ? '' : __t) +\n'-header\">\\n  <div class=\"ui steps\">\\n    ';\n ctx.panels.forEach(function(panel, index) { ;\n__p += '\\n    <a class=\"' +\n((__t = (ctx.currentPage === index ? ' active' : '')) == null ? '' : __t) +\n' step\" ref=\"' +\n((__t = (ctx.wizardKey)) == null ? '' : __t) +\n'-link\">\\n      <div class=\"content\">\\n        <div class=\"title\">\\n        ' +\n((__t = (panel.title)) == null ? '' : __t) +\n'\\n        ';\n if (panel.tooltip && ctx.currentPage === index) { ;\n__p += '\\n        <span data-tooltip=\"' +\n((__t = (ctx.wizardPageTooltip)) == null ? '' : __t) +\n'\" data-position=\"right center\">\\n        <i class=\"' +\n((__t = (ctx.iconClass('question-sign'))) == null ? '' : __t) +\n'\"></i>\\n        </span>\\n        ';\n } ;\n__p += '\\n        </div>\\n      </div>\\n    </a>\\n    ';\n }) ;\n__p += '\\n  </div>\\n</nav>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/semantic/lib/templates/semantic/wizardHeader/form.ejs.js?");
-
-/***/ }),
-
-/***/ "./node_modules/@formio/semantic/lib/templates/semantic/wizardHeader/index.js":
-/*!************************************************************************************!*\
-  !*** ./node_modules/@formio/semantic/lib/templates/semantic/wizardHeader/index.js ***!
-  \************************************************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./node_modules/@formio/semantic/lib/templates/semantic/wizardHeader/form.ejs.js\");\nexports[\"default\"] = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/semantic/lib/templates/semantic/wizardHeader/index.js?");
-
-/***/ }),
-
 /***/ "./node_modules/@formio/semantic/lib/templates/semantic/wizardNav/form.ejs.js":
 /*!************************************************************************************!*\
   !*** ./node_modules/@formio/semantic/lib/templates/semantic/wizardNav/form.ejs.js ***!
@@ -7296,37 +7327,6 @@ eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nex
 
 "use strict";
 eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./node_modules/@formio/semantic/lib/templates/semantic/wizardNav/form.ejs.js\");\nexports[\"default\"] = { form: form_ejs_1.default };\n\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/semantic/lib/templates/semantic/wizardNav/index.js?");
-
-/***/ }),
-
-/***/ "./node_modules/@formio/semantic/lib/templates/semantic/wizard/builder.ejs.js":
-/*!************************************************************************************!*\
-  !*** ./node_modules/@formio/semantic/lib/templates/semantic/wizard/builder.ejs.js ***!
-  \************************************************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '';\n__p += '<div class=\"formio-wizard-builder-component-title\">' +\n((__t = ( ctx.t(ctx.component.title) )) == null ? '' : __t) +\n'</div>\\n';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/semantic/lib/templates/semantic/wizard/builder.ejs.js?");
-
-/***/ }),
-
-/***/ "./node_modules/@formio/semantic/lib/templates/semantic/wizard/form.ejs.js":
-/*!*********************************************************************************!*\
-  !*** ./node_modules/@formio/semantic/lib/templates/semantic/wizard/form.ejs.js ***!
-  \*********************************************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-eval("Object.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"]=function(ctx) {\nvar __t, __p = '', __j = Array.prototype.join;\nfunction print() { __p += __j.call(arguments, '') }\n__p += '<div class=\"' +\n((__t = (ctx.className)) == null ? '' : __t) +\n'\">\\n  <div style=\"position: relative;\">\\n    ';\n if (ctx.wizardHeaderType === 'wizardHeaderVertical') { ;\n__p += '\\n      <div class=\"ui stackable grid\">\\n        <div class=\"three wide computer sixteen wide tablet sixteen wide mobile column\">\\n          ' +\n((__t = ( ctx.wizardHeader )) == null ? '' : __t) +\n'\\n        </div>\\n        <div class=\"one wide computer one wide mobile one wide tablet column\"></div>\\n        <div class=\"wizard-page ten wide computer fourteen wide tablet fourteen wide mobiles column\" ref=\"' +\n((__t = (ctx.wizardKey)) == null ? '' : __t) +\n'\">\\n          ' +\n((__t = (ctx.components)) == null ? '' : __t) +\n'\\n        </div>\\n      </div>\\n      <div class=\"ui grid\" style=\"margin-top: 10px;\">\\n        <div class=\"four wide column\"></div>\\n        <div class=\"twelve wide column\">\\n          ' +\n((__t = ( ctx.wizardNav )) == null ? '' : __t) +\n'\\n        </div>\\n      </div>\\n    ';\n } else { ;\n__p += ' \\n      ' +\n((__t = ( ctx.wizardHeader )) == null ? '' : __t) +\n'\\n      <div class=\"wizard-page\" ref=\"' +\n((__t = (ctx.wizardKey)) == null ? '' : __t) +\n'\">\\n        ' +\n((__t = (ctx.components)) == null ? '' : __t) +\n'\\n      </div>\\n      ' +\n((__t = ( ctx.wizardNav )) == null ? '' : __t) +\n'\\n    ';\n } ;\n__p += ' \\n  </div>\\n</div>';\nreturn __p\n}\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/semantic/lib/templates/semantic/wizard/form.ejs.js?");
-
-/***/ }),
-
-/***/ "./node_modules/@formio/semantic/lib/templates/semantic/wizard/index.js":
-/*!******************************************************************************!*\
-  !*** ./node_modules/@formio/semantic/lib/templates/semantic/wizard/index.js ***!
-  \******************************************************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar builder_ejs_1 = __webpack_require__(/*! ./builder.ejs */ \"./node_modules/@formio/semantic/lib/templates/semantic/wizard/builder.ejs.js\");\nvar form_ejs_1 = __webpack_require__(/*! ./form.ejs */ \"./node_modules/@formio/semantic/lib/templates/semantic/wizard/form.ejs.js\");\nexports[\"default\"] = { form: form_ejs_1.default, builder: builder_ejs_1.default };\n\n\n//# sourceURL=webpack://Formio/./node_modules/@formio/semantic/lib/templates/semantic/wizard/index.js?");
 
 /***/ }),
 
