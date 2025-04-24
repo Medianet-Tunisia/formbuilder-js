@@ -5,10 +5,10 @@ import FormComponent from '../form/Form';
 export default class PanelComponent extends NestedComponent {
   static schema(...extend) {
     return NestedComponent.schema({
-      label: 'Panel',
+      label: 'Step',
       type: 'panel',
       key: 'panel',
-      title: 'Panel',
+      title: 'Step',
       theme: 'default',
       breadcrumb: 'default',
       components: [],
@@ -21,7 +21,7 @@ export default class PanelComponent extends NestedComponent {
 
   static get builderInfo() {
     return {
-      title: 'Panel',
+      title: 'Step',
       icon: 'list-alt',
       group: 'layout',
       documentation: '/userguide/form-building/layout-components#panel',
