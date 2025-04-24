@@ -37,7 +37,8 @@ export default function(...extend) {
           label: 'API',
           key: 'api',
           weight: 30,
-          components: ComponentEditAPI
+          components: ComponentEditAPI,
+          ignore: true
         },
         {
           label: 'Conditional',
@@ -49,7 +50,8 @@ export default function(...extend) {
           label: 'Logic',
           key: 'logic',
           weight: 50,
-          components: ComponentEditLogic
+          components: ComponentEditLogic,
+          ignore: true
         },
         {
           label: 'Layout',
