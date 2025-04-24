@@ -36,6 +36,7 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Formio.js~Formio.html">Formio</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-embed">embed</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-GlobalFormio">GlobalFormio</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-INTERNAL_RESSOURCES">INTERNAL_RESSOURCES</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#addons">addons</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/addons/FormioAddon.js~FormioAddon.html">FormioAddon</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-editForms">editForms</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#builders">builders</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/builders/Builders.js~Builders.html">Builders</a></span></span></li>
@@ -193,15 +194,27 @@ import _difference from &apos;lodash/difference&apos;;
 import _keys from &apos;lodash/keys&apos;;
 export default [
   {
+    key: &apos;hidden&apos;,
+    ignore: true
+  },
+  {
+    key: &apos;hideLabel&apos;,
+    ignore: true
+  },
+  {
+    key: &apos;modalEdit&apos;,
+    ignore: true
+  },
+  {
+    key: &apos;disabled&apos;,
+    ignore: true
+  },
+  {
     key: &apos;labelPosition&apos;,
     ignore: true
   },
   {
     key: &apos;placeholder&apos;,
-    ignore: true
-  },
-  {
-    key: &apos;description&apos;,
     ignore: true
   },
   {
@@ -227,7 +240,7 @@ export default [
     weight: 1,
     type: &apos;textfield&apos;,
     input: true,
-    placeholder: &apos;Panel Title&apos;,
+    placeholder: &apos;Step Title&apos;,
     label: &apos;Title&apos;,
     key: &apos;title&apos;,
     tooltip: &apos;The title text that appears in the header of this panel.&apos;

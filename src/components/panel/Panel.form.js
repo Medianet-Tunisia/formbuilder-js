@@ -18,10 +18,15 @@ export default function(...extend) {
     {
       key: 'api',
       components: PanelApiConditional,
+      ignore: true
     },
     {
       key: 'layout',
       components: PanelLayoutConditional,
+    },
+    {
+      key: 'logic',
+      ignore: true
     },
   ], ...extend);
 }

@@ -19,6 +19,7 @@
     "lint"
   ],
   "scripts": {
+    "build-dev": "gulp build",
     "build": "esdoc && gulp build",
     "create-app-yml": "node -e 'var fs=require(`fs`);fs.writeFileSync(`./_config.app.yml`, `baseurl: https://formiojs.test-form.io/` + require(`./package.json`).version);'",
     "rm-app-yml": "rm ./_config.app.yml",
@@ -162,6 +163,7 @@
     "sass": "^1.56.2",
     "shortcut-buttons-flatpickr": "^0.4.0",
     "sinon": "^14.0.2",
+    "typedoc": "^0.28.3",
     "webpack": "^5.75.0",
     "webpack-stream": "^7.0.0",
     "written-number": "^0.11.1"

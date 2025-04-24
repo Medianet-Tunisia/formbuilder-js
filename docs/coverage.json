@@ -1,6 +1,6 @@
 {
-  "coverage": "6.33%",
-  "expectCount": 1042,
+  "coverage": "6.32%",
+  "expectCount": 1043,
   "actualCount": 66,
   "files": {
     "src/addons/FormioAddon.js": {
@@ -382,7 +382,7 @@
       "expectCount": 1,
       "actualCount": 0,
       "undocumentLines": [
-        6
+        8
       ]
     },
     "src/components/password/Password.form.js": {
@@ -809,6 +809,13 @@
       "actualCount": 0,
       "undocumentLines": [
         5
+      ]
+    },
+    "src/constants.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        1
       ]
     },
     "src/contrib/edittable/EditTable.form.js": {

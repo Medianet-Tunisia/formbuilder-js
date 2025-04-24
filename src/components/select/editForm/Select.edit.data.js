@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import { eachComponent } from '../../../utils/utils';
-
+import { INTERNAL_RESSOURCES } from '../../../constants';
 const calculateSelectData = (context) => {
   const { instance, data } = context;
   const rawDefaultValue = instance.downloadedResources.find(resource => _.get(resource, data.valueProperty) === instance.getValue());

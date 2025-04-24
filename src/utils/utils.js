@@ -1164,10 +1164,12 @@ export function getContextComponents(context, excludeNested, excludedTypes = [])
   context.utils.eachComponent(context.instance.options.editForm.components, (component, path) => {
     const addToContextComponents = excludeNested ? !component.tree : true;
     if (component.key !== context.data.key && addToContextComponents && !_.includes(excludedTypes, component.type)) {
-      values.push({
-        label: `${component.label || component.key} (${path})`,
-        value: path,
-      });
+      if (component.type !== 'button' && component.type !== 'fieldset' && component.type !== 'tabs' && component.type !== 'columns' && component.type !== 'panel') {
+          values.push({
+            label: `${component.label || component.key} (${path})`,
+            value: path,
+          });
+      }
     }
   });
 
