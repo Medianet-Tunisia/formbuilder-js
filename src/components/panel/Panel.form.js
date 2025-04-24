@@ -23,6 +23,7 @@ export default function(...extend) {
     {
       key: 'layout',
       components: PanelLayoutConditional,
+      ignore: true
     },
     {
       key: 'logic',
