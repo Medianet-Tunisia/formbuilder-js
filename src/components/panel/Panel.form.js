@@ -2,12 +2,9 @@ import nestedComponentForm from '../_classes/nested/NestedComponent.form';
 
 import PanelEditDisplay from './editForm/Panel.edit.display';
 import PanelEditConditional from './editForm/Panel.edit.conditional';
+import PanelLayoutConditional from './editForm/Panel.edit.layout';
+import PanelApiConditional from './editForm/Panel.edit.api';
 
-/**
- * The Edit Form function.
- * @param {...any} extend - The components that extend the edit form.
- * @returns {import('@formio/core').Component[]} - The edit form components.
- */
 export default function(...extend) {
   return nestedComponentForm([
     {
@@ -17,6 +14,20 @@ export default function(...extend) {
     {
       key: 'conditional',
       components: PanelEditConditional,
+    },
+    {
+      key: 'api',
+      components: PanelApiConditional,
+      ignore: true
+    },
+    {
+      key: 'layout',
+      components: PanelLayoutConditional,
+      ignore: true
+    },
+    {
+      key: 'logic',
+      ignore: true
     },
   ], ...extend);
 }

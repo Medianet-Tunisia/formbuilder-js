@@ -1,9 +1,10 @@
-@use 'formio.embed.scss';
+@import './formio.embed.scss';
 $dialog-z-index: 10000;
 $autocomplete-in-dialog-z-index: $dialog-z-index + 1000;
 
 .formio-form {
   position: relative;
+  min-height: 80px;
 }
 
 .formio-error-wrapper,
@@ -29,10 +30,6 @@ $autocomplete-in-dialog-z-index: $dialog-z-index + 1000;
   color: #856404;
   background-color: #fff3cd;
   border-color: #ffeeba;
-}
-
-.form-control {
-  height: calc(1.4em + 0.75rem + 2px);
 }
 
 .formio-disabled-input .form-control.flatpickr-input {
@@ -174,13 +171,14 @@ $autocomplete-in-dialog-z-index: $dialog-z-index + 1000;
   line-height: 1;
 }
 
-.card.card-vertical {
+
+.card-vertical {
   display: flex;
   flex-direction: row;
   margin-top: 5px;
 }
 
-.card.card-vertical .card-body,
+.card-vertical .card-body,
 .tab-content,
 .tab {
   flex-grow: 2;
@@ -195,13 +193,13 @@ $autocomplete-in-dialog-z-index: $dialog-z-index + 1000;
   border-bottom: 0;
 }
 
-.card.card-vertical > .card-body,
-.card.card-vertical > .tab-content,
-.card.card-vertical > .tab {
+.card-vertical > .card-body,
+.card-vertical > .tab-content,
+.card-vertical > .tab {
   flex-basis: 85%;
 }
 
-.card.card-vertical ul>li>.nav-link-vertical  {
+.card-vertical ul>li>.nav-link-vertical  {
   border-right-color: transparent;
   border-radius: 4px 0 0 4px;
   margin-right: 0;
@@ -380,15 +378,6 @@ td > .formio-form-group {
   a {
     text-decoration: underline;
   }
-}
-
-.formio-component-file .status {
-  margin-top: 4px;
-  font-size: 0.9rem;
-}
-
-.formio-component-file .list-group-item .fa {
-  cursor: pointer;
 }
 
 .formio-component-file .fileSelector.fileDragOver {
@@ -711,6 +700,10 @@ body.formio-dialog-open {
   justify-content: flex-end;
 }
 
+.formio-dialog.formio-dialog-theme-default .formio-dialog-buttons {
+  *zoom: 1;
+}
+
 .formio-dialog.formio-dialog-theme-default .formio-dialog-buttons:after {
   content: '';
   display: table;
@@ -866,6 +859,10 @@ body.formio-dialog-open {
   overflow-wrap: break-word;
 }
 
+.tree-listgroup {
+  flex-direction: row;
+}
+
 .formio-component-submit button[disabled]+.has-error {
   display: block;
 }
@@ -970,8 +967,6 @@ body.formio-dialog-open {
 
 .formio-component-datagrid {
   overflow-x: auto;
-  overflow-y: visible;
-  height: auto;
 
   .datagrid-table {
     &, td, th {
@@ -1106,6 +1101,23 @@ body.formio-dialog-open {
 .formio-component.alert-danger .help-block,
 .formio-component.alert-warning .help-block {
   color: inherit;
+}
+
+.tree {
+  &__level {
+    &_even {
+      background-color: #f6f6f6;
+    }
+  }
+
+  &__node-content {
+    margin-bottom: 10px;
+    overflow-wrap: break-word;
+  }
+
+  &__node-children {
+    margin: 0;
+  }
 }
 
 .formio-select-autocomplete-input {
@@ -1750,14 +1762,4 @@ span[role="link"] {
 
 .hidden {
   display: none !important;
-}
-
-.align-center {
-  display: flex;
-  align-items: center;
-}
-
-.justify-center {
-  display: flex;
-  justify-content: center;
 }

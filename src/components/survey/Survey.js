@@ -142,7 +142,7 @@ export default class SurveyComponent extends Field {
   }
 
   getInputName(question) {
-    return `${this.options.name}[${question.value}][${this.id}]`;
+    return `${this.options.name}[${question.value}]`;
   }
 
   getValueAsString(value, options) {
@@ -151,8 +151,8 @@ export default class SurveyComponent extends Field {
         <table border="1" style="width:100%">
           <thead>
             <tr>
-              <th>${this.t('surveyQuestion')}</th>
-              <th>${this.t('surveyQuestionValue')}</th>
+              <th>Question</th>
+              <th>Value</th>
             </tr>
           </thead>
           <tbody>

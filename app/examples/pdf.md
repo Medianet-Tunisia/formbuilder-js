@@ -5,7 +5,8 @@ section: examples
 weight: 18
 ---
 ```html
-<script src="https://cdn.form.io/js/formio.embed.js"></script>
+<link rel="stylesheet" href="https://cdn.form.io/formiojs/formio.full.min.css">
+<script src="https://cdn.form.io/formiojs/formio.full.min.js"></script>
 <div id="formio"></div>
 ```
 

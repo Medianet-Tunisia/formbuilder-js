@@ -69,6 +69,13 @@ export default class CheckBoxComponent extends Field {
     return CheckBoxComponent.schema();
   }
 
+  get defaultValue() {
+    const { name } = this.component;
+    const defaultValue = super.defaultValue;
+
+    return name ? (this.component[name] || this.emptyValue) : (defaultValue || this.component.defaultValue || false).toString() === 'true';
+  }
+
   get labelClass() {
     let className = '';
     if (this.isInputComponent
@@ -133,7 +140,7 @@ export default class CheckBoxComponent extends Field {
   }
 
   get emptyValue() {
-    return this.component.inputType === 'radio' ? '' : false;
+    return this.component.inputType === 'radio' ? null : false;
   }
 
   isEmpty(value = this.dataValue) {
@@ -209,11 +216,8 @@ export default class CheckBoxComponent extends Field {
   getValueAsString(value) {
     const { name: componentName, value: componentValue } = this.component;
     const hasValue = componentName ? _.isEqual(value, componentValue) : value;
-    if (_.isUndefined(value) && this.inDataTable) {
-      return '';
-    }
 
-    return this.t(hasValue ? 'yes' : 'no');
+    return this.t(hasValue ? 'Yes' : 'No');
   }
 
   updateValue(value, flags) {

@@ -1,31 +1,8 @@
-/**
- *
- * @param {object} formio - formio instance
- * @returns {import('./typedefs').FileProvider} The FileProvider interface defined in index.js.
- */
-function url(formio) {
-  /**
-   *
-   * @param {object} options - options to set on the xhr
-   * @param {object} xhr - the xhr object
-   */
-  function setOptions(options, xhr) {
-    const parsedOptions = typeof options === 'string' ? JSON.parse(options) : options;
-    for (const prop in parsedOptions) {
-      if (prop === 'headers') {
-        const headers = parsedOptions['headers'];
-        for (const header in headers) {
-          xhr.setRequestHeader(header, headers[header]);
-        }
-      }
-      else {
-        xhr[prop] = parsedOptions[prop];
-      }
-    }
-  }
+import NativePromise from 'native-promise-only';
 
+const url = (formio) => {
   const xhrRequest = (url, name, query, data, options, progressCallback, abortCallback) => {
-    return new Promise((resolve, reject) => {
+    return new NativePromise((resolve, reject) => {
       const xhr = new XMLHttpRequest();
       const json = (typeof data === 'string');
       const fd = new FormData();
@@ -92,7 +69,18 @@ function url(formio) {
 
       //Overrides previous request props
       if (options) {
-        setOptions(options, xhr);
+        const parsedOptions = typeof options === 'string' ? JSON.parse(options) : options;
+        for (const prop in parsedOptions) {
+          if (prop === 'headers') {
+            const headers = parsedOptions['headers'];
+            for (const header in headers) {
+              xhr.setRequestHeader(header, headers[header]);
+            }
+          }
+          else {
+            xhr[prop] = parsedOptions[prop];
+          }
+        }
       }
       xhr.send(json ? data : fd);
     });
@@ -134,8 +122,8 @@ function url(formio) {
         return uploadRequest();
       }
     },
-    deleteFile(fileInfo, options) {
-      return new Promise((resolve, reject) => {
+    deleteFile(fileInfo) {
+      return new NativePromise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
         xhr.open('DELETE', fileInfo.url, true);
         xhr.onload = () => {
@@ -146,9 +134,6 @@ function url(formio) {
             reject(xhr.response || 'Unable to delete file');
           }
         };
-        if (options) {
-          setOptions(options, xhr);
-        }
         xhr.send(null);
       });
     },
@@ -162,10 +147,10 @@ function url(formio) {
       }
 
       // Return the original as there is nothing to do.
-      return Promise.resolve(file);
+      return NativePromise.resolve(file);
     }
   };
-}
+};
 
 url.title = 'Url';
 export default url;

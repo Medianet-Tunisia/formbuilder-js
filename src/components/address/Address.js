@@ -1,7 +1,7 @@
 import autocompleter from 'autocompleter';
 import _ from 'lodash';
 
-import { Formio } from '../../Formio';
+import { GlobalFormio as Formio } from '../../Formio';
 import { GoogleAddressProvider } from '../../providers/address/GoogleAddressProvider';
 
 import Field from '../_classes/field/Field';
@@ -25,6 +25,7 @@ export default class AddressComponent extends ContainerComponent {
       key: 'address',
       switchToManualModeLabel: 'Can\'t find address? Switch to manual mode.',
       provider: '',
+      providerOptions: {},
       manualModeViewString: '',
       hideLabel: false,
       disableClearIcon: false,
@@ -99,17 +100,6 @@ export default class AddressComponent extends ContainerComponent {
     };
   }
 
-  static get serverConditionSettings() {
-    return AddressComponent.conditionOperatorsSettings;
-  }
-
-  static get conditionOperatorsSettings() {
-    return {
-      ...super.conditionOperatorsSettings,
-      operators: ['isEmpty', 'isNotEmpty'],
-    };
-  }
-
   mergeSchema(component = {}) {
     let { defaultSchema } = this;
 
@@ -127,37 +117,24 @@ export default class AddressComponent extends ContainerComponent {
     }
     Field.prototype.init.call(this);
 
-    // Added for backwards compatibility
-    if (this.component.providerOptions) {
-      const {params, url, queryProperty, responseProperty, displayValueProperty } = this.component.providerOptions;
-      const key = params?.key;
-      const autocompleteOptions = params?.autocompleteOptions;
-
-      delete this.component.providerOptions
-      this.component.url = url;
-      this.component.queryProperty = queryProperty;
-      this.component.responseProperty = responseProperty;
-      this.component.displayValueProperty = displayValueProperty;
-      this.component.apiKey = key;
-      this.component.autocompleteOptions = autocompleteOptions;
-    }
-
-    let provider = this.component.provider;
-    const providerOptions = this.providerOptions;
-    const map = this.component.map;
-
     if (!this.builderMode) {
-      if (provider) {
-        if (_.get(providerOptions, 'params.subscriptionKey')) {
-          _.set(providerOptions, "params['subscription-key']", _.get(providerOptions, 'params.subscriptionKey'));
-          _.unset(providerOptions, 'params.subscriptionKey');
-        }
-
+      if (this.component.provider) {
+        const {
+          provider,
+          providerOptions,
+        } = this.component;
         this.provider = this.initializeProvider(provider, providerOptions);
       }
-      else if (map) {
+      else if (this.component.map) {
         // Fallback to legacy version where Google Maps was the only provider.
-        provider = this.component.provider = GoogleAddressProvider.name;
+        this.component.provider = GoogleAddressProvider.name;
+        this.component.providerOptions = this.component.providerOptions || {};
+
+        const {
+          map,
+          provider,
+          providerOptions,
+        } = this.component;
 
         const {
           key,
@@ -239,7 +216,7 @@ export default class AddressComponent extends ContainerComponent {
   }
 
   set address(value) {
-    if (this.manualModeEnabled && !this.isMultiple && !_.isEqual(value, this.emptyValue)) {
+    if (this.manualModeEnabled && !this.isMultiple) {
       this.dataValue.address = value;
     }
     else {
@@ -263,18 +240,6 @@ export default class AddressComponent extends ContainerComponent {
 
   isValueInLegacyFormat(value) {
     return value && !value.mode;
-  }
-
-  set dataValue(value) {
-    super.dataValue = value
-  }
-
-  get dataValue() {
-    const resultValue = _.get(this._data, this.path);
-    if (!_.isArray(resultValue) && this.component.multiple) {
-      return [resultValue]
-    }
-    return super.dataValue;
   }
 
   normalizeValue(value) {
@@ -324,17 +289,6 @@ export default class AddressComponent extends ContainerComponent {
     return this.refs
       ? (this.refs[AddressComponent.modeSwitcherRef] || null)
       : null;
-  }
-
-  get providerOptions() {
-    return {
-      params: {subscriptionKey: this.component.subscriptionKey, key: this.component.apiKey, ...this.component.params},
-      url: this.component.url,
-      queryProperty: this.component.queryProperty,
-      responseProperty: this.component.responseProperty,
-      displayValueProperty: this.component.displayValueProperty,
-      autocompleteOptions: this.component.autocompleteOptions
-    }
   }
 
   get removeValueIcon() {
@@ -400,7 +354,7 @@ export default class AddressComponent extends ContainerComponent {
   }
 
   get addAnother() {
-    return this.t(this.component.addAnother || 'addAnother');
+    return this.t(this.component.addAnother || 'Add Another');
   }
 
   renderElement(value) {
@@ -475,8 +429,10 @@ export default class AddressComponent extends ContainerComponent {
 
     if (!this.builderMode) {
       if (!this.provider && this.component.provider) {
-        const provider = this.component.provider;
-        const providerOptions = this.providerOptions;
+        const {
+          provider,
+          providerOptions,
+        } = this.component;
         this.provider = this.initializeProvider(provider, providerOptions);
       }
     }

@@ -369,7 +369,7 @@ export default [
               {
                 weight: 20,
                 input: true,
-                label: 'Schema Definition',
+                label: 'Schema Defenition',
                 key: 'schemaDefinition',
                 editor: 'ace',
                 as: 'javascript',

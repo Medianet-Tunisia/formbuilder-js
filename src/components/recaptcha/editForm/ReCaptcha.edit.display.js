@@ -23,9 +23,6 @@ export default [
         value: 'buttonClick'
       }
     ],
-    validate: {
-      required: true
-    },
     weight: 650
   },
   {

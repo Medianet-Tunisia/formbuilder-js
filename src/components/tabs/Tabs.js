@@ -131,7 +131,8 @@ export default class TabsComponent extends NestedComponent {
 
   /**
    * Set the current tab.
-   * @param {number} index - The index of the tab to set.
+   *
+   * @param index
    */
   setTab(index) {
     if (!this.tabs || !this.tabs[index] || !this.refs[this.tabKey] || !this.refs[this.tabKey][index]) {
@@ -149,23 +150,18 @@ export default class TabsComponent extends NestedComponent {
 
     _.each(this.refs[this.tabLinkKey], (tabLink, tabIndex) => {
       if (this.refs[this.tabLinkKey][tabIndex]) {
-        this.removeClass(tabLink, 'active');
         this.removeClass(tabLink, 'formio-tab-link-active');
       }
       if (this.refs[this.tabLikey][tabIndex]) {
-        this.removeClass(this.refs[this.tabLikey][tabIndex], 'active');
         this.removeClass(this.refs[this.tabLikey][tabIndex], 'formio-tab-link-container-active');
       }
     });
     if (this.refs[this.tabLikey][index]) {
-      this.addClass(this.refs[this.tabLikey][index], 'active');
       this.addClass(this.refs[this.tabLikey][index], 'formio-tab-link-container-active');
     }
     if (this.refs[this.tabLinkKey][index]) {
-      this.addClass(this.refs[this.tabLinkKey][index], 'active');
       this.addClass(this.refs[this.tabLinkKey][index], 'formio-tab-link-active');
     }
-    this.setValue(this.data);
     this.triggerChange();
   }
 

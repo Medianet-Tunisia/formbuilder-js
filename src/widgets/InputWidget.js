@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import Element from '../Element';
+import NativePromise from 'native-promise-only';
 export default class InputWidget extends Element {
   static get defaultSettings() {
     return {
@@ -18,7 +19,7 @@ export default class InputWidget extends Element {
 
   attach(input) {
     this._input = input;
-    return Promise.resolve();
+    return NativePromise.resolve();
   }
 
   get defaultSettings() {
@@ -46,8 +47,8 @@ export default class InputWidget extends Element {
     return value;
   }
 
-  get validationValue() {
-    return this.dataValue;
+  validationValue(value) {
+    return value;
   }
 
   addPrefix() {

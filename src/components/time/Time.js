@@ -16,6 +16,18 @@ export default class TimeComponent extends TextFieldComponent {
     }, ...extend);
   }
 
+  static get serverConditionSettings() {
+    return {
+      ...super.serverConditionSettings,
+      valueComponent(classComp) {
+        return {
+          ...classComp,
+          type: 'time',
+        };
+      },
+    };
+  }
+
   constructor(component, options, data) {
     super(component, options, data);
     const { edge: isEdgeBrowser, version: edgeVersion } = getBrowserInfo();
@@ -23,8 +35,14 @@ export default class TimeComponent extends TextFieldComponent {
     this.component.inputType = isEdgeBrowser && edgeVersion <= 18
       ? 'text'
       : (this.component.inputType || 'time');
-    // If default value is given then the raw data needs to be set
-    this.rawData = this.component.multiple ? [] : this.getValueAsString(this.defaultValue) || this.emptyValue;
+    this.rawData = this.component.multiple ? [] : this.emptyValue;
+  }
+
+  init() {
+    super.init();
+    if (this.component.inputType === 'text') {
+      this.validators.push('time');
+    }
   }
 
   static get builderInfo() {
@@ -59,6 +77,12 @@ export default class TimeComponent extends TextFieldComponent {
     return value;
   }
 
+  get validationValue() {
+    if (Array.isArray(this.rawData) && !this.rawData.length || !this.rawData) {
+      return this.dataValue;
+    }
+    return this.rawData;
+  }
 
   get inputInfo() {
     const info = super.inputInfo;

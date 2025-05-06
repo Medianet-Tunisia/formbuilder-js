@@ -1,6 +1,6 @@
 import ConditionOperator from './ConditionOperator';
 import _ from 'lodash';
-import { compareSelectResourceWithObjectTypeValues, isSelectResourceWithObjectValue } from '../utils';
+import { getItemTemplateKeys, isSelectResourceWithObjectValue } from '../utils';
 
 export default class IsEqualTo extends ConditionOperator {
     static get operatorKey() {
@@ -11,7 +11,7 @@ export default class IsEqualTo extends ConditionOperator {
         return 'Is Equal To';
     }
 
-    execute({ value, comparedValue, instance, path }) {
+    execute({ value, comparedValue, instance, conditionComponentPath }) {
         if ((value || value === false) && comparedValue && typeof value !== typeof comparedValue && _.isString(comparedValue)) {
             try {
                 comparedValue = JSON.parse(comparedValue);
@@ -20,20 +20,31 @@ export default class IsEqualTo extends ConditionOperator {
             catch (e) {}
         }
 
-        if (instance?.root?.getComponent) {
-            const conditionTriggerComponent = instance.root.getComponent(path);
+        if (instance && instance.root) {
+            const conditionTriggerComponent = instance.root.getComponent(conditionComponentPath);
 
             if (
                 conditionTriggerComponent
                 && isSelectResourceWithObjectValue(conditionTriggerComponent.component)
                 && conditionTriggerComponent.component?.template
             ) {
-                return compareSelectResourceWithObjectTypeValues(value, comparedValue, conditionTriggerComponent.component);
+                if (!value || !_.isPlainObject(value)) {
+                    return false;
+                }
+
+                const { template, valueProperty } = conditionTriggerComponent.component;
+
+                if (valueProperty === 'data') {
+                    value = { data: value };
+                    comparedValue = { data: comparedValue };
+                }
+
+                return _.every(getItemTemplateKeys(template) || [], k => _.isEqual(_.get(value, k), _.get(comparedValue, k)));
             }
         }
 
         //special check for select boxes
-        if (_.isObject(value) && comparedValue && _.isBoolean(value[comparedValue])) {
+        if (_.isObject(value) && comparedValue && _.isString(comparedValue)) {
             return value[comparedValue];
         }
 

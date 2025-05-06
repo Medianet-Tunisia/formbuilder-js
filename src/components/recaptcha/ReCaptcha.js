@@ -1,8 +1,9 @@
 /*globals grecaptcha*/
 import Component from '../_classes/component/Component';
-import { Formio } from '../../Formio';
+import { GlobalFormio as Formio } from '../../Formio';
 import _get from 'lodash/get';
 import _debounce from 'lodash/debounce';
+import NativePromise from 'native-promise-only';
 
 export default class ReCaptchaComponent extends Component {
   static schema(...extend) {
@@ -19,17 +20,6 @@ export default class ReCaptchaComponent extends Component {
 
   static savedValueTypes() {
     return [];
-  }
-
-  static get conditionOperatorsSettings() {
-    return {
-      ...super.conditionOperatorsSettings,
-      operators: ['isEmpty', 'isNotEmpty'],
-    };
-  }
-
-  static get serverConditionSettings() {
-    return ReCaptchaComponent.conditionOperatorsSettings;
   }
 
   render() {
@@ -54,7 +44,7 @@ export default class ReCaptchaComponent extends Component {
         this.recaptchaApiReady = Formio.requireLibrary('googleRecaptcha', 'grecaptcha', recaptchaApiScriptUrl, true);
       }
       else {
-        console.warn(this.t('noSiteKey'));
+        console.warn('There is no Site Key specified in settings in form JSON');
       }
     }
   }
@@ -67,43 +57,49 @@ export default class ReCaptchaComponent extends Component {
     return true;
   }
 
-  async verify(actionName) {
+  verify(actionName) {
     const siteKey = _get(this.root.form, 'settings.recaptcha.siteKey');
     if (!siteKey) {
-      console.warn(this.t('noSiteKey'));
+      console.warn('There is no Site Key specified in settings in form JSON');
       return;
     }
     if (!this.recaptchaApiReady) {
       const recaptchaApiScriptUrl = `https://www.google.com/recaptcha/api.js?render=${_get(this.root.form, 'settings.recaptcha.siteKey')}`;
       this.recaptchaApiReady = Formio.requireLibrary('googleRecaptcha', 'grecaptcha', recaptchaApiScriptUrl, true);
     }
-    try {
-      await this.recaptchaApiReady;
-      this.recaptchaVerifiedPromise = new Promise((resolve, reject) => {
-        if (!this.isLoading) {
-          this.isLoading= true;
-          grecaptcha.ready(_debounce(async() => {
-            try {
-              const token = await grecaptcha.execute(siteKey, { action: actionName });
-              const verificationResult = await this.sendVerificationRequest(token);
-              this.recaptchaResult = {
-                ...verificationResult,
-                token,
-              };
-              this.updateValue(this.recaptchaResult);
-              this.isLoading = false;
-              return resolve(verificationResult);
+    if (this.recaptchaApiReady) {
+      this.recaptchaVerifiedPromise = new NativePromise((resolve, reject) => {
+        this.recaptchaApiReady
+          .then(() => {
+            if (!this.isLoading) {
+              this.isLoading= true;
+              grecaptcha.ready(_debounce(() => {
+                grecaptcha
+                  .execute(siteKey, {
+                    action: actionName
+                  })
+                  .then((token) => {
+                    return this.sendVerificationRequest(token).then(({ verificationResult, token }) => {
+                      this.recaptchaResult = {
+                        ...verificationResult,
+                        token,
+                      };
+                      this.updateValue(this.recaptchaResult);
+                      return resolve(verificationResult);
+                    });
+                  })
+                  .catch(() => {
+                    this.isLoading = false;
+                  });
+              }, 1000));
             }
-            catch (err) {
-              this.isLoading = false;
-              reject(err);
-            }
-          }, 1000));
-        }
+          })
+          .catch(() => {
+            return reject();
+          });
+      }).then(() => {
+        this.isLoading = false;
       });
-    }
-    catch (err) {
-      this.loading = false;
     }
   }
 
@@ -116,32 +112,37 @@ export default class ReCaptchaComponent extends Component {
   }
 
   sendVerificationRequest(token) {
-    return Formio.makeStaticRequest(`${Formio.projectUrl}/recaptcha?recaptchaToken=${token}`);
+    return Formio.makeStaticRequest(`${Formio.projectUrl}/recaptcha?recaptchaToken=${token}`)
+      .then((verificationResult) => ({ verificationResult, token }));
   }
 
-  checkComponentValidity(data, dirty, row, options = {}, errors = []) {
+  checkComponentValidity(data, dirty, row, options = {}) {
     data = data || this.rootValue;
     row = row || this.data;
     const { async = false } = options;
 
-    // Verification could be async only (which for now is only the case for server-side validation)
+    // Verification could be async only
     if (!async) {
-      return super.checkComponentValidity(data, dirty, row, options, errors);
+      return super.checkComponentValidity(data, dirty, row, options);
     }
 
     const componentData = row[this.component.key];
     if (!componentData || !componentData.token) {
       this.setCustomValidity(this.t('reCaptchaTokenNotSpecifiedError'));
-      return Promise.resolve(false);
+      return NativePromise.resolve(false);
     }
 
     if (!componentData.success) {
       this.setCustomValidity(this.t('reCaptchaTokenValidationError'));
-      return Promise.resolve(false);
+      return NativePromise.resolve(false);
     }
 
-    // Any further validation will 100% not run on the client
-    return Promise.resolve(true);
+    return this.hook('validateReCaptcha', componentData.token, () => NativePromise.resolve(true))
+      .then((success) => success)
+      .catch((err) => {
+        this.setCustomValidity(this.t(err.message || err));
+        return false;
+      });
   }
 
   normalizeValue(newValue) {

@@ -24,8 +24,7 @@ export default [
           [
             'values',
             'json',
-            'custom',
-            'url'
+            'custom'
           ],
         ],
       },

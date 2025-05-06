@@ -6,7 +6,7 @@ export default class HTMLComponent extends Component {
     return Component.schema({
       label: 'HTML',
       type: 'htmlelement',
-      tag: 'div',
+      tag: 'p',
       attrs: [],
       content: '',
       input: false,
@@ -45,15 +45,13 @@ export default class HTMLComponent extends Component {
     }
 
     const submission = _.get(this.root, 'submission', {});
-    const content = this.component.content ? this.interpolate(
-      this.sanitize(this.component.content, this.shouldSanitizeValue),
-      {
-        metadata: submission.metadata || {},
-        submission: submission,
-        data: this.rootValue,
-        row: this.data
+    const content = this.component.content ? this.interpolate(this.component.content, {
+      metadata: submission.metadata || {},
+      submission: submission,
+      data: this.rootValue,
+      row: this.data
     }) : '';
-    return content;
+    return this.sanitize(content, this.shouldSanitizeValue);
   }
 
   get singleTags() {
@@ -62,21 +60,9 @@ export default class HTMLComponent extends Component {
 
   checkRefreshOn(changed) {
     super.checkRefreshOn(changed);
-    let visible;
-    if (this.hasCondition()) {
-      visible = !this.conditionallyHidden();
-    }
-    else {
-      visible = !this.component.hidden;
-    }
-    const shouldSetContent = !this.builderMode
-      && this.component.refreshOnChange
-      && this.element
-      && !_.isUndefined(changed)
-      && ((_.isBoolean(changed) && changed) || !_.isEmpty(changed))
-      && visible;
-
-    if (shouldSetContent) {
+    if (!this.builderMode && this.component.refreshOnChange && this.element &&
+      !_.isUndefined(changed) && ((_.isBoolean(changed) && changed) || !_.isEmpty(changed)) &&
+      this.conditionallyVisible(this.data, this.row)) {
       this.setContent(this.element, this.renderContent());
     }
   }

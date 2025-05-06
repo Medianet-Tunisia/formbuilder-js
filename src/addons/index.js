@@ -7,11 +7,7 @@ export const editForms = [
   key: 'settings',
   display: 'form',
   input: true,
-  components: components.map((comp) => {
-    comp.tableView = false;
-    return comp;
-  }),
-  tableView: false,
+  components,
   defaultValue: {
     data: defaultSettings
   },
