@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import { eachComponent } from '../../../utils/utils';
-import { INTERNAL_RESSOURCES } from '../../../constants';
+import { INTERNAL_RESSOURCES, INTERNAL_RESSOURCE_DETAIL } from '../../../constants';
 const calculateSelectData = (context) => {
   const { instance, data } = context;
   const rawDefaultValue = instance.downloadedResources.find(resource => _.get(resource, data.valueProperty) === instance.getValue());
@@ -34,7 +34,10 @@ export default [
     data: {
       values: [
         { label: 'Values', value: 'values' },
-        { label: 'URL', value: 'url' },
+        // Masqué : l'API interne du back-office remplace les appels URL arbitraires.
+        // Les champs déjà enregistrés en dataSrc:'url' continuent de fonctionner au
+        // rendu, ils ne sont simplement plus proposés dans le builder.
+        // { label: 'URL', value: 'url' },
         { label: 'Resource', value: 'resource' },
         { label: 'Custom', value: 'custom' },
         { label: 'Raw JSON', value: 'json' },
@@ -154,9 +157,10 @@ export default [
     input: true,
     dataSrc: 'url',
     data: {
-      url: '/form?type=resource&limit=1000000&select=_id,title',
+      url: INTERNAL_RESSOURCES,
     },
-    authenticate: true,
+    // authenticate: false => pas de token form.io attaché (l'API interne est locale)
+    authenticate: false,
     template: '<span>{{ item.title }}</span>',
     valueProperty: '_id',
     clearOnHide: false,
@@ -224,7 +228,7 @@ export default [
       }
     },
     data: {
-      url: '/form/{{ data.data.resource }}',
+      url: INTERNAL_RESSOURCE_DETAIL,
     },
     conditional: {
       json: {
@@ -236,52 +240,58 @@ export default [
       },
     },
   },
-  {
-    type: 'select',
-    input: true,
-    label: 'Storage Type',
-    key: 'dataType',
-    clearOnHide: true,
-    tooltip: 'The type to store the data. If you select something other than autotype, it will force it to that type.',
-    weight: 12,
-    template: '<span>{{ item.label }}</span>',
-    dataSrc: 'values',
-    data: {
-      values: [
-        { label: 'Autotype', value: 'auto' },
-        { label: 'String', value: 'string' },
-        { label: 'Number', value: 'number' },
-        { label: 'Boolean', value: 'boolean' },
-        { label: 'Object', value: 'object' },
-      ],
-    },
-  },
-  {
-    type: 'textfield',
-    input: true,
-    key: 'idPath',
-    weight: 12,
-    label: 'ID Path',
-    placeholder: 'id',
-    tooltip: 'Path to the select option id.'
-  },
-  {
-    type: 'textfield',
-    input: true,
-    label: 'Select Fields',
-    key: 'selectFields',
-    tooltip: 'The properties on the resource to return as part of the options. Separate property names by commas. If left blank, all properties will be returned.',
-    placeholder: 'Comma separated list of fields to select.',
-    weight: 14,
-    conditional: {
-      json: {
-        and: [
-          { '===': [{ var: 'data.dataSrc' }, 'resource'] },
-          { '===': [{ var: 'data.valueProperty' }, ''] },
-        ],
-      },
-    },
-  },
+  // Masqué : "Storage Type" (dataType). Sans valeur, Select applique l'autotype,
+  // ce qui convient aux colonnes renvoyées par FormioResourceController.
+  // {
+  //   type: 'select',
+  //   input: true,
+  //   label: 'Storage Type',
+  //   key: 'dataType',
+  //   clearOnHide: true,
+  //   tooltip: 'The type to store the data. If you select something other than autotype, it will force it to that type.',
+  //   weight: 12,
+  //   template: '<span>{{ item.label }}</span>',
+  //   dataSrc: 'values',
+  //   data: {
+  //     values: [
+  //       { label: 'Autotype', value: 'auto' },
+  //       { label: 'String', value: 'string' },
+  //       { label: 'Number', value: 'number' },
+  //       { label: 'Boolean', value: 'boolean' },
+  //       { label: 'Object', value: 'object' },
+  //     ],
+  //   },
+  // },
+  // Masqué : "ID Path". Notion propre à l'API SaaS form.io ; l'API interne renvoie
+  // toujours la clé primaire sous "_id", qui est déjà la valeur par défaut.
+  // {
+  //   type: 'textfield',
+  //   input: true,
+  //   key: 'idPath',
+  //   weight: 12,
+  //   label: 'ID Path',
+  //   placeholder: 'id',
+  //   tooltip: 'Path to the select option id.'
+  // },
+  // Masqué : "Select Fields". Envoyé en paramètre `select` à l'API, que
+  // FormioResourceController::submissions() ignore — le champ n'aurait aucun effet.
+  // {
+  //   type: 'textfield',
+  //   input: true,
+  //   label: 'Select Fields',
+  //   key: 'selectFields',
+  //   tooltip: 'The properties on the resource to return as part of the options. Separate property names by commas. If left blank, all properties will be returned.',
+  //   placeholder: 'Comma separated list of fields to select.',
+  //   weight: 14,
+  //   conditional: {
+  //     json: {
+  //       and: [
+  //         { '===': [{ var: 'data.dataSrc' }, 'resource'] },
+  //         { '===': [{ var: 'data.valueProperty' }, ''] },
+  //       ],
+  //     },
+  //   },
+  // },
   {
     type: 'checkbox',
     input: true,
@@ -307,7 +317,9 @@ export default [
           { var: 'data.dataSrc' },
           [
             'url',
-            'resource',
+            // Masqué pour 'resource' : la recherche serveur n'est pas implémentée par
+            // FormioResourceController::submissions(), le champ resterait sans effet.
+            // 'resource',
           ],
         ],
       },
@@ -337,7 +349,9 @@ export default [
           { var: 'data.dataSrc' },
           [
             'url',
-            'resource',
+            // Masqué pour 'resource' : sans recherche serveur, ce délai ne s'applique
+            // à rien (cf. searchField ci-dessus).
+            // 'resource',
           ],
         ],
       },
@@ -374,7 +388,9 @@ export default [
           { var: 'data.dataSrc' },
           [
             'url',
-            'resource',
+            // Masqué pour 'resource' : submissions() n'accepte que limit et skip,
+            // un filtre saisi ici serait ignoré silencieusement.
+            // 'resource',
           ],
         ],
       },
@@ -394,7 +410,9 @@ export default [
           { var: 'data.dataSrc' },
           [
             'url',
-            'resource',
+            // Masqué pour 'resource' : submissions() trie systématiquement sur la clé
+            // primaire, un tri saisi ici serait ignoré.
+            // 'resource',
           ],
         ],
       },
@@ -588,45 +606,51 @@ export default [
     weight: 22,
     tooltip: 'At what point does the match algorithm give up. A threshold of 0.0 requires a perfect match, a threshold of 1.0 would match anything.',
   },
-  {
-    type: 'checkbox',
-    input: true,
-    weight: 23,
-    key: 'addResource',
-    label: 'Add Resource',
-    tooltip: 'Allows to create a new resource while entering a submission.',
-    conditional: {
-      json: { '===': [{ var: 'data.dataSrc' }, 'resource'] },
-    },
-  },
-  {
-    type: 'textfield',
-    label: 'Add Resource Label',
-    key: 'addResourceLabel',
-    tooltip: 'Set the text of the Add Resource button.',
-    placeholder: 'Add Resource',
-    weight: 24,
-    input: true,
-    conditional: {
-      json: {
-        and: [
-          { '===': [{ var: 'data.dataSrc' }, 'resource'] },
-          { '!!': { var: 'data.addResource' } },
-        ],
-      },
-    },
-  },
-  {
-    type: 'checkbox',
-    input: true,
-    weight: 25,
-    key: 'reference',
-    label: 'Save as reference',
-    tooltip: 'Using this option will save this field as a reference and link its value to the value of the origin record.',
-    conditional: {
-      json: { '===': [{ var: 'data.dataSrc' }, 'resource'] },
-    },
-  },
+  // Masqué : "Add Resource" / "Add Resource Label". Le bouton crée une submission
+  // via l'API SaaS form.io ; l'API interne est en lecture seule (routes GET
+  // uniquement), le bouton échouerait.
+  // {
+  //   type: 'checkbox',
+  //   input: true,
+  //   weight: 23,
+  //   key: 'addResource',
+  //   label: 'Add Resource',
+  //   tooltip: 'Allows to create a new resource while entering a submission.',
+  //   conditional: {
+  //     json: { '===': [{ var: 'data.dataSrc' }, 'resource'] },
+  //   },
+  // },
+  // {
+  //   type: 'textfield',
+  //   label: 'Add Resource Label',
+  //   key: 'addResourceLabel',
+  //   tooltip: 'Set the text of the Add Resource button.',
+  //   placeholder: 'Add Resource',
+  //   weight: 24,
+  //   input: true,
+  //   conditional: {
+  //     json: {
+  //       and: [
+  //         { '===': [{ var: 'data.dataSrc' }, 'resource'] },
+  //         { '!!': { var: 'data.addResource' } },
+  //       ],
+  //     },
+  //   },
+  // },
+  // Masqué : "Save as reference". Mécanisme de submissions liées propre à form.io,
+  // sans équivalent côté back-office. Laisser data.reference indéfini garde le champ
+  // "Value Property" visible (sa condition teste reference !== true).
+  // {
+  //   type: 'checkbox',
+  //   input: true,
+  //   weight: 25,
+  //   key: 'reference',
+  //   label: 'Save as reference',
+  //   tooltip: 'Using this option will save this field as a reference and link its value to the value of the origin record.',
+  //   conditional: {
+  //     json: { '===': [{ var: 'data.dataSrc' }, 'resource'] },
+  //   },
+  // },
   {
     type: 'checkbox',
     input: true,
@@ -656,14 +680,21 @@ export default [
   },
   {
     key: 'defaultValue',
-    onSetItems(component) {
-      setSelectData(component.evalContext());
-    },
-    onChange(context) {
-      if (context && context.flags && context.flags.modified) {
-        setSelectData(context);
-      }
-    },
+    // Masqué : "Default Value". Le composant lui-même est défini dans
+    // Component.edit.data.js (partagé par tous les types de champs) : on ne peut pas
+    // le commenter là sans le retirer de TOUS les champs. `ignore: true` sur cette
+    // surcharge ne le retire que du Select. Portée : toutes les sources de données du
+    // Select, pas seulement 'resource'. Pour le rétablir, retirer cette seule ligne
+    // et décommenter les deux handlers ci-dessous.
+    ignore: true,
+    // onSetItems(component) {
+    //   setSelectData(component.evalContext());
+    // },
+    // onChange(context) {
+    //   if (context && context.flags && context.flags.modified) {
+    //     setSelectData(context);
+    //   }
+    // },
   },
   {
     key: 'selectData',

@@ -3,6 +3,7 @@ import { GlobalFormio as Formio } from '../../../Formio';
 import _ from 'lodash';
 import NativePromise from 'native-promise-only';
 import { getItemTemplateKeys } from '../../../utils/utils';
+import { INTERNAL_RESSOURCES } from '../../../constants';
 
 export default class ListComponent extends Field {
   static schema(...extend) {
@@ -171,7 +172,9 @@ export default class ListComponent extends Field {
           return;
         }
 
-        let resourceUrl = this.options.formio ? this.options.formio.formsUrl : `${Formio.getProjectUrl()}/form`;
+        // Sans projet form.io configuré, on interroge l'API interne du back-office
+        // plutôt que `${Formio.getProjectUrl()}/form` (= https://api.form.io => 401).
+        let resourceUrl = this.options.formio ? this.options.formio.formsUrl : INTERNAL_RESSOURCES;
         resourceUrl += (`/${this.component.data.resource}/submission`);
 
         if (forceUpdate || this.additionalResourcesAvailable || !this.serverCount) {
